@@ -8,7 +8,7 @@ import NewsSection from "@/components/sections/NewsSection";
 
 const Index = () => {
   useEffect(() => {
-    document.title = "GD | Home";
+    document.title = "Gourab | Home";
 
     // Preload the profile image with highest priority
     const link = document.createElement("link");
