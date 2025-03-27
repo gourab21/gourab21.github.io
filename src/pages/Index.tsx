@@ -21,9 +21,9 @@ const Index = () => {
   }, []);
 
   const roles = [
+    "Post Graduate Researcher",
     "Software Engineer",
     "Web Developer",
-    "UI/UX Designer",
     "Open Source Contributor",
   ];
 
