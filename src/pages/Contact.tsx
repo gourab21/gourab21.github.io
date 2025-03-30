@@ -29,7 +29,7 @@ const formSchema = z.object({
 
 const Contact = () => {
   useEffect(() => {
-    document.title = "Portfolio | Contact";
+    document.title = "Gourab | Contact";
   }, []);
 
   const [isSubmitting, setIsSubmitting] = useState(false);

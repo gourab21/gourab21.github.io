@@ -22,8 +22,8 @@ const Index = () => {
 
   const roles = [
     "Post Graduate Researcher",
-    "Software Engineer",
     "Web Developer",
+    "Problem Solver",
     "Open Source Contributor",
   ];
 
@@ -75,12 +75,7 @@ const Index = () => {
                 </div>
 
                 <p className="text-foreground/70 max-w-lg">
-                  Senior Software Engineer with 5+ years of experience in
-                  full-stack development, specializing in modern JavaScript
-                  frameworks and cloud technologies. Passionate about creating
-                  scalable, maintainable code and optimizing application
-                  performance. Strong background in leading development teams
-                  and implementing efficient CI/CD pipelines.
+                <b>UGC NET JRF and Assistant Professor Qualified</b> Postgraduate Student with expertise in <b>Machine Learning, AI, and UAV Security</b>. Passionate about solving real-world problems through research and technology. <b>1st place winner in two coding contests</b> at prestigious institutions. Focused on <b>AI-driven security solutions</b> and real-time data processing.
                 </p>
 
                 <div className="flex flex-col sm:flex-row gap-4 mt-4">

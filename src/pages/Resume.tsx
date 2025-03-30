@@ -10,6 +10,14 @@ const Resume = () => {
     document.title = "Gourab | Resume";
   }, []);
 
+  const fieldsOfInterest = [
+    "Machine Learning",
+    "UAV Security",
+    "Artificial Intelligence",
+    "Web Development",
+    "Frontend Architecture"
+  ];
+
   const experienceData: TimelineItemData[] = [
     {
       id: "1",
@@ -70,6 +78,11 @@ const Resume = () => {
 
   const awardsData = [
     {
+      title: "JRF - UGC NET DEC-24.",
+      organization: "University Grants Commission (UGC).",
+      year: "Mar 2025"
+    },
+    {
       title: "Winner - Codeplay, Coding Competition, SXC Kolkata",
       organization: "St. Xavier's College (Autonomous), Kolkata",
       year: "Feb 2025"
@@ -93,64 +106,63 @@ const Resume = () => {
 
   const projectsData = [
     {
-      title: "E-Commerce Platform",
-      description: "A full-stack online shopping platform built with React and Node.js",
+      title: "HECC-PSO: Secure UAV Communication Cryptographic Framework",
+      description: "Developed resilient cryptographic framework using HECC and PSO to optimize AES key management for UAVs.",
       link: "#"
     },
     {
-      title: "Task Management Dashboard",
-      description: "A productivity tool for tracking and managing team projects",
+      title: "HeartStack: A Multi-Layered Ensemble Model for Heart Disease Prediction",
+      description: "Developed stacked ensemble model for precise heart disease prediction.",
       link: "#"
     },
     {
-      title: "Portfolio Website Template",
-      description: "A customizable template for professional portfolios",
+      title: "Academic Personal Website",
+      description: "A customized academic personal website for mysel.",
       link: "#"
     }
   ];
 
   const volunteeringData = [
     {
-      role: "Mentor",
-      organization: "Code for Good",
-      period: "2020 - Present",
-      description: "Mentoring underrepresented students in coding and web development."
+      role: "Regular (Lifetime) Member",
+      organization: "The International Society for Applied Computing (ISAC).",
+      period: "2025 - Persent",
+      description: ""
     },
     {
-      role: "Workshop Instructor",
-      organization: "Women Who Code",
-      period: "2019 - 2021",
-      description: "Leading workshops on JavaScript and React for beginners."
+      role: "Member",
+      organization: "International Association of Engineers (IAENG).",
+      period: "2024 - Persent",
+      description: ""
+    },
+    {
+      role: "Public Relations (PR) Head",
+      organization: "PixElation - The Photography Society of ARSD",
+      period: "2021 - 2023",
+      description: ""
     }
   ];
 
   const skillCategories = [
     {
-      name: "Programming Languages",
-      skills: ["JavaScript", "TypeScript", "Python", "Java", "C++", "HTML5", "CSS3"]
+      "name": "Programming Languages",
+      "skills": ["Python", "C++", "MATLAB", "HTML5", "CSS3", "Assembly Language","JavaScript"]
     },
     {
-      name: "Frameworks & Libraries",
-      skills: ["React", "Vue.js", "Angular", "Node.js", "Express", "Django", "Spring Boot"]
+      "name": "Frameworks & Libraries",
+      "skills": ["Sklearn","Seaborn","Django", "Node.js"]
     },
     {
-      name: "Tools & Technologies",
-      skills: ["Git", "Docker", "Kubernetes", "AWS", "Firebase", "MongoDB", "PostgreSQL", "Redis"]
-    },
+      "name": "Tools & Technologies",
+      "skills": ["Google Colab","Git", "Firebase", "MySQL", "XAMPP", "ESP32", "Arduino"]
+    },    
     {
       name: "Soft Skills",
-      skills: ["Leadership", "Communication", "Problem-solving", "Team Collaboration", "Project Management", "Agile/Scrum", "Mentoring"]
+      skills: ["Leadership", "Communication", "Problem-solving", "Team Collaboration", "Project Management", "Mentoring"]
     }
   ];
 
-  const fieldsOfInterest = [
-    "Web Development",
-    "Frontend Architecture",
-    "UI/UX Design",
-    "Cloud Computing",
-    "DevOps",
-    "Artificial Intelligence"
-  ];
+  
   
   const referencesData = [
     {
@@ -185,27 +197,27 @@ const Resume = () => {
           <div className="max-w-4xl mx-auto">
             <div className="flex flex-col md:flex-row md:justify-between md:items-start mb-8 gap-4">
               <div>
-                <h1 className="text-3xl md:text-4xl font-bold mb-2">John Doe</h1>
-                <h2 className="text-xl text-foreground/80 mb-4">Senior Software Engineer</h2>
+                <h1 className="text-3xl md:text-4xl font-bold mb-2">Gourab Das</h1>
+                <h2 className="text-xl text-foreground/80 mb-4">Post Graduate Researcher</h2>
                 
                 <div className="space-y-2 text-sm text-foreground/70">
                   <div className="flex items-center gap-2">
                     <Mail className="h-4 w-4" />
-                    <span>john.doe@example.com</span>
+                    <span>gourabdas2128@gmail.com</span>
                   </div>
                   <div className="flex items-center gap-2">
                     <Phone className="h-4 w-4" />
-                    <span>+1 (555) 123-4567</span>
+                    <span>+91 736-499-7118</span>
                   </div>
                   <div className="flex items-center gap-2">
                     <MapPin className="h-4 w-4" />
-                    <span>San Francisco, CA</span>
+                    <span>Kolkata, India</span>
                   </div>
                 </div>
                 
                 <div className="flex gap-3 mt-4">
                   <a 
-                    href="https://github.com" 
+                    href="https://github.com/gourab21" 
                     target="_blank"
                     rel="noopener noreferrer"
                     className="p-2 rounded-full bg-secondary hover:bg-primary/20 transition-colors"
@@ -214,7 +226,7 @@ const Resume = () => {
                     <Github className="h-5 w-5" />
                   </a>
                   <a 
-                    href="https://linkedin.com" 
+                    href="https://www.linkedin.com/in/gourab21/" 
                     target="_blank"
                     rel="noopener noreferrer"
                     className="p-2 rounded-full bg-secondary hover:bg-primary/20 transition-colors"
@@ -223,7 +235,7 @@ const Resume = () => {
                     <Linkedin className="h-5 w-5" />
                   </a>
                   <a 
-                    href="https://twitter.com" 
+                    href="https://x.com/gourabdas21" 
                     target="_blank"
                     rel="noopener noreferrer"
                     className="p-2 rounded-full bg-secondary hover:bg-primary/20 transition-colors"
@@ -232,7 +244,7 @@ const Resume = () => {
                     <Twitter className="h-5 w-5" />
                   </a>
                   <a 
-                    href="https://youtube.com" 
+                    href="https://www.youtube.com/@gourabdas2128" 
                     target="_blank"
                     rel="noopener noreferrer"
                     className="p-2 rounded-full bg-secondary hover:bg-primary/20 transition-colors"
@@ -240,8 +252,10 @@ const Resume = () => {
                   >
                     <YoutubeIcon className="h-5 w-5" />
                   </a>
+
+
                   <a 
-                    href="https://orcid.org" 
+                    href="https://orcid.org/0009-0009-6804-7255" 
                     target="_blank"
                     rel="noopener noreferrer"
                     className="p-2 rounded-full bg-secondary hover:bg-primary/20 transition-colors"
@@ -249,7 +263,7 @@ const Resume = () => {
                   >
                     <div className="h-5 w-5 flex items-center justify-center text-xs font-bold">ID</div>
                   </a>
-                  <a 
+                  {/* <a 
                     href="https://scholar.google.com" 
                     target="_blank"
                     rel="noopener noreferrer"
@@ -257,7 +271,7 @@ const Resume = () => {
                     aria-label="Google Scholar Profile"
                   >
                     <div className="h-5 w-5 flex items-center justify-center text-xs font-bold">GS</div>
-                  </a>
+                  </a> */}
                 </div>
               </div>
               
@@ -407,21 +421,18 @@ const Resume = () => {
               
               <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                 <div className="glass-panel p-4 rounded-lg">
-                  <h3 className="font-medium">AWS Certified Solutions Architect</h3>
-                  <p className="text-sm text-foreground/70">Amazon Web Services • 2022</p>
+                  <h3 className="font-medium">Supervised Machine Learning: Regression and Classification</h3>
+                  <p className="text-sm text-foreground/70">DeepLearning.AI - Stanford | ONLINE • 2025</p>
                 </div>
                 <div className="glass-panel p-4 rounded-lg">
-                  <h3 className="font-medium">Google Cloud Professional Developer</h3>
-                  <p className="text-sm text-foreground/70">Google Cloud • 2021</p>
+                  <h3 className="font-medium">Next Generation Communication Technologies Using MATLAB Tools</h3>
+                  <p className="text-sm text-foreground/70">Indian Institute of Information Technology Una • 2025</p>
                 </div>
                 <div className="glass-panel p-4 rounded-lg">
-                  <h3 className="font-medium">Microsoft Certified: Azure Developer Associate</h3>
-                  <p className="text-sm text-foreground/70">Microsoft • 2020</p>
+                  <h3 className="font-medium">Problem Solving (Intermediate) Certificate</h3>
+                  <p className="text-sm text-foreground/70">HackerRank • 2025</p>
                 </div>
-                <div className="glass-panel p-4 rounded-lg">
-                  <h3 className="font-medium">Certified Kubernetes Administrator</h3>
-                  <p className="text-sm text-foreground/70">Cloud Native Computing Foundation • 2020</p>
-                </div>
+                
               </div>
             </div>
 
@@ -446,15 +457,15 @@ const Resume = () => {
               <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
                 <div className="glass-panel p-4 rounded-lg">
                   <h3 className="font-medium">English</h3>
-                  <p className="text-sm text-foreground/70">Native</p>
-                </div>
-                <div className="glass-panel p-4 rounded-lg">
-                  <h3 className="font-medium">Spanish</h3>
                   <p className="text-sm text-foreground/70">Professional Proficiency</p>
                 </div>
                 <div className="glass-panel p-4 rounded-lg">
-                  <h3 className="font-medium">French</h3>
-                  <p className="text-sm text-foreground/70">Basic Proficiency</p>
+                  <h3 className="font-medium">Hindi</h3>
+                  <p className="text-sm text-foreground/70">Professional Proficiency</p>
+                </div>
+                <div className="glass-panel p-4 rounded-lg">
+                  <h3 className="font-medium">Bengali</h3>
+                  <p className="text-sm text-foreground/70">Native</p>
                 </div>
               </div>
             </div>

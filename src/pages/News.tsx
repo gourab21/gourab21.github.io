@@ -12,7 +12,7 @@ import Footer from '@/components/layout/Footer';
 
 const News = () => {
   useEffect(() => {
-    document.title = "Portfolio | News & Updates";
+    document.title = "Gourab | News & Updates";
   }, []);
 
   const [selectedCategory, setSelectedCategory] = useState<string | null>(null);
