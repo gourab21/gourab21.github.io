@@ -7,86 +7,87 @@ import { cn } from '@/lib/utils';
 
 const Resume = () => {
   useEffect(() => {
-    document.title = "Portfolio | Resume";
+    document.title = "Gourab | Resume";
   }, []);
 
   const experienceData: TimelineItemData[] = [
     {
       id: "1",
-      title: "Senior Software Engineer",
-      company: "Tech Innovations Inc.",
-      period: "2021 - Present",
-      description: "Leading the frontend team in developing scalable web applications using React and TypeScript. Implemented CI/CD pipelines and improved performance by 40%."
-    },
-    {
-      id: "2",
-      title: "Full-Stack Developer",
-      company: "Digital Solutions LLC",
-      period: "2018 - 2021",
-      description: "Developed and maintained full-stack applications using Vue.js and Node.js. Collaborated with designers to implement responsive UI and improved user experience."
-    },
-    {
-      id: "3",
-      title: "Web Developer",
-      company: "Creative Agency",
-      period: "2016 - 2018",
-      description: "Built responsive websites for clients across various industries. Worked closely with the design team to create engaging user interfaces and optimized site performance."
+      title: "Post Graduate Researcher",
+      company: <a href="https://vidyamandira.ac.in/">Ramakrishna Mission Vidyamandira</a> ,
+      period: "2024 - Present",
+      description: "Working on development and Execution of algorithms and models in the field of Machine learning and UAV Security."
     }
+    
   ];
   
   const educationData: TimelineItemData[] = [
     {
       id: "ed1",
-      title: "Master of Science in Computer Science",
-      company: "Stanford University",
-      period: "2013 - 2015",
-      description: "Specialized in Human-Computer Interaction and Web Technologies. Graduated with honors."
+      title: "Master of Science - Computer Science",
+      company: <a href="https://vidyamandira.ac.in/">Ramakrishna Mission Vidyamandira</a>,
+      period: "2024 - Present",
+      description: "CGPA - 9.76"
     },
     {
       id: "ed2",
-      title: "Bachelor of Science in Software Engineering",
-      company: "University of California",
-      period: "2009 - 2013",
-      description: "Focused on software development and engineering principles. Participated in coding competitions and hackathons."
+      title: "Bachelor of Science in Computer Science",
+      company: <a href="https://du.ac.in/">University of Delhi</a> ,
+      period: "2020 - 2023",
+      description: "CGPA - 9.23. College First Rank Holder."
+    },
+    {
+      id: "ed3",
+      title: "Higher Secondary Certificate Examination (+2)",
+      company: <a href="https://du.ac.in/">Ramakrishna Mission Vidyapith Deoghar</a>,
+      period: "2018 - 2020",
+      description: "Percentage - 96.2 %"
     }
   ];
 
   const publicationsData = [
+    // {
+    //   title: "Modern JavaScript Frameworks: A Comparative Analysis",
+    //   journal: "Journal of Web Technologies",
+    //   year: "2022",
+    //   link: "#"
+    // },
     {
-      title: "Modern JavaScript Frameworks: A Comparative Analysis",
-      journal: "Journal of Web Technologies",
-      year: "2022",
-      link: "#"
-    },
-    {
-      title: "Optimizing React Applications for Performance",
-      conference: "International Conference on Web Engineering",
-      year: "2021",
-      link: "#"
-    },
-    {
-      title: "The Future of Web Development: Trends and Predictions",
-      book: "Web Development: Next Generation Technologies",
-      year: "2020",
-      link: "#"
+      title: " Enhanced UAV Tracking through Multi-Sensor Fusion and Extended Kalman Filtering",
+      conference: "Sixth Doctoral Symposium on Intelligence Enabled Research (DoSIER)",
+      year: "2024",
+      link: "https://dblp.org/rec/conf/dosier/BaidyaMMDSC24.html"
     }
+    // ,
+    // {
+    //   title: "The Future of Web Development: Trends and Predictions",
+    //   book: "Web Development: Next Generation Technologies",
+    //   year: "2020",
+    //   link: "#"
+    // }
+    
   ];
 
   const awardsData = [
     {
-      title: "Outstanding Contribution in Open Source",
-      organization: "GitHub",
-      year: "2022"
+      title: "Winner - Codeplay, Coding Competition, SXC Kolkata",
+      organization: "St. Xavier's College (Autonomous), Kolkata",
+      year: "Feb 2025"
     },
     {
-      title: "Web Developer of the Year",
-      organization: "Tech Excellence Awards",
-      year: "2021"
+      title: "Winner - The Turing Show, Coding Competition",
+      organization: "Ramakrishna Mission Vivekananda Educational and Research Institute",
+      year: "Jan 2025"
     },
     {
-      title: "Best Web Application",
-      organization: "Annual Dev Summit",
-      year: "2020"
+      title: "Sanjeev Arora Memorial Prize",
+      organization: "Atma Ram Sanatan Dharma College",
+      year: "May 2024"
+    },
+    {
+      title: "Meritorious Student Award 2023",
+      organization: "Atma Ram Sanatan Dharma College",
+      year: "May 2024"
     }
   ];
 
