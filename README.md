@@ -1,69 +1,44 @@
-# Welcome to your Lovable project
+# Personal Website of Gourab
 
-## Project info
+Welcome to the repository for my personal website, accessible at [www.gourab.org](http://www.gourab.org). This site serves as a comprehensive platform to showcase my professional journey, research interests, publications, and other relevant information.
 
-**URL**: https://lovable.dev/projects/507f3788-d18f-4e0d-8b48-8570da49344e
+## Table of Contents
 
-## How can I edit this code?
+- [About](#about)
+- [Features](#features)
+- [Technologies Used](#technologies-used)
+- [Getting Started](#getting-started)
+- [Usage](#usage)
+- [Contributing](#contributing)
+- [License](#license)
+- [Contact](#contact)
 
-There are several ways of editing your application.
+## About
 
-**Use Lovable**
+This website is designed to provide visitors with insights into my academic and professional background. It includes detailed information about my research areas, a curated list of publications, and updates on ongoing projects. The goal is to create a centralized hub for sharing my work and facilitating collaboration.
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/507f3788-d18f-4e0d-8b48-8570da49344e) and start prompting.
+## Features
 
-Changes made via Lovable will be committed automatically to this repo.
+- **Professional Biography**: An overview of my academic qualifications and career milestones.
+- **Research Interests**: Detailed descriptions of my areas of expertise and current research focus.
+- **Publications**: A comprehensive list of my published works, including journal articles and conference papers.
+- **News and Updates**: Regular posts about recent activities, achievements, and upcoming events.
+- **Contact Information**: Easy access to my professional contact details for inquiries and collaborations.
 
-**Use your preferred IDE**
+## Technologies Used
 
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
+The website is built using the following technologies:
 
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
+- **HTML5**: For structuring the content.
+- **CSS3**: For styling and layout.
+- **JavaScript**: For interactive elements and dynamic content.
+- **[Static Site Generator]**: (Optional) If a static site generator like Jekyll or Hugo is used, mention it here.
+- **Hosting Platform**: Specify the hosting service used (e.g., GitHub Pages, Netlify).
 
-Follow these steps:
+## Getting Started
 
-```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
+To set up a local copy of this repository for development or customization, follow these steps:
 
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
-
-# Step 3: Install the necessary dependencies.
-npm i
-
-# Step 4: Start the development server with auto-reloading and an instant preview.
-npm run dev
-```
-
-**Edit a file directly in GitHub**
-
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
-
-**Use GitHub Codespaces**
-
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
-
-## What technologies are used for this project?
-
-This project is built with .
-
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
-
-## How can I deploy this project?
-
-Simply open [Lovable](https://lovable.dev/projects/507f3788-d18f-4e0d-8b48-8570da49344e) and click on Share -> Publish.
-
-## I want to use a custom domain - is that possible?
-
-We don't support custom domains (yet). If you want to deploy your project under your own domain then we recommend using Netlify. Visit our docs for more details: [Custom domains](https://docs.lovable.dev/tips-tricks/custom-domain/)
+1. **Clone the Repository**:
+   ```bash
+   git clone https://github.com/yourusername/your-repo-name.git
