@@ -64,7 +64,7 @@ const Contact = () => {
       });
       
       // Replace 'your-email@example.com' with your actual email
-      await fetch('https://formsubmit.co/gourabdas.2128@gmail.com', {
+      await fetch('https://formsubmit.co/gyanbhaktishanti@gmail.com', {
         method: 'POST',
         body: formData,
         headers: {
