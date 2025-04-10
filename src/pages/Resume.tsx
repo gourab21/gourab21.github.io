@@ -13,6 +13,7 @@ const Resume = () => {
   const fieldsOfInterest = [
     "Machine Learning",
     "UAV Security",
+    "Internet of Things (IoT)",
     "Artificial Intelligence",
     "Web Development",
     "Frontend Architecture"
@@ -35,7 +36,7 @@ const Resume = () => {
       title: "Master of Science - Computer Science",
       company: <a href="https://vidyamandira.ac.in/">Ramakrishna Mission Vidyamandira</a>,
       period: "2024 - Present",
-      description: "CGPA - 9.76"
+      description: "CGPA - 9.76 (upto Semester 1)."
     },
     {
       id: "ed2",
@@ -47,7 +48,7 @@ const Resume = () => {
     {
       id: "ed3",
       title: "Higher Secondary Certificate Examination (+2)",
-      company: <a href="https://du.ac.in/">Ramakrishna Mission Vidyapith Deoghar</a>,
+      company: <a href="https://www.rkmvdeoghar.org/">Ramakrishna Mission Vidyapith Deoghar</a>,
       period: "2018 - 2020",
       description: "Percentage - 96.2 %"
     }

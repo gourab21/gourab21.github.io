@@ -64,7 +64,7 @@ const Contact = () => {
       });
       
       // Replace 'your-email@example.com' with your actual email
-      await fetch('https://formsubmit.co/john.doe@example.com', {
+      await fetch('https://formsubmit.co/gourabdas.2128@gmail.com', {
         method: 'POST',
         body: formData,
         headers: {
@@ -114,7 +114,7 @@ const Contact = () => {
                       </div>
                       <div>
                         <h3 className="text-sm font-medium">Email</h3>
-                        <p className="text-sm text-foreground/70">john.doe@example.com</p>
+                        <p className="text-sm text-foreground/70">gourabdas2128@gmail.com</p>
                       </div>
                     </div>
                     
@@ -124,7 +124,7 @@ const Contact = () => {
                       </div>
                       <div>
                         <h3 className="text-sm font-medium">Phone</h3>
-                        <p className="text-sm text-foreground/70">+1 (555) 123-4567</p>
+                        <p className="text-sm text-foreground/70">+91 7364997118</p>
                       </div>
                     </div>
                     
@@ -134,26 +134,26 @@ const Contact = () => {
                       </div>
                       <div>
                         <h3 className="text-sm font-medium">Location</h3>
-                        <p className="text-sm text-foreground/70">San Francisco, CA</p>
+                        <p className="text-sm text-foreground/70">Kolkata, India</p>
                       </div>
                     </div>
                   </div>
                 </div>
                 
                 <div className="glass-panel p-6 rounded-lg">
-                  <h2 className="text-xl font-semibold mb-4">Office Hours</h2>
+                  <h2 className="text-xl font-semibold mb-4">Calling Hours</h2>
                   <div className="space-y-2">
                     <div className="flex justify-between">
                       <span className="text-sm">Monday - Friday:</span>
-                      <span className="text-sm text-foreground/70">9:00 AM - 5:00 PM</span>
+                      <span className="text-sm text-foreground/70">4:00 PM - 10:00 PM</span>
                     </div>
                     <div className="flex justify-between">
                       <span className="text-sm">Saturday:</span>
-                      <span className="text-sm text-foreground/70">10:00 AM - 2:00 PM</span>
+                      <span className="text-sm text-foreground/70">2:00 PM - 10:00 PM</span>
                     </div>
                     <div className="flex justify-between">
                       <span className="text-sm">Sunday:</span>
-                      <span className="text-sm text-foreground/70">Closed</span>
+                      <span className="text-sm text-foreground/70">7:00 AM - 10:00 PM</span>
                     </div>
                   </div>
                 </div>

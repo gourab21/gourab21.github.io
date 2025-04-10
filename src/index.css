@@ -1,4 +1,3 @@
-
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap');
 @import url('https://fonts.cdnfonts.com/css/sf-mono');
 
@@ -163,16 +162,14 @@
   }
 }
 
-/* Fix for project card text overflow */
+/* Remove text cutoff in project cards */
 .glass-panel p {
-  overflow: hidden;
-  text-overflow: ellipsis;
-  display: -webkit-box;
-  -webkit-line-clamp: 3;
-  -webkit-box-orient: vertical;
-  max-height: 4.5rem; /* Ensure text doesn't exceed container */
-  margin-top: 0;
-  margin-bottom: 0.5rem;
+  overflow: visible;
+   text-overflow: initial;
+   display: block;
+   -webkit-line-clamp: initial;
+   -webkit-box-orient: initial;
+   max-height: none;
 }
 
 /* Mobile-specific styles */
