@@ -75,7 +75,7 @@ const Index = () => {
                 </div>
 
                 <p className="text-foreground/70 max-w-lg">
-                <b>UGC NET JRF and Assistant Professor Qualified</b> Postgraduate Student with expertise in <b>Machine Learning, AI, and UAV Security</b>. Passionate about solving real-world problems through research and technology. <b>1st place winner in two coding contests</b> at prestigious institutions. Focused on <b>AI-driven security solutions</b> and real-time data processing.
+                <b>UGC NET JRF and Assistant Professor Qualified</b> Post Graduate Student with expertise in <b>Machine Learning, AI, and UAV Security</b>. Passionate about solving real-world problems through research and technology. <b>1st place winner in two coding contests</b> at prestigious institutions. Focused on <b>AI-driven security solutions</b> and real-time data processing.
                 </p>
 
                 <div className="flex flex-col sm:flex-row gap-4 mt-4">
