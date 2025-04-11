@@ -52,6 +52,7 @@ const NewsSection = () => {
                   <span className={cn(
                     "text-xs px-2 py-0.5 rounded-full",
                     item.category === 'achievement' && "bg-green-100 text-green-800 dark:bg-green-900/30 dark:text-green-400",
+                    item.category === 'submission' && "bg-orange-100 text-orange-800 dark:bg-orange-900/30 dark:text-orange-400",
                     item.category === 'publication' && "bg-blue-100 text-blue-800 dark:bg-blue-900/30 dark:text-blue-400",
                     item.category === 'career' && "bg-purple-100 text-purple-800 dark:bg-purple-900/30 dark:text-purple-400",
                     item.category === 'general' && "bg-gray-100 text-gray-800 dark:bg-gray-800/50 dark:text-gray-400"
