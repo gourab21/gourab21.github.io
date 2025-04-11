@@ -15,6 +15,8 @@ interface Publication {
   link?: string;
 }
 
+// You need to change in Resume for Publiccation Type also.............
+
 const Publication = () => {
   useEffect(() => {
     document.title = "Gourab | Publications";

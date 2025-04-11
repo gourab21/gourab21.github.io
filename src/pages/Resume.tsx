@@ -193,7 +193,15 @@ const Resume = () => {
       institution: "Ramakrishna Mission Vidyamandira",
       email: "arindamsarkar@vidyamandira.ac.in",
       phone: "+91-98517 00660"
+    },
+    {
+      "name": "Revered Swami Divyasudhananda",
+      "title": "Monastic Member and Principal",
+      "institution": "Ramakrishna Mission Vidyapith, Deoghar",
+      "email": "divyasudhananda@gmail.com",
+      "phone": "+91-97485 35329"
     }
+    
   ];
   
   return (
@@ -344,7 +352,9 @@ const Resume = () => {
                   <div key={index} className="glass-panel p-4 rounded-lg">
                     <h3 className="font-medium">{pub.title}</h3>
                     <p className="text-sm text-foreground/70">
-                      {pub.journal || pub.conference || pub.book} • {pub.year}
+                    {/* You need to change here to add the publication type. */}
+                      {/* {pub.journal || pub.conference || pub.book} • {pub.year}    */}
+                      {pub.conference} • {pub.year}
                     </p>
                     <a 
                       href={pub.link} 
