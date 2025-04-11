@@ -47,37 +47,26 @@ const Contact = () => {
 
   const onSubmit = async (data: z.infer<typeof formSchema>) => {
     setIsSubmitting(true);
-    
+  
     try {
-      // Option 1: Send to a backend API
-      // Replace with your actual API endpoint
-      // const response = await fetch('https://your-api-endpoint.com/contact', {
-      //   method: 'POST',
-      //   headers: { 'Content-Type': 'application/json' },
-      //   body: JSON.stringify(data)
-      // });
-      
-      // Option 2: Send to FormSubmit (a free service)
       const formData = new FormData();
       Object.entries(data).forEach(([key, value]) => {
         formData.append(key, value);
       });
-      
-      // Replace 'your-email@example.com' with your actual email
-      await fetch('https://formsubmit.co/gourab.rkm@gmail.com', {
+  
+      await fetch('https://usebasin.com/f/3fc8a0313785', {
         method: 'POST',
         body: formData,
         headers: {
-          'Accept': 'application/json'
+          'Accept': 'application/json',
         },
       });
-      
+  
       toast({
         title: "Message sent!",
         description: "Thank you for your message. I'll get back to you soon.",
       });
-      
-      // Reset the form
+  
       form.reset();
     } catch (error) {
       console.error("Error sending message:", error);
@@ -90,6 +79,7 @@ const Contact = () => {
       setIsSubmitting(false);
     }
   };
+  
   
   return (
     <div className="page-transition-wrapper animate-page-in min-h-screen flex flex-col">
