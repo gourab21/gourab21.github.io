@@ -1,7 +1,7 @@
 
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { ChevronRight, Newspaper } from 'lucide-react';
+import { ChevronRight, ExternalLink, Newspaper } from 'lucide-react';
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import { newsData } from '@/data/newsData';
@@ -31,8 +31,19 @@ const NewsSection = () => {
           {latestNews.map((item) => (
             <Card key={item.id} className="h-full transition-all hover:shadow-md hover:border-primary/30 hover:translate-y-[-2px]">
               <CardHeader className="pb-2">
-                <CardTitle className="text-lg leading-tight group-hover:text-primary transition-colors">
+                <CardTitle className="text-lg leading-tight group-hover:text-primary transition-colors flex items-center">
                   {item.title}
+                  {item.link && (
+                    <a 
+                      href={item.link} 
+                      target="_blank" 
+                      rel="noopener noreferrer" 
+                      className="inline-flex items-center text-primary hover:text-primary/80 ml-2"
+                      onClick={(e) => e.stopPropagation()}
+                    >
+                      <ExternalLink className="h-3.5 w-3.5" />
+                    </a>
+                  )}
                 </CardTitle>
                 <CardDescription className="flex items-center gap-2">
                   <span className="text-xs">

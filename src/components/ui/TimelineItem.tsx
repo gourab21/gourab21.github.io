@@ -1,7 +1,7 @@
 
 import React from 'react';
 import { cn } from '@/lib/utils';
-import { Calendar } from 'lucide-react';
+import { Calendar, ExternalLink } from 'lucide-react';
 
 export interface TimelineItemData {
   id: string;
@@ -10,6 +10,7 @@ export interface TimelineItemData {
   period: string;
   description: string;
   skills?: string[];
+  link?: string; // Added optional link field
 }
 
 interface TimelineItemProps {
@@ -36,7 +37,19 @@ export default function TimelineItem({
       {/* Content */}
       <div className="glass-panel p-4 md:p-6 rounded-lg mb-6">
         <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-2 mb-2">
-          <h3 className="text-lg font-medium">{item.title}</h3>
+          <h3 className="text-lg font-medium">
+            {item.title}
+            {item.link && (
+              <a 
+                href={item.link} 
+                target="_blank" 
+                rel="noopener noreferrer" 
+                className="inline-flex items-center text-primary hover:text-primary/80 ml-2"
+              >
+                <ExternalLink className="h-4 w-4" />
+              </a>
+            )}
+          </h3>
           <div className="flex items-center text-sm text-foreground/70">
             <Calendar className="h-4 w-4 mr-1" />
             <span>{item.period}</span>

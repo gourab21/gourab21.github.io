@@ -1,7 +1,7 @@
 
 import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
-import { ChevronRight, Filter, Newspaper } from 'lucide-react';
+import { ChevronRight, ExternalLink, Filter, Newspaper } from 'lucide-react';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
@@ -73,8 +73,19 @@ const News = () => {
                   <Card className="w-full transition-all hover:shadow-md hover:border-primary/30 group-hover:transform group-hover:translate-y-[-2px]">
                     <CardHeader className="pb-2">
                       <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-2">
-                        <CardTitle className="text-xl leading-tight group-hover:text-primary transition-colors">
+                        <CardTitle className="text-xl leading-tight group-hover:text-primary transition-colors flex items-center">
                           {item.title}
+                          {item.link && (
+                            <a 
+                              href={item.link} 
+                              target="_blank" 
+                              rel="noopener noreferrer" 
+                              className="inline-flex items-center text-primary hover:text-primary/80 ml-2"
+                              onClick={(e) => e.stopPropagation()}
+                            >
+                              <ExternalLink className="h-4 w-4" />
+                            </a>
+                          )}
                         </CardTitle>
                         <div className="flex items-center gap-2">
                           <time dateTime={item.date} className="text-sm text-foreground/60">

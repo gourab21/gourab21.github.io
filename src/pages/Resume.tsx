@@ -51,6 +51,13 @@ const Resume = () => {
       company: <a href="https://www.rkmvdeoghar.org/">Ramakrishna Mission Vidyapith Deoghar</a>,
       period: "2018 - 2020",
       description: "Percentage - 96.2 %"
+    },
+    {
+      id: "ed4",
+      title: "Secondary Certificate Examination (10)",
+      company: <a href="https://www.rkmvdeoghar.org/">Sarada Vidya Mandir</a>,
+      period: "2018",
+      description: "Percentage - 93.8 %"
     }
   ];
 

@@ -17,7 +17,7 @@ interface Publication {
 
 const Publication = () => {
   useEffect(() => {
-    document.title = "Portfolio | Publications";
+    document.title = "Gourab | Publications";
   }, []);
 
   const [filter, setFilter] = useState<string | null>(null);

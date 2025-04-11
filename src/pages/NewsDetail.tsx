@@ -1,7 +1,7 @@
 
 import React, { useEffect } from 'react';
 import { useParams, useNavigate, Link } from 'react-router-dom';
-import { ArrowLeft, Calendar } from 'lucide-react';
+import { ArrowLeft, Calendar, ExternalLink } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
 import { newsData } from '@/data/newsData';
@@ -16,9 +16,9 @@ const NewsDetail = () => {
 
   useEffect(() => {
     if (newsItem) {
-      document.title = `Portfolio | ${newsItem.title}`;
+      document.title = `Gourab | ${newsItem.title}`;
     } else {
-      document.title = "Portfolio | News Not Found";
+      document.title = "Gourab | News Not Found";
     }
   }, [newsItem]);
 
@@ -53,7 +53,19 @@ const NewsDetail = () => {
               Back to all news
             </Link>
 
-            <h1 className="text-3xl md:text-4xl font-bold mb-4">{newsItem.title}</h1>
+            <h1 className="text-3xl md:text-4xl font-bold mb-4">
+              {newsItem.title}
+              {newsItem.link && (
+                <a 
+                  href={newsItem.link} 
+                  target="_blank" 
+                  rel="noopener noreferrer" 
+                  className="inline-flex items-center text-primary hover:text-primary/80 ml-2"
+                >
+                  <ExternalLink className="h-5 w-5" />
+                </a>
+              )}
+            </h1>
             
             <div className="flex flex-wrap items-center gap-3 mb-8">
               <div className="flex items-center gap-1 text-foreground/70">
@@ -83,6 +95,19 @@ const NewsDetail = () => {
               <div className="prose dark:prose-invert max-w-none">
                 <p>{newsItem.content}</p>
               </div>
+              
+              {newsItem.link && (
+                <div className="mt-6">
+                  <a 
+                    href={newsItem.link} 
+                    target="_blank" 
+                    rel="noopener noreferrer" 
+                    className="inline-flex items-center text-primary hover:text-primary/80 font-medium"
+                  >
+                    Visit related link <ExternalLink className="h-4 w-4 ml-2" />
+                  </a>
+                </div>
+              )}
             </div>
             
             <div className="flex justify-between items-center">

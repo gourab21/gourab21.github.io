@@ -3,49 +3,65 @@ import React, { useEffect } from 'react';
 import Navbar from '@/components/layout/Navbar';
 import Footer from '@/components/layout/Footer';
 import TimelineItem, { TimelineItemData } from '@/components/ui/TimelineItem';
+import { ScrollArea } from '@/components/ui/scroll-area';
 
 const Achievement = () => {
   useEffect(() => {
-    document.title = "Portfolio | Achievement";
+    document.title = "Gourab | Achievement";
   }, []);
 
   // Sample achievement data
   const achievementData: TimelineItemData[] = [
+
     {
-      id: "1",
-      title: "Best Paper Award",
-      company: "International Conference on Computer Science",
-      period: "June 2023",
-      description: "Received the Best Paper Award for research on advanced machine learning algorithms for natural language processing."
+      id: "99",
+      title: "Junior Research Fellowship (JRF) - UGC NET December 2024",
+      company: "University Grants Commission (UGC)",
+      period: "February 2025",
+      description: "Awarded Junior Research Fellowship (JRF) & Qualified for Assistant Professor in UGC NET December 2024.",
+      link: "https://drive.google.com/file/d/1ClMqzNc7ybJfEdNGWo0Ca3mQrNV2ir2x/view?usp=drive_link"
     },
     {
-      id: "2",
-      title: "Outstanding Research Contribution",
-      company: "Science Foundation",
-      period: "December 2022",
-      description: "Recognized for significant contributions to the field of computer vision, developing novel approaches for object detection in low-light environments."
+      id: "100",
+      title: "Winner - Codeplay @ Exabyte 2025",
+      company: "St. Xavier's College (Autonomous), Kolkata",
+      period: "February 2025",
+      description: "Secured 1st position in an Inter college Coding competition organized in their annual tech fest Exabyte 2025.",
+      link :"https://drive.google.com/file/d/1uoj8Zmj-ZCmJCYobYfvoGDF_bzzOP70t/view?usp=drive_link"
     },
     {
-      id: "3",
-      title: "Innovation Award",
-      company: "Tech Innovations Summit",
-      period: "March 2022",
-      description: "Awarded for developing an innovative solution using blockchain technology for secure medical record sharing."
+      id: "101",
+      title: "Winner - The Turing Show @ Perceptron 2025",
+      company: "Ramakrishna Mission Vivekananda Educational and Research Institute",
+      period: "January 2025",
+      description: "Used problem solving skills & Secured 1st position in an Inter college Coding competition organized by RKMVERI in their annual tech fest Perceptron 2025.",
+      link: "https://drive.google.com/file/d/17zqZrezTnzsUqR2laGm5fpC-sz7ouE3i/view?usp=drive_link"
     },
     {
-      id: "4",
-      title: "Google Developer Expert",
-      company: "Google",
-      period: "January 2022",
-      description: "Selected as a Google Developer Expert in Web Technologies, recognizing expertise and contributions to the developer community."
+      id: "102",
+      title: "Sanjeev Arora Memorial Prize",
+      company: "Atma Ram Sanatan Dharma College, University of Delhi",
+      period: "May 2024",
+      description: "For Excellence in Computer Science.",
+      link: "https://drive.google.com/file/d/1yOV94IvWaGP2_MXgcT-Kld1Qtkx8tBuG/view?usp=drive_link"
     },
     {
-      id: "5",
-      title: "IEEE Fellowship",
-      company: "IEEE",
-      period: "September 2021",
-      description: "Awarded fellowship for outstanding research in cybersecurity and privacy-preserving technologies."
+      id: "103",
+      title: "Meritorious Student Award 2023",
+      company: "Atma Ram Sanatan Dharma College, University of Delhi",
+      period: "May 2024",
+      description: "For Securing 1st Rank in the Department in Graduation.",
+      link: "https://drive.google.com/file/d/1M5qcZwk_cV_vt7GhDHcH_ZtJQHw0JQmF/view?usp=drive_link"
+    },
+    {
+      id: "104",
+      title: "Best Leadership Award 2019",
+      company: "Ramakrishna Mission Vidyapith, Deoghar",
+      period: "December 2019",
+      description: "For Outstanding Leadership in the Senior Secondary Section & co-ordinating various events.",
+      link: "https://drive.google.com/file/d/1DcWTBPH-82k4DYs4wpLvqZquASk14v0Z/view?usp=drive_link"
     }
+     
   ];
   
   return (
@@ -58,15 +74,17 @@ const Achievement = () => {
             <h1 className="text-3xl md:text-4xl font-bold mb-2">Achievements</h1>
             <div className="h-1 w-20 bg-primary mb-8"></div>
             
-            <div className="relative pl-6">
-              {achievementData.map((item, index) => (
-                <TimelineItem
-                  key={item.id}
-                  item={item}
-                  isLast={index === achievementData.length - 1}
-                />
-              ))}
-            </div>
+            <ScrollArea className="w-full overflow-x-auto">
+               <div className="relative pl-6">
+                 {achievementData.map((item, index) => (
+                   <TimelineItem
+                     key={item.id}
+                     item={item}
+                     isLast={index === achievementData.length - 1}
+                   />
+                 ))}
+               </div>
+             </ScrollArea>
           </div>
         </div>
       </main>
