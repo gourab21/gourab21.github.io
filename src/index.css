@@ -121,7 +121,45 @@
   .light .text-gradient {
     @apply bg-gradient-to-r from-primary via-orange-400 to-primary;
   }
+
+   /* Animation utilities */
+   .animate-in {
+    animation-duration: 350ms;
+    animation-fill-mode: both;
+    animation-timing-function: ease-out;
+  }
+  
+  .fade-in {
+    animation-name: fadeIn;
+  }
+  
+  .zoom-in-95 {
+    animation-name: zoomIn95;
+  }
+  
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+  
+  @keyframes zoomIn95 {
+    from {
+      opacity: 0;
+      transform: scale(0.95);
+    }
+    to {
+      opacity: 1;
+      transform: scale(1);
+    }
+  }
+
 }
+
+
 
 .page-transition-wrapper {
   position: relative;
@@ -171,6 +209,16 @@
    -webkit-box-orient: initial;
    max-height: none;
 }
+
+/* Gallery styles */
+.gallery-image-container {
+  transition: transform 0.3s ease-in-out;
+}
+
+.gallery-image-container:hover {
+  transform: scale(1.02);
+}
+
 
 /* Mobile-specific styles */
 @media (max-width: 768px) {

@@ -3,30 +3,23 @@ import { Link, useLocation } from 'react-router-dom';
 import { cn } from '@/lib/utils';
 import { Menu, X, Sun, Moon } from 'lucide-react';
 import { useTheme } from '@/contexts/ThemeContext';
+
 export default function Navbar() {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const location = useLocation();
-  const {
-    theme,
-    toggleTheme
-  } = useTheme();
-  const navLinks = [{
-    name: "Home",
-    path: "/"
-  }, {
-    name: "Achievement",
-    path: "/achievement"
-  }, {
-    name: "Publication",
-    path: "/publication"
-  }, {
-    name: "Codes",
-    path: "/codes"
-  }, {
-    name: "Resume",
-    path: "/resume"
-  }];
+  
+  const { theme, toggleTheme } = useTheme();
+   
+   const navLinks = [
+     { name: "Home", path: "/" },
+     { name: "Achievement", path: "/achievement" },
+     { name: "Publication", path: "/publication" },
+     { name: "Codes", path: "/codes" },
+     { name: "Resume", path: "/resume" },
+     { name: "Gallery", path: "/gallery" },
+   ];
+ 
   useEffect(() => {
     const handleScroll = () => {
       setIsScrolled(window.scrollY > 20);
