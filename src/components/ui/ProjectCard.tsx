@@ -23,12 +23,10 @@ export default function ProjectCard({ project, className }: ProjectCardProps) {
   
   // Project thumbnail images for each project
   const projectImages = {
-    "1": "/lovable-uploads/pogoo.jpg", // E-Commerce
-    "2": "/lovable-uploads/heartstack.jpg", // Task Management
-    "3": "/lovable-uploads/website.png", // Weather Dashboard
-    "4": "https://images.unsplash.com/photo-1611162617213-7d7a39e9b1d7?auto=format&fit=crop&w=800&q=80", // Social Media Analytics
-    "5": "https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d?auto=format&fit=crop&w=800&q=80", // Portfolio Website
-    "6": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=800&q=80", // Fitness Tracker
+    "3": "/lovable-uploads/pogoo.jpg", // Gate Pass Management System
+    "2": "/lovable-uploads/heartstack.jpg", // HeartStack
+    "1": "/lovable-uploads/website.png", // Personal Academic Website
+    // Add more images as needed
   };
   
   return (

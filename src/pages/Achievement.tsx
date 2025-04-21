@@ -14,7 +14,7 @@ const Achievement = () => {
   const achievementData: TimelineItemData[] = [
 
     {
-      id: "99",
+      id: "6",
       title: "Junior Research Fellowship (JRF) - UGC NET December 2024",
       company: "University Grants Commission (UGC)",
       period: "February 2025",
@@ -22,7 +22,7 @@ const Achievement = () => {
       link: "https://drive.google.com/file/d/1ClMqzNc7ybJfEdNGWo0Ca3mQrNV2ir2x/view?usp=drive_link"
     },
     {
-      id: "100",
+      id: "5",
       title: "Winner - Codeplay @ Exabyte 2025",
       company: "St. Xavier's College (Autonomous), Kolkata",
       period: "February 2025",
@@ -30,7 +30,7 @@ const Achievement = () => {
       link :"https://drive.google.com/file/d/1uoj8Zmj-ZCmJCYobYfvoGDF_bzzOP70t/view?usp=drive_link"
     },
     {
-      id: "101",
+      id: "4",
       title: "Winner - The Turing Show @ Perceptron 2025",
       company: "Ramakrishna Mission Vivekananda Educational and Research Institute",
       period: "January 2025",
@@ -38,7 +38,7 @@ const Achievement = () => {
       link: "https://drive.google.com/file/d/17zqZrezTnzsUqR2laGm5fpC-sz7ouE3i/view?usp=drive_link"
     },
     {
-      id: "102",
+      id: "3",
       title: "Sanjeev Arora Memorial Prize",
       company: "Atma Ram Sanatan Dharma College, University of Delhi",
       period: "May 2024",
@@ -46,7 +46,7 @@ const Achievement = () => {
       link: "https://drive.google.com/file/d/1yOV94IvWaGP2_MXgcT-Kld1Qtkx8tBuG/view?usp=drive_link"
     },
     {
-      id: "103",
+      id: "2",
       title: "Meritorious Student Award 2023",
       company: "Atma Ram Sanatan Dharma College, University of Delhi",
       period: "May 2024",
@@ -54,16 +54,23 @@ const Achievement = () => {
       link: "https://drive.google.com/file/d/1M5qcZwk_cV_vt7GhDHcH_ZtJQHw0JQmF/view?usp=drive_link"
     },
     {
-      id: "104",
+      id: "1",
       title: "Best Leadership Award 2019",
       company: "Ramakrishna Mission Vidyapith, Deoghar",
       period: "December 2019",
       description: "For Outstanding Leadership in the Senior Secondary Section & co-ordinating various events.",
       link: "https://drive.google.com/file/d/1DcWTBPH-82k4DYs4wpLvqZquASk14v0Z/view?usp=drive_link"
-    }
+    },
+    // start from 7
      
   ];
-  
+
+   // Sort achievements by id descending
+   const sortedAchievements = [...achievementData].sort(
+    (a, b) => Number(b.id) - Number(a.id)
+  );
+
+
   return (
     <div className="page-transition-wrapper animate-page-in min-h-screen flex flex-col">
       <Navbar />
@@ -76,11 +83,11 @@ const Achievement = () => {
             
             <ScrollArea className="w-full overflow-x-auto">
                <div className="relative pl-6">
-                 {achievementData.map((item, index) => (
+                 {sortedAchievements.map((item, index) => (
                    <TimelineItem
                      key={item.id}
                      item={item}
-                     isLast={index === achievementData.length - 1}
+                     isLast={index === sortedAchievements.length - 1}
                    />
                  ))}
                </div>

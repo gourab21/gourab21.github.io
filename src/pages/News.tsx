@@ -16,9 +16,11 @@ const News = () => {
   }, []);
 
   const [selectedCategory, setSelectedCategory] = useState<string | null>(null);
-  const sortedNews = [...newsData].sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime());
   
-  const filteredNews = selectedCategory 
+   // Sort by id descending (numeric comparison)
+   const sortedNews = [...newsData].sort((a, b) => Number(b.id) - Number(a.id)).reverse();
+ 
+   const filteredNews = selectedCategory
     ? sortedNews.filter(item => item.category === selectedCategory)
     : sortedNews;
 

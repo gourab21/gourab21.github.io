@@ -11,7 +11,8 @@ import { formatDistanceToNow } from 'date-fns';
 const NewsSection = () => {
   // Get only the most recent 3 news items
   const latestNews = [...newsData]
-    .sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime())
+  .sort((a, b) => Number(b.id) - Number(a.id))
+    .reverse()
     .slice(0, 3);
 
   return (

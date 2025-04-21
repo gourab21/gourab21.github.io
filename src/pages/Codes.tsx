@@ -7,7 +7,7 @@ import { ScrollArea } from '@/components/ui/scroll-area';
 
 const Codes = () => {
   useEffect(() => {
-    document.title = "Gourab | Codes";
+    document.title = "Gourab | Projects";
   }, []);
 
   const [filter, setFilter] = useState<string | null>(null);
@@ -15,7 +15,7 @@ const Codes = () => {
   // Sample projects data
   const projectsData: ProjectData[] = [
     {
-      id: "1",
+      id: "3",
       title: "Gate Pass Management System",
       description: "An RFID-based gate pass system using ESP32, Firebase, and MySQL, enabling real-time authentication, time-based access control, remote monitoring via dashboards.",
       tags: ["ESP32", "Firebase", "MySQL", "PHP", "HTML", "CSS", "JavaScript"],
@@ -30,7 +30,7 @@ const Codes = () => {
       githubUrl: "https://github.com/gourab21/HeartStack-A-Multi-Layered-Ensemble-Model-for-Heart-Disease-Prediction"
     },
     {
-      id: "3",
+      id: "1",
       title: "Personal Academic Website",
       description: "Academic Portfolio website with smooth animations and responsive design.",
       tags: ["Next.js", "Tailwind CSS", "TypeScript", "Vite"],
@@ -39,6 +39,7 @@ const Codes = () => {
     },
     
     // Add more projects as needed
+    // components/ui/ProjectCard.tsx contains all the images and links
   ];
 
   // Get unique tags from all projects
@@ -46,10 +47,13 @@ const Codes = () => {
     new Set(projectsData.flatMap(project => project.tags))
   ).sort();
 
+   // Sort projects by id descending
+   const sortedProjects = [...projectsData].sort((a, b) => Number(b.id) - Number(a.id));
+
   // Filter projects based on selected tag
   const filteredProjects = filter
-    ? projectsData.filter(project => project.tags.includes(filter))
-    : projectsData;
+    ? sortedProjects.filter(project => project.tags.includes(filter))
+    : sortedProjects;
 
   return (
     <div className="page-transition-wrapper animate-page-in min-h-screen flex flex-col">
@@ -58,7 +62,7 @@ const Codes = () => {
       <main className="flex-grow pt-24 pb-16">
         <div className="container mx-auto px-4 md:px-6">
           <div className="max-w-6xl mx-auto">
-            <h1 className="text-3xl md:text-4xl font-bold mb-8">Code Projects</h1>
+            <h1 className="text-3xl md:text-4xl font-bold mb-8">Projects</h1>
             {/* Filter tags - Made horizontally scrollable with mouse wheel and touch */}
             <div className="mb-8">
                <ScrollArea className="w-full" orientation="horizontal">

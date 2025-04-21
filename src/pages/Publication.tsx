@@ -81,7 +81,8 @@ const Publication = () => {
       year: "2024",
       type: "conference",
       link: "https://dblp.org/rec/conf/dosier/BaidyaMMDSC24.html"
-    }
+    },
+   
   ];
   
   const publicationTypes = [
@@ -91,9 +92,14 @@ const Publication = () => {
     { id: 'chapter', label: 'Book Chapters' }
   ];
   
+ // Sort publications by ID in descending order
+ const sortedPublications = [...publicationsData].sort((a, b) => 
+  parseInt(b.id) - parseInt(a.id)
+);
+
   const filteredPublications = filter
-    ? publicationsData.filter(pub => pub.type === filter)
-    : publicationsData;
+  ?sortedPublications.filter(pub => pub.type === filter)
+  : sortedPublications;
   
   return (
     <div className="page-transition-wrapper animate-page-in min-h-screen flex flex-col">

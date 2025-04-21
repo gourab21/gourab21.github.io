@@ -58,7 +58,7 @@ const Index = () => {
             <div className="container mx-auto max-w-4xl">
               <div className="flex flex-col md:flex-row items-center justify-between gap-8">
                 {/* Profile Image for Mobile (shown only on small screens) - Repositioned lower */}
-                <div className="md:hidden w-48 h-48 relative mb-6 mt-16">
+                <div className="md:hidden w-64 h-64 relative mb-6 mt-16">
                   <div className="w-full h-full rounded-full bg-primary/10 flex items-center justify-center overflow-hidden border border-white/10 relative">
                     {/* Person image with optimized loading */}
                     <div className="w-full h-full overflow-hidden rounded-full relative z-10">
