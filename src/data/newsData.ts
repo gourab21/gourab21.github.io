@@ -48,7 +48,7 @@ export const newsData: NewsItem[] = [
   {
     id: "995",
     title: "Selected for Summer Internship at IIT Kharagpur",
-    date: "2024-05-01",
+    date: "2025-04-15",
     summary: "Selected for Summer Internship at IIT Kharagpur under Professor Dr. Pabitra Mitra.",
     content: "I am excited to announce that I have been selected for a summer internship at IIT Kharagpur under the guidance of Professor Dr. Pabitra Mitra. He specializes in NLP and Machine Learning, and I will be working on a project related to these fields. This internship is a significant step in my academic journey, allowing me to apply my theoretical knowledge in a practical setting and gain hands-on experience in advanced research methodologies. \nI am looking forward to collaborating with fellow researchers and contributing to innovative projects that align with my interests Machine Learning. I am grateful for this opportunity and eager to learn from the esteemed faculty and researchers at IIT Kharagpur.",
     category: "achievement",
