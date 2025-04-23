@@ -111,7 +111,15 @@ const News = () => {
                       </div>
                     </CardHeader>
                     <CardContent>
-                      <p className="text-foreground/70">{item.summary}</p>
+                    <p 
+                         className="text-foreground/70"
+                         dangerouslySetInnerHTML={{ 
+                           __html: item.summary.replace(
+                             /<a\s+href="([^"]*)"[^>]*>(.*?)<\/a>/g, 
+                             (match, url, text) => `<a href="${url}" target="_blank" rel="noopener noreferrer" class="font-bold text-secondary-purple hover:underline">${text}</a>`
+                           ) 
+                         }} 
+                       />
                       <div className="mt-4">
                         <Button variant="link" className="p-0 h-auto text-primary">
                           Read more <ChevronRight className="h-3 w-3 ml-1" />

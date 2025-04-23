@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { ChevronRight, ExternalLink, Newspaper } from 'lucide-react';
@@ -63,7 +62,15 @@ const NewsSection = () => {
                 </CardDescription>
               </CardHeader>
               <CardContent>
-                <p className="text-sm text-foreground/70 line-clamp-3">{item.summary}</p>
+              <p 
+                   className="text-sm text-foreground/70 line-clamp-3"
+                   dangerouslySetInnerHTML={{ 
+                    __html: item.summary.replace(
+                      /<a\s+href="([^"]*)"[^>]*>(.*?)<\/a>/g, 
+                      (match, url, text) => `<a href="${url}" target="_blank" rel="noopener noreferrer" class="font-bold text-secondary-purple hover:underline">${text}</a>`
+                    ) 
+                  }} 
+                 />
               </CardContent>
               <CardFooter>
                 <Link to={`/news/${item.id}`}>

@@ -13,9 +13,9 @@ export interface NewsItem {
 export const newsData: NewsItem[] = [
   {
     id: "996",
-    title: "Selected for Indian Academy of Sciences - Summer Research Fellowship 2025",
+    title: "Selected for IASc-INSA-NASI Summer Research Fellowship 2025",
     date: "2025-04-10",
-    summary: "Got an offer letter from Indian Academy of Sciences for Summer Research Fellowship 2025 to work with Dr. C Pavan Kumar, IIIT Dharwad.",
+    summary: "Got an offer letter from Indian Academy of Sciences for Summer Research Fellowship 2025 to work with <a href='https://pavankumarphd.github.io/' target='_blank' rel='noopener noreferrer' class='font-bold text-secondary-purple hover:text-secondary-purple-hover '>Dr. C Pavan Kumar</a>, IIIT Dharwad.",
     content: "I am thrilled to announce that I have been selected for the prestigious Summer Research Fellowship 2025 by the Indian Academy of Sciences. I will be working under the guidance of Dr. C Pavan Kumar at IIIT Dharwad. This opportunity will allow me to delve deeper into my research interests and contribute to the field of Computer Science. I am grateful for the support of my mentors and peers throughout this journey. Since I am a M.Sc student and actively looking PhD opportunities after my Masters hence I am looking forward to this opportunity to gain valuable research experience and insights. I am excited about the potential collaborations and learning experiences that lie ahead.",
     category: "achievement",
   },
@@ -49,12 +49,13 @@ export const newsData: NewsItem[] = [
     id: "995",
     title: "Selected for Summer Internship at IIT Kharagpur",
     date: "2024-05-01",
-    summary: "Selected for Summer Internship at IIT Kharagpur under Professor Dr. Pabitra Mitra.",
-    content: "I am excited to announce that I have been selected for a summer internship at IIT Kharagpur under the guidance of Professor Dr. Pabitra Mitra. He specializes in NLP and Machine Learning, and I will be working on a project related to these fields. This internship is a significant step in my academic journey, allowing me to apply my theoretical knowledge in a practical setting and gain hands-on experience in advanced research methodologies. \nI am looking forward to collaborating with fellow researchers and contributing to innovative projects that align with my interests Machine Learning. I am grateful for this opportunity and eager to learn from the esteemed faculty and researchers at IIT Kharagpur.",
+    summary: "Selected for Summer Internship at IIT Kharagpur under Professor <a href='https://scholar.google.com/citations?user=5bXSZPYAAAAJ&hl=en&oi=ao' target='_blank' rel='noopener noreferrer' class='font-bold text-secondary-purple hover:text-secondary-purple-hover '>Dr. Pabitra Mitra.</a>",
+    content: "I am excited to announce that I have been selected for a summer internship at IIT Kharagpur under the guidance of Professor Dr. Pabitra Mitra.. He specializes in NLP and Machine Learning, and I will be working on a project related to these fields. This internship is a significant step in my academic journey, allowing me to apply my theoretical knowledge in a practical setting and gain hands-on experience in advanced research methodologies. \nI am looking forward to collaborating with fellow researchers and contributing to innovative projects that align with my interests Machine Learning. I am grateful for this opportunity and eager to learn from the esteemed faculty and researchers at IIT Kharagpur.",
     category: "achievement",
   },
   // Add more news items as needed with number decreasing...
-
+  
+  
 
 
 ];

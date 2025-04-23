@@ -92,11 +92,12 @@ const NewsDetail = () => {
             </div>
             
             <div className="glass-panel p-6 rounded-lg mb-8">
-              <p className="text-lg font-medium mb-4">{newsItem.summary}</p>
+            <p 
+                 className="text-lg font-medium mb-4"
+                 dangerouslySetInnerHTML={{ __html: newsItem.summary }}
+               />
               <div className="prose dark:prose-invert max-w-none">
-              {newsItem.content.split('\n').map((line, idx) => (
-                <p key={idx} className="mb-2">{line}</p>
-              ))}
+              <p dangerouslySetInnerHTML={{ __html: newsItem.content }} />
               </div>
               
               {newsItem.link && (
