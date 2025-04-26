@@ -271,25 +271,28 @@ const Resume = () => {
 
 
                   <a 
-                    href="https://orcid.org/0009-0009-6804-7255" 
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="p-2 rounded-full bg-secondary hover:bg-primary/20 transition-colors"
-                    aria-label="ORCID Profile"
-                  >
-                    <div className="h-5 w-5 flex items-center justify-center text-xs font-bold">ID</div>
-                  </a>
-                  <a 
-                    href="https://scholar.google.com/citations?user=XTZqxZgAAAAJ&hl=en" 
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="p-2 rounded-full bg-secondary hover:bg-primary/20 transition-colors"
-                    aria-label="Google Scholar Profile"
-                  >
-                    <div className="h-5 w-5 flex items-center justify-center text-xs font-bold">GS</div>
-                  </a>
-                </div>
-              </div>
+      href="https://orcid.org/0009-0009-6804-7255" 
+      target="_blank"
+      rel="noopener noreferrer"
+      className="p-2 rounded-full bg-secondary hover:bg-primary/20 transition-colors"
+      aria-label="ORCID Profile"
+    >
+      <span className="h-5 w-5 flex items-center justify-center text-[10px] font-bold bg-white text-black rounded-full">ID</span>
+    </a>
+
+    <a 
+  href="https://scholar.google.com/citations?user=XTZqxZgAAAAJ&hl=en" 
+  target="_blank"
+  rel="noopener noreferrer"
+  className="p-2 rounded-full bg-secondary hover:bg-primary/20 transition-colors"
+  aria-label="Google Scholar Profile"
+>
+  <span className="text-xl">🎓</span>
+</a>
+
+
+
+
               
               <a 
                 href="/lovable-uploads/GDAS_CV.pdf" 
