@@ -279,15 +279,15 @@ const Resume = () => {
                   >
                     <div className="h-5 w-5 flex items-center justify-center text-xs font-bold">ID</div>
                   </a>
-                  {/* <a 
-                    href="https://scholar.google.com" 
+                  <a 
+                    href="https://scholar.google.com/citations?user=XTZqxZgAAAAJ&hl=en" 
                     target="_blank"
                     rel="noopener noreferrer"
                     className="p-2 rounded-full bg-secondary hover:bg-primary/20 transition-colors"
                     aria-label="Google Scholar Profile"
                   >
                     <div className="h-5 w-5 flex items-center justify-center text-xs font-bold">GS</div>
-                  </a> */}
+                  </a>
                 </div>
               </div>
               
