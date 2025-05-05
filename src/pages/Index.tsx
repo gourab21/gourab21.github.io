@@ -100,10 +100,8 @@ const Index = () => {
                   </div>
                 </div>
                 
-                {/* Professional Image (hidden on mobile, shown on larger screens) */}
                 <div className="hidden md:block w-80 h-80 lg:w-96 lg:h-96 relative">
                   <div className="w-full h-full rounded-full bg-primary/10 flex items-center justify-center overflow-hidden border border-white/10 relative">
-                    {/* Person image with optimized loading */}
                     <div className="w-full h-full overflow-hidden rounded-full relative z-10">
                       <img 
                         src="/lovable-uploads/7a5ec607-643c-4b67-ad00-baa817466d01.png" 

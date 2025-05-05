@@ -308,7 +308,7 @@ const Resume = () => {
                 {fieldsOfInterest.map((field, index) => (
                   <span 
                     key={index} 
-                    className="px-4 py-2 bg-primary/10 text-primary rounded-lg"
+                    className="px-4 py-2 bg-primary/5 font-medium text-primary rounded-lg"
                   >
                     {field}
                   </span>

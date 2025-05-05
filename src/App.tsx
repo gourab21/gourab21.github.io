@@ -13,6 +13,8 @@ import Contact from "./pages/Contact";
 import News from "./pages/News";
 import NewsDetail from "./pages/NewsDetail";
 import Gallery from "./pages/Gallery";
+import GoogleScholar from "./pages/GoogleScholar";
+
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -34,6 +36,7 @@ const App = () => (
             <Route path="/news" element={<News />} />
             <Route path="/news/:id" element={<NewsDetail />} />
             <Route path="/gallery" element={<Gallery />} />
+            <Route path="/googlescholar" element={<GoogleScholar />} />
             <Route path="*" element={<NotFound />} />
           </Routes>
         </Router>

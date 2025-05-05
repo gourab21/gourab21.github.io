@@ -1,0 +1,128 @@
+{
+  "citations": 41,
+  "h_index": 4,
+  "publications": 15,
+  "last_updated": "2025-05-04 19:17:47",
+  "recent_publications": [
+    {
+      "title": "Enhanced UAV Tracking through Multi-Sensor Fusion and Extended Kalman Filtering",
+      "year": 2025,
+      "citation": "Proceedings of the 2024 Sixth Doctoral Symposium on Intelligence Enabled …, 2025",
+      "abstract": "Abstract not available",
+      "url": "#",
+      "authors": "A Chakraborty B Baidya and A Mondal and S Manna and G Das and A Santra"
+    },
+    {
+      "title": "Elevating security and disease forecasting in smart healthcare through artificial neural synchronized federated learning",
+      "year": 2024,
+      "citation": "Cluster Computing 27 (6), 7889-7914, 2024",
+      "abstract": "Protecting patient privacy has become a top priority with the introduction of Healthcare 5.0 and the growth of the Internet of Things. This study provides a revolutionary strategy that makes use of blockchain technology, information fusion, and federated illness prediction and deep extreme machine learning to meet the difficulties with regard to healthcare privacy. The suggested framework integrates several innovative technologies to make healthcare systems safe and privacy-preserving. The framework leverages the blockchain system, a distributed and unchangeable ledger, to secure the integrity, traceability and openness of private medical information. Patient privacy is better protected as a result, and there is less chance of data breaches or unauthorized access. The system makes use of the Linear Discriminant Analysis (LDA), Decision Tree, Extra Tree Classifier, AdaBoost, and Federated Deep Extreme Machine …",
+      "url": "https://link.springer.com/article/10.1007/s10586-024-04356-z",
+      "authors": "Tao Hai and Arindam Sarkar and Muammer Aksoy and Rahul Karmakar and Sarbajit Manna and Amrita Prasad"
+    },
+    {
+      "title": "Federated learning-guided intrusion detection and neural key exchange for safeguarding patient data on the internet of medical things",
+      "year": 2024,
+      "citation": "International Journal of Machine Learning and Cybernetics 15 (12), 5635-5665, 2024",
+      "abstract": "To improve the security of the Internet of Medical Things (IoMT) in healthcare, this paper offers a Federated Learning (FL)-guided Intrusion Detection System (IDS) and an Artificial Neural Network (ANN)-based key exchange mechanism inside a blockchain framework. The IDS are essential for spotting network anomalies and taking preventative action to guarantee the secure and dependable functioning of IoMT systems. The suggested method integrates FL-IDS with a blockchain-based ANN-based key exchange mechanism, providing several important benefits: (1) FL-based IDS creates a shared ledger that aggregates nearby weights and transmits historical weights that have been averaged, lowering computing effort, eliminating poisoning attacks, and improving data visibility and integrity throughout the shared database. (2) The system uses edge-based detection techniques to protect the cloud in the case of a …",
+      "url": "https://link.springer.com/article/10.1007/s13042-024-02269-2",
+      "authors": "Chongzhou Zhong and Arindam Sarkar and Sarbajit Manna and Mohammad Zubair Khan and Abdulfattah Noorwali and Ashish Das and Koyel Chakraborty"
+    },
+    {
+      "title": "Secured mutual wireless communication using real and imaginary-valued artificial neuronal synchronization and attack detection",
+      "year": 2024,
+      "citation": "Engineering Applications of Artificial Intelligence 137, 109203, 2024",
+      "abstract": "This research presents a cutting-edge security framework that integrates optimal Intrusion Detection System (IDS) and Artificial Neural Networks (ANNs)-based key exchange methods to enhance the reliability of mutual wireless communication in Internet of Medical Things (IoMT) networks. The advent of IoMT technology has brought about a significant transformation in patient care and healthcare operations. It allows for real-time monitoring and diagnosis to be conducted remotely. However, the protection of sensitive medical data has become a crucial issue that has to be addressed to maintain privacy and security. IoMT devices, which have limited processing capabilities, are especially susceptible to cyberattacks, therefore requiring the implementation of new security measures. The proposed methodology offers numerous advantages. By utilizing patient sensor data and analyzing network traffic, the suggested …",
+      "url": "https://www.sciencedirect.com/science/article/pii/S0952197624013617",
+      "authors": "Chengzhi Jiang and Arindam Sarkar and Abdulfattah Noorwali and Rahul Karmakar and Kamal M Othman and Sarbajit Manna"
+    },
+    {
+      "title": "A Non-Recursive Space-Efficient Blind Approach to Find All Possible Solutions to the N-Queens Problem",
+      "year": 2023,
+      "citation": "International Conference on Innovations in Data Analytics, 327-339, 2023",
+      "abstract": "Abstract not available",
+      "url": "#",
+      "authors": "Sarbajit Manna Suklav Ghosh"
+    },
+    {
+      "title": "Synergies of federated learning and blockchain for patient-centric sustainable next generation healthcare through distributed medical internet of things",
+      "year": 2023,
+      "citation": "IET Conference Proceedings CP870 2023 (39), 497-506, 2023",
+      "abstract": "This study investigates how blockchain and Federated Learning (FL) may work together to create a patientcentered, long-lasting healthcare ecosystem. The paper presents an innovative method for improving data privacy, security, and interoperability within healthcare systems by utilizing the distributed Medical Internet of Things (MIoT). The next generation of healthcare services will be revolutionized by the synergistic combination of FL and blockchain, enabling a decentralized framework for enhanced patient care and data-driven decisionmaking. Centralized Machine Learning (ML)-based methods lack security of patient's sensitive medical information as all information of patient are trained in central server. To tackle with this problem, this paper offers amalgamation of FL and blockchain technology which enables training of ML models collectively by making use of distributed MIoT data, enhances the accuracy …",
+      "url": "https://digital-library.theiet.org/doi/abs/10.1049/icp.2024.0533",
+      "authors": "Sarbajit Manna and Arindam Sarkar and Mohammad Zubair Khan and Ayman Noor"
+    },
+    {
+      "title": "Graphic user interface based implementation of longest common subsequence problem in DNA sequencing",
+      "year": 2021,
+      "citation": "AIP Conference Proceedings 2358 (1), 2021",
+      "abstract": "One of the oldest problems in computational biology is biological sequences in which similar portion of two DNA sequence is searched. Global alignment is designed for the same and Longest Common Subsequence (LCS), one of the most basic algorithms in the field of computer science, provides the best solution global alignment irrespective of the shape of its input sequences. The Longest common Subsequence problem with a variable number of strings is variable and strictly more than 2 is known as Multiple Longest Common Subsequence problem (MLCS) and it is an NP-hard problem. Dynamic Programming Algorithm can be employed to solve the same within polynomial time provided the number of strings is known. In this work, using python GUI-library tkinter, the GUI has been built with the code of the LCS problem embedded within the GUI application. This would not only help to see how the strings are …",
+      "url": "https://pubs.aip.org/aip/acp/article-abstract/2358/1/080021/1000525",
+      "authors": "Arpan Kumar and Sarbajit Manna"
+    },
+    {
+      "title": "Secure Symmetric Key Transmission of Messages Using Random Shuffling of Spiral Matrix and Multiplicative Inverse (RSSMMI)",
+      "year": 2018,
+      "citation": "Advanced Computational and Communication Paradigms: Proceedings of …, 2018",
+      "abstract": "A bit level block cipher based symmetric key cryptographic technique is proposed here. Entire plaintext file reads two characters at a time and according to the binary representation of ASCII value of these characters, 16-bit blocks are created and they are represented in a 4 × 4 spiral matrix. Then using random shuffling of spiral matrix and multiplicative inverse, 8-bit ciphertext blocks are generated for each 16-bit plaintext block. So here 50% compression is achieved in terms of size of ciphertext file. Apart from compression, RSSMMI technique has several advantages like formation of symmetric key dynamically and randomly, security, and equal applicability of this technique for large number of files of almost any type.",
+      "url": "https://link.springer.com/chapter/10.1007/978-981-10-8237-5_13",
+      "authors": "Sarbajit Manna and Soumya Banerjee and Prantik Panja and Ramkrishna Das and Saurabh Dutta"
+    },
+    {
+      "title": "Cumulative image encryption approach based on user defined operation, character repositioning, text key and image key encryption technique and secret sharing scheme",
+      "year": 2017,
+      "citation": "2017 IEEE International Conference on Power, Control, Signals and …, 2017",
+      "abstract": "The proposed scheme is a combined approach using Secret Sharing Scheme, Image Key Encryption and Text key Encryption using BWM&AS (Bit wise Masking and Alternate Sequence) operation and Character Repositioning Technique. Four level of encryption techniques have been combined together. In the proposed encryption technique the image key is encrypted using a user defined character positioned text key then that encrypted image key is used to encrypt the original image. Now the encrypted image is divided into N number of shares where each of the shares is again encrypted by unique image key in encryption end. Shares are retrieved from the encrypted shares using appropriate image key during decryption and the encrypted image is generated by taking K number of shares out of N. Lastly, the original image is retrieved by performing BWM&AS operation between the encrypted image key and …",
+      "url": "https://ieeexplore.ieee.org/abstract/document/8391813/",
+      "authors": "Ramkrishna Das and Sarbajit Manna and Saurabh Dutta"
+    },
+    {
+      "title": "Secure user authentication system using image-based otp and randomize numeric otp based on user unique biometric image and digit repositioning scheme",
+      "year": 2017,
+      "citation": "Communication, Devices, and Computing: Proceedings of ICCDC 2017, 83-93, 2017",
+      "abstract": "Proposed system introduces a combined one time password (OTP)-based authentication system where image OTP is used in first level and numeric OTP is used in the second level of authentication. Server randomly selects an image as image OTP and encrypts it using user unique biometric image and user-defined Bit-wise Masking and Alternate Sequence (BWMAS) operation. This encrypted image OTP will be shared and to be decrypt by the user. Then the system generates a large random number as first part of numeric OTP within a range where range value is derived from the user password. Second part of numeric OTP is generated from the values of randomly selected blocks of the randomly selected pixels of user biometric image. Finally we combine those OTPs using alternate merging and generate intermediate numeric OTP which will be shared from server to user. Final numeric OTP will be …",
+      "url": "https://link.springer.com/chapter/10.1007/978-981-10-8585-7_8",
+      "authors": "Ramkrishna Das and Sarbajit Manna and Saurabh Dutta"
+    },
+    {
+      "title": "Design and implementation of a two-layered hybrid cryptosystem",
+      "year": 2017,
+      "citation": "2017 Third International Conference on Research in Computational …, 2017",
+      "abstract": "A two-layered hybrid cryptosystem is proposed here. In symmetric key cryptosystem, the shared key is sent over a channel to the receiver. If an encrypted shared key is sent, the chance of intercepting the original key is reduced to some extent. So a hybrid cryptosystem is introduced here which is a combination of both asymmetric key and symmetric key cryptosystem. In the proposed technique, the encryption of the shared key is done using RSA algorithm by receiver's public key. Then the plain text is encrypted using the shared key to form the cipher text. The cipher text along with the encrypted shared key is sent to the receiver. The encrypted shared key is decrypted by the receiver using his or her private key. After that, using the decrypted key, the plain text is recovered by the receiver. Advantage of the proposed cryptosystem is that even if the shared key is intercepted during transmission, it is not the original …",
+      "url": "https://ieeexplore.ieee.org/abstract/document/8234529/",
+      "authors": "Sarbajit Manna and Mohit Prajapati and Ayan Sett and Kallol Banerjee and Saurabh Dutta"
+    },
+    {
+      "title": "Proposing A Ciphering Protocol",
+      "year": 2016,
+      "citation": "arXiv preprint arXiv:1605.02954, 2016",
+      "abstract": "This paper describes a novel bit level stream cipher based symmetric key cryptographic technique. At first, sender and receiver agree upon a symmetric key. Then the symmetric key is formed using Greatest Common Divisor (G.C.D) of sum of even or odd bit positional weightth even or odd number and a symmetric key value is derived from the symmetric by the sender. The symmetric key value is XORed with the ASCII value of the plain text character to get the cipher text character. This is repeated for the entire plain text file. The symmetric key and the entire cipher text file is sent by the sender to the receiver. From the symmetric key, the receiver calculates the symmetric key value. The symmetric key value is XORed with the cipher text character to get back the plain text character. When this process is repeated for every cipher text character, then entire plain text file is formed by the decryption process. This technique has several advantages like formation of symmetric key dynamically, more emphasis on symmetric key value rather than the symmetric key, security and equal applicability for encryption and decryption of a large number of files of almost any type or extension.",
+      "url": "https://arxiv.org/abs/1605.02954",
+      "authors": "Sarbajit Manna and Saurabh Dutta"
+    },
+    {
+      "title": "A stream cipher based symmetric key cryptographic technique using ASCII value of number and position of 0’s and 1’s",
+      "year": 2016,
+      "citation": "International Conference on Computational Science and Engineering (ICCSE …, 2016",
+      "abstract": "Abstract not available",
+      "url": "#",
+      "authors": "Saurabh Dutta Sarbajit Manna"
+    },
+    {
+      "title": "Proposing A Symmetric Key Bit-Level Block Cipher",
+      "year": 2015,
+      "citation": "The Bulletin of Engineering & Science 6 (2), 37-41, 2015",
+      "abstract": "Abstract not available",
+      "url": "#",
+      "authors": "Saurabh Dutta Sarbajit Manna"
+    },
+    {
+      "title": "A Stream Cipher based Bit-Level Symmetric Key Cryptographic Technique using Chen Prime Number",
+      "year": 2014,
+      "citation": "Int. J. Comput. Appl 107 (12), 975-8887, 2014",
+      "abstract": "In this paper, a stream cipher based symmetric key cryptographic technique based on Chen prime number has been proposed. The proposed technique is suitable for encryption and decryption of a large number of files of almost any type. A symmetric key is formed by the sender directly from the plain text using Chen prime number. Then a symmetric key value is derived from the symmetric key which is used to form the cipher text. The symmetric key is sent to the receiver by the sender. The symmetric key value is derived by the receiver from the symmetric key which is used for decryption. To enhance security, focus is to secure the symmetric key value rather than the symmetric key.",
+      "url": "https://www.academia.edu/download/85032444/pxc3900328.pdf",
+      "authors": "Sarbajit Manna and Saurabh Dutta"
+    }
+  ]
+}

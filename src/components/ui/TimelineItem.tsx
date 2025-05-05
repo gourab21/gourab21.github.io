@@ -36,7 +36,7 @@ export default function TimelineItem({
       
       {/* Content */}
       <div className="glass-panel p-4 md:p-6 rounded-lg mb-6">
-        <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-2 mb-2">
+        <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-2 mb-1">
           <h3 className="text-lg font-medium">
             {item.title}
             {item.link && (
@@ -56,9 +56,9 @@ export default function TimelineItem({
           </div>
         </div>
         
-        <p className="text-sm text-primary font-medium mb-3">{item.company}</p>
+        <p className="text-base text-primary font-normal mb-2">{item.company}</p>
         
-        <p className="text-sm text-foreground/80 mb-4">{item.description}</p>
+        <p className="text-sm text-foreground/90 mb-2">{item.description}</p>
         
         {item.skills && item.skills.length > 0 && (
           <div className="flex flex-wrap gap-2">

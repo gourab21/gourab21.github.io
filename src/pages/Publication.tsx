@@ -26,53 +26,7 @@ const Publication = () => {
 
   // Sample publications data
   const publicationsData: Publication[] = [
-    // {
-    //   id: "1",
-    //   title: "Advanced Techniques in Natural Language Processing for Social Media Analysis",
-    //   authors: "Doe, J., Smith, A., & Johnson, B.",
-    //   venue: "Journal of Computational Linguistics",
-    //   year: "2023",
-    //   type: "journal",
-    //   doi: "10.1234/jcl.2023.1234",
-    //   link: "https://example.com/publication1"
-    // },
-    // {
-    //   id: "2",
-    //   title: "A Novel Approach to Real-time Object Detection in Low-Resource Environments",
-    //   authors: "Doe, J., Williams, C., & Brown, D.",
-    //   venue: "International Conference on Computer Vision (ICCV)",
-    //   year: "2022",
-    //   type: "conference",
-    //   link: "https://example.com/publication2"
-    // },
-    // {
-    //   id: "3",
-    //   title: "Blockchain Technologies: Applications and Future Directions",
-    //   authors: "Garcia, E., Doe, J., & Lee, M.",
-    //   venue: "Springer Publishing",
-    //   year: "2022",
-    //   type: "book",
-    //   doi: "10.5678/sp.2022.5678"
-    // },
-    // {
-    //   id: "4",
-    //   title: "Privacy-Preserving Machine Learning: Methods and Applications",
-    //   authors: "Doe, J., Anderson, R.",
-    //   venue: "Handbook of Artificial Intelligence in Healthcare",
-    //   year: "2021",
-    //   type: "chapter",
-    //   doi: "10.9101/ai.2021.9101"
-    // },
-    // {
-    //   id: "5",
-    //   title: "Efficient Deep Learning Architectures for Edge Computing",
-    //   authors: "Doe, J., Singh, P., & Thomas, L.",
-    //   venue: "IEEE Transactions on Pattern Analysis and Machine Intelligence",
-    //   year: "2021",
-    //   type: "journal",
-    //   doi: "10.1121/ieee.2021.1121",
-    //   link: "https://example.com/publication5"
-    // },
+    
     {
       id: "1",
       title: "Enhanced UAV Tracking through Multi-Sensor Fusion and Extended Kalman Filtering",

@@ -17,8 +17,8 @@
     --popover-foreground: 240 10% 3.9%;
     
     --primary: 24 100% 50%;
-    --primary-foreground: 0 0% 98%;
-    
+    --primary-foreground: 0 0% 98%;   
+
     --secondary: 24 30% 95%;
     --secondary-foreground: 240 5.9% 10%;
     
@@ -122,8 +122,17 @@
     @apply bg-gradient-to-r from-primary via-orange-400 to-primary;
   }
 
-   /* Animation utilities */
-   .animate-in {
+  /* Author text color for light and dark modes */
+  .author-text {
+    color: hsl(180, 50%, 40%); /* Muted teal for light mode */
+  }
+  
+  .dark .author-text {
+    color: hsl(180, 70%, 70%); /* Soft cyan for dark mode */
+  }
+
+  /* Animation utilities */
+  .animate-in {
     animation-duration: 350ms;
     animation-fill-mode: both;
     animation-timing-function: ease-out;
@@ -156,10 +165,7 @@
       transform: scale(1);
     }
   }
-
 }
-
-
 
 .page-transition-wrapper {
   position: relative;
@@ -203,11 +209,11 @@
 /* Remove text cutoff in project cards */
 .glass-panel p {
   overflow: visible;
-   text-overflow: initial;
-   display: block;
-   -webkit-line-clamp: initial;
-   -webkit-box-orient: initial;
-   max-height: none;
+  text-overflow: initial;
+  display: block;
+  -webkit-line-clamp: initial;
+  -webkit-box-orient: initial;
+  max-height: none;
 }
 
 /* Gallery styles */
@@ -218,7 +224,6 @@
 .gallery-image-container:hover {
   transform: scale(1.02);
 }
-
 
 /* Mobile-specific styles */
 @media (max-width: 768px) {

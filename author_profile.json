@@ -1,0 +1,145 @@
+{
+    "container_type": "Author",
+    "filled": [
+        "basics",
+        "indices",
+        "counts",
+        "coauthors",
+        "publications",
+        "public_access"
+    ],
+    "scholar_id": "IV97v-wAAAAJ",
+    "source": "AUTHOR_PROFILE_PAGE",
+    "name": "Bodhisattwa Baidya",
+    "url_picture": "https://scholar.googleusercontent.com/citations?view_op=view_photo&user=IV97v-wAAAAJ&citpid=7",
+    "affiliation": "Research Scholar, Ramakrishna Mission Vidyamandira,Belur Math,Howrah,West Bengal,India",
+    "interests": [
+        "UAV",
+        "DRONE",
+        "COMPUTER NETWORKS",
+        "CRYPTOGRAPHY",
+        "CYBER SECURITY"
+    ],
+    "email_domain": "@vidyamandira.ac.in",
+    "hindex": 0,
+    "hindex5y": 0,
+    "i10index": 0,
+    "i10index5y": 0,
+    "cites_per_year": {},
+    "coauthors": [
+        {
+            "container_type": "Author",
+            "filled": [],
+            "scholar_id": "jN14fwwAAAAJ",
+            "source": "CO_AUTHORS_LIST",
+            "name": "Dr. Atanu Mondal",
+            "affiliation": "Ramakrishna Mission Vidyamandira, Howrah."
+        },
+        {
+            "container_type": "Author",
+            "filled": [],
+            "scholar_id": "9LP8OhwAAAAJ",
+            "source": "CO_AUTHORS_LIST",
+            "name": "satish anamalamudi",
+            "affiliation": "SRM University-AP, Amaravati"
+        },
+        {
+            "container_type": "Author",
+            "filled": [],
+            "scholar_id": "n2aiyFoAAAAJ",
+            "source": "CO_AUTHORS_LIST",
+            "name": "Keshav Kaushik (Among World's Top...",
+            "affiliation": "SSCSE, Sharda University. Vice-Chairperson, ACM Meerut Professional Chapter"
+        }
+    ],
+    "publications": [
+        {
+            "container_type": "Publication",
+            "source": "AUTHOR_PUBLICATION_ENTRY",
+            "bib": {
+                "title": "Cutting-Edge Innovations: The Future of AGI Drones in Climate Change",
+                "pub_year": "2025",
+                "citation": "Artificial General Intelligence-Based Drones for Climate Change, 299-342, 2025"
+            },
+            "filled": false,
+            "author_pub_id": "IV97v-wAAAAJ:qjMakFHDy7sC",
+            "num_citations": 0
+        },
+        {
+            "container_type": "Publication",
+            "source": "AUTHOR_PUBLICATION_ENTRY",
+            "bib": {
+                "title": "Energy-Efficient UAV Path Planning Using PSO-ABC Algorithm in Obstacle-Rich Environments",
+                "pub_year": "2024",
+                "citation": "2024 OITS International Conference on Information Technology (OCIT), 199-204, 2024"
+            },
+            "filled": false,
+            "author_pub_id": "IV97v-wAAAAJ:Tyk-4Ss8FVUC",
+            "num_citations": 0
+        },
+        {
+            "container_type": "Publication",
+            "source": "AUTHOR_PUBLICATION_ENTRY",
+            "bib": {
+                "title": "Agamographs Using Rubik's Cubes: Morphing Images Through Strategic Mosaic Arrangements",
+                "pub_year": "2024",
+                "citation": "2024 OITS International Conference on Information Technology (OCIT), 766-771, 2024"
+            },
+            "filled": false,
+            "author_pub_id": "IV97v-wAAAAJ:zYLM7Y9cAGgC",
+            "num_citations": 0
+        },
+        {
+            "container_type": "Publication",
+            "source": "AUTHOR_PUBLICATION_ENTRY",
+            "bib": {
+                "title": "Quantum-Resistant Lattice-Based Cryptography for Secure UAV Communications",
+                "pub_year": "2024",
+                "citation": "International Conference on Smart Systems and Wireless Communication, 507-524, 2024"
+            },
+            "filled": false,
+            "author_pub_id": "IV97v-wAAAAJ:UeHWp8X0CEIC",
+            "num_citations": 0
+        },
+        {
+            "container_type": "Publication",
+            "source": "AUTHOR_PUBLICATION_ENTRY",
+            "bib": {
+                "title": "Quantum lattice: securing UAV swarms in the post-quantum era",
+                "pub_year": "2024",
+                "citation": "IET Conference Proceedings CP912 2024 (38), 26-31, 2024"
+            },
+            "filled": false,
+            "author_pub_id": "IV97v-wAAAAJ:IjCSPb-OGe4C",
+            "num_citations": 0
+        },
+        {
+            "container_type": "Publication",
+            "source": "AUTHOR_PUBLICATION_ENTRY",
+            "bib": {
+                "title": "Enhanced UAV Tracking through Multi-Sensor Fusion and Extended Kalman Filtering",
+                "pub_year": "2024",
+                "citation": "Sixth Doctoral Symposium on Intelligence Enabled Research, Sukanta …, 2024"
+            },
+            "filled": false,
+            "author_pub_id": "IV97v-wAAAAJ:d1gkVwhDpl0C",
+            "num_citations": 0
+        },
+        {
+            "container_type": "Publication",
+            "source": "AUTHOR_PUBLICATION_ENTRY",
+            "bib": {
+                "title": "An Efficient Path Selection in Software Defined UAV Network",
+                "pub_year": "2023",
+                "citation": "2023 14th International Conference on Computing Communication and Networking …, 2023"
+            },
+            "filled": false,
+            "author_pub_id": "IV97v-wAAAAJ:u-x6o8ySG0sC",
+            "num_citations": 0
+        }
+    ],
+    "public_access": {
+        "available": 0,
+        "not_available": 0
+    }
+}

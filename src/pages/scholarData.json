@@ -1,0 +1,20 @@
+{
+    "citations": 0,
+    "h_index": 0,
+    "publications": 1,
+    "last_updated": "2025-05-04 19:17:47",
+    "recent_publications": [
+      {
+        "title": "Enhanced UAV Tracking through Multi-Sensor Fusion and Extended Kalman Filtering",
+        "year": 2025,
+        "citation": "Proceedings of the Sixth Doctoral Symposium on Intelligence Enabled Research, Sukanta Mahavidyalaya, Dhupguri, India, 2025",
+        "abstract": "This research introduces a sophisticated method for UAV tracking utilizing multi-sensor fusion and Extended Kalman Filter (EKF) techniques. We model a sophisticated 3D UAV trajectory alongside diverse sensor information, encompassing RF signal strength, radar range and velocity, audio signals, and optical location data. The EKF technique is employed to estimate the drone’s position and velocity, exhibiting enhanced tracking precision relative to individual sensor observations. The simulation integrates variable noise levels and adaptive estimation of measurement noise covariance to improve the resilience of the EKF. Real-time visualization of sensor data and EKF estimates facilitates instant evaluation of the algorithm’s efficacy. The results indicate that the EKF efficiently eliminates sensor noise, yielding a more refined and precise trajectory estimation. The analysis of sensor data indicates the average signal strengths and standard deviations for each sensor category. The EKF exhibits a 12.5% enhancement in tracking accuracy relative to unprocessed optical sensor data, with mean tracking errors of 0.07 m for the EKF compared to 0.08 m for the optical sensor independently. This study emphasizes the efficacy of multi-sensor fusion and EKF implementation in improving drone tracking capabilities across diverse applications, such as surveillance, search and rescue, and air traffic management.",
+        "url": "https://ceur-ws.org/Vol-3900/Paper19.pdf",
+        "authors": "Bodhisattwa Baidya, Atanu Mondal, Sarbajit Manna, Gourab Das, Anirban Santra, Arkaprava Chakraborty",
+        "type":"conference"
+      }
+      
+      
+    ]
+  }
+  
