@@ -15,7 +15,7 @@ export default function Navbar() {
      { name: "Home", path: "/" },
      { name: "Achievement", path: "/achievement" },
      { name: "Publication", path: "/publication" },
-     { name: "Google Scholar", path: "/googlescholar" },
+    //  { name: "Google Scholar", path: "/googlescholar" },
      { name: "Codes", path: "/codes" },
      { name: "Resume", path: "/resume" },
      { name: "Gallery", path: "/gallery" },
