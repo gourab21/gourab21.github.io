@@ -41,7 +41,7 @@ const Index = () => {
   
   return (
     <>
-      {loading && <LoadingSpinner text="आत्मनो मोक्षार्थं जगद्धिताय‌ च" />}
+      {loading && <LoadingSpinner text="ब्रह्म सत्यं जगन्मिथ्या जीवो ब्रह्मैव नापरः" />}
       
       <div className={cn(
         "page-transition-wrapper min-h-screen flex flex-col",

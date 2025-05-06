@@ -25,11 +25,11 @@ const LoadingSpinner = ({ text, className }: LoadingSpinnerProps) => {
         <div className="mt-6 text-center">
           <p className={cn(
             "text-primary animate-pulse-slow",
-            isMobile ? "text-lg font-medium" : "text-2xl font-bold"
+            isMobile ? "text-xl font-medium" : "text-3xl font-bold"
           )}>
             {text}
           </p>
-          <p className="text-sm text-muted-foreground mt-2 opacity-80">For one's own salvation and for the welfare of the world</p>
+          <p className="text-lg md:text-base text-muted-foreground mt-2 opacity-100">Brahman is real, the universe is mithya.<br/>The jiva is Brahman itself and not different.</p>
         </div>
       )}
     </div>
