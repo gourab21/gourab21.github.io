@@ -1,5 +1,5 @@
 import React, {useEffect, useState} from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import { ChevronRight, ExternalLink, Newspaper } from 'lucide-react';
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
@@ -19,6 +19,7 @@ const NewsSection = () => {
     const [autoplay, setAutoplay] = useState(true);
     const [api, setApi] = useState<any>();
     const [isRewinding, setIsRewinding] = useState(false);
+    const navigate = useNavigate();
 
     // Setup autoplay for the carousel
     useEffect(() => {
@@ -47,10 +48,19 @@ if (!api.canScrollNext()) {
 } else {
   api.scrollNext();
 }      
-}, 1000); // Change slide every 5 seconds
+}, 1700); // Change slide every 5 seconds
       
       return () => clearInterval(interval);
     }, [api, autoplay, isRewinding, latestNews.length]);
+
+
+    const handleCardClick = (id: string, e: React.MouseEvent) => {
+      // Don't navigate if clicking on an external link
+      if ((e.target as HTMLElement).closest('a[href^="http"]')) {
+        return;
+      }
+      navigate(`/news/${id}`);
+    };
 
 
   return (
@@ -76,7 +86,10 @@ if (!api.canScrollNext()) {
            <CarouselContent>
              {latestNews.map((item) => (
                <CarouselItem key={item.id} className="md:basis-1/3 lg:basis-1/3">
-                 <Card className="h-full transition-all hover:shadow-md hover:border-primary/30 hover:translate-y-[-2px]">
+                  <Card 
+                  className="h-full transition-all hover:shadow-md hover:border-primary/30 hover:translate-y-[-2px] cursor-pointer"
+                  onClick={(e) => handleCardClick(item.id, e)}
+                >
                    <CardHeader className="pb-2">
                      <CardTitle className="text-lg leading-tight group-hover:text-primary transition-colors flex items-center">
                        {item.title}
@@ -119,11 +132,10 @@ if (!api.canScrollNext()) {
                      />
                    </CardContent>
                    <CardFooter>
-                     <Link to={`/news/${item.id}`}>
-                       <Button variant="link" className="p-0 h-auto text-primary justify-start">
-                         Read more <ChevronRight className="h-3 w-3 ml-1" />
-                       </Button>
-                     </Link>
+                     {/* Keep the Read more button visually, but it's part of the clickable card now */}
+                    <Button variant="link" className="p-0 h-auto text-primary justify-start pointer-events-none">
+                      Read more <ChevronRight className="h-3 w-3 ml-1" />
+                    </Button>
                    </CardFooter>
                  </Card>
                </CarouselItem>
