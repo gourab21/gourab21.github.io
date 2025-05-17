@@ -17,43 +17,43 @@ export default function Footer() {
   const socialLinks: SocialLink[] = [
     {
       name: 'GitHub',
-      href: 'https://github.com',
+      href: 'https://github.com/gourab21',
       icon: <Github className="h-7 w-7" />,
       isExternal: true
     },
     {
       name: 'LinkedIn',
-      href: 'https://linkedin.com',
+      href: 'https://www.linkedin.com/in/gourab21/',
       icon: <Linkedin className="h-7 w-7" />,
       isExternal: true
     },
     {
       name: 'X (Twitter)',
-      href: 'https://twitter.com',
+      href: 'https://x.com/gourabdas21',
       icon: <Twitter className="h-7 w-7" />,
       isExternal: true
     },
     {
       name: 'YouTube',
-      href: 'https://youtube.com',
+      href: 'https://www.youtube.com/@gourabdas2128',
       icon: <YoutubeIcon className="h-7 w-7" />,
       isExternal: true
     },
     {
       name: 'Google Scholar',
-      href: '/googlescholar',
+      href: 'https://scholar.google.com/citations?user=XTZqxZgAAAAJ&hl=en',
       icon: <svg viewBox="0 0 24 24" className="h-7 w-7 fill-current"><path d="M12 24a7 7 0 1 1 0-14 7 7 0 0 1 0 14Zm0-24L0 9.5l4.838 3.94A8 8 0 0 1 12 10a8 8 0 0 1 7.162 3.44L24 9.5 12 0Z" /></svg>,
-      isExternal: false
+      isExternal: true
     },
     {
       name: 'ORCID',
-      href: 'https://orcid.org',
+      href: 'https://orcid.org/0009-0009-6804-7255',
       icon: <div className="h-7 w-7 flex items-center justify-center text-sm font-bold">ID</div>,
       isExternal: true
     },
     {
       name: 'Email',
-      href: 'mailto:hello@example.com',
+      href: 'mailto:gourabdas2128@gmail.com',
       icon: <Mail className="h-7 w-7" />,
       isExternal: true
     }
