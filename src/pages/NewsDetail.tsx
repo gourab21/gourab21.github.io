@@ -22,6 +22,17 @@ const NewsDetail = () => {
     }
   }, [newsItem]);
 
+    // Function to convert newlines to <br> tags
+  const formatTextWithLineBreaks = (text: string) => {
+    return text.split('\n').map((line, index) => (
+      <React.Fragment key={index}>
+        {line}
+        {index < text.split('\n').length - 1 && <br />}
+      </React.Fragment>
+    ));
+  };
+
+
   if (!newsItem) {
     return (
       <div className="page-transition-wrapper animate-page-in min-h-screen flex flex-col">
@@ -97,7 +108,7 @@ const NewsDetail = () => {
                  dangerouslySetInnerHTML={{ __html: newsItem.summary }}
                />
               <div className="prose dark:prose-invert max-w-none">
-              <p dangerouslySetInnerHTML={{ __html: newsItem.content }} />
+                {formatTextWithLineBreaks(newsItem.content)}
               </div>
               
               {newsItem.link && (

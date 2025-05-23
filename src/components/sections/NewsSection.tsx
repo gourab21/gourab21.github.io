@@ -48,7 +48,7 @@ if (!api.canScrollNext()) {
 } else {
   api.scrollNext();
 }      
-}, 1700); // Change slide every 5 seconds
+}, 2300); // Change slide every 5 seconds
       
       return () => clearInterval(interval);
     }, [api, autoplay, isRewinding, latestNews.length]);

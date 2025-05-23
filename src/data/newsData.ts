@@ -11,6 +11,25 @@ export interface NewsItem {
 
 // Sample news data
 export const newsData: NewsItem[] = [
+  
+  
+  {
+    id: "994",
+    title: "Started Summer Research Internship at IIT Kharagpur",
+    date: "2024-05-22",
+    summary: "Started my Summer Internship at IIT Kharagpur under Professor <a href='https://scholar.google.com/citations?user=5bXSZPYAAAAJ&hl=en&oi=ao' target='_blank' rel='noopener noreferrer' class='font-bold text-secondary-purple hover:text-secondary-purple-hover '>Dr. Pabitra Mitra.</a>",
+    content: "I am excited to announce that I have started my Summer Research Internship at IIT Kharagpur under the guidance of Professor Dr. Pabitra Mitra. This opportunity will allow me to work on cutting-edge research in the field of Computer Science and gain valuable insights from one of the leading experts in the field. I am looking forward to collaborating with fellow researchers and contributing to innovative projects during my time here.\n\n Working on a project involving Computer Vision, Image Processing, Machine Learning, and Deep Learning for plant phenotype-genotype classification.",
+    category: "achievement",
+  },
+  
+  {
+    id: "995",
+    title: "Our Paper got accepted in CICBA 2025, Jadavpur University, India",
+    date: "2025-05-22",
+    summary: "Our Paper titled Next-Gen Secure UAV: Leveraging Hyperelliptic Curves and Particle Swarm Optimization got accepted in CICBA 2025, Jadavpur University, India.",
+    content: "I am thrilled to announce that our paper titled 'Next-Gen Secure UAV: Leveraging Hyperelliptic Curves and Particle Swarm Optimization' has been accepted for presentation at the prestigious CICBA 2025 conference at Jadavpur University, India. This research focuses on enhancing the security of UAV communication through innovative cryptographic techniques. I am grateful to my co-authors and mentors for their invaluable support throughout this journey. Looking forward to sharing our findings with the academic community!",
+    category: "publication",
+  },
   {
     id: "996",
     title: "Selected for IASc-INSA-NASI Summer Research Fellowship 2025",
@@ -45,14 +64,7 @@ export const newsData: NewsItem[] = [
     category: "publication",
     link: "https://dblp.org/rec/conf/dosier/BaidyaMMDSC24.html"
   },
-  {
-    id: "995",
-    title: "Selected for Summer Internship at IIT Kharagpur",
-    date: "2024-05-01",
-    summary: "Selected for Summer Internship at IIT Kharagpur under Professor <a href='https://scholar.google.com/citations?user=5bXSZPYAAAAJ&hl=en&oi=ao' target='_blank' rel='noopener noreferrer' class='font-bold text-secondary-purple hover:text-secondary-purple-hover '>Dr. Pabitra Mitra.</a>",
-    content: "I am excited to announce that I have been selected for a summer internship at IIT Kharagpur under the guidance of Professor Dr. Pabitra Mitra.. He specializes in NLP and Machine Learning, and I will be working on a project related to these fields. This internship is a significant step in my academic journey, allowing me to apply my theoretical knowledge in a practical setting and gain hands-on experience in advanced research methodologies. \nI am looking forward to collaborating with fellow researchers and contributing to innovative projects that align with my interests Machine Learning. I am grateful for this opportunity and eager to learn from the esteemed faculty and researchers at IIT Kharagpur.",
-    category: "achievement",
-  },
+  
   // Add more news items as needed with number decreasing...
   
   

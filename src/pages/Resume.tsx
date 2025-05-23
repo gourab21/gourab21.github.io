@@ -21,7 +21,14 @@ const Resume = () => {
 
   const experienceData: TimelineItemData[] = [
     {
-      id: "1",
+      id: "110",
+      title: "Summer Research Intern",
+      company:  <a href='https://scholar.google.com/citations?user=5bXSZPYAAAAJ&hl=en&oi=ao' target='_blank' rel='noopener noreferrer' class='font-bold text-secondary-purple hover:text-secondary-purple-hover '>IIT Kharagpur under Dr. Pabitra Mitra.</a> ,
+      period: "2025 - Present",
+      description: "Working on a project involving Computer Vision, Image Processing, Machine Learning, and Deep Learning for plant phenotype-genotype classification."
+    },
+    {
+      id: "111",
       title: "Post Graduate Researcher",
       company: <a href="https://vidyamandira.ac.in/">Ramakrishna Mission Vidyamandira</a> ,
       period: "2024 - Present",
