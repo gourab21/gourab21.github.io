@@ -8,6 +8,15 @@ export interface GalleryImage {
 
 // Sample gallery images
 export const galleryImages: GalleryImage[] = [
+  
+  
+  
+  {
+    id: "18",
+    title: "Intership @ IIT Kharagpur",
+    description: "My first internship at IIT Kharagpur, where I worked under the guidance of Prof. Pabitra Mitra in the Domain of Deep Learning and Computer Vision.",
+    src: "/lovable-uploads/gallery/kgpmain.jpg"
+  },
   {
     id: "16",
     title: "Winner Turing Show 2025",
