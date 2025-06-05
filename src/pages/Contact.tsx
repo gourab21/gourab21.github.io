@@ -131,22 +131,17 @@ const Contact = () => {
                   </div>
                 </div>
                 
-                <div className="glass-panel p-6 rounded-lg">
-                  <h2 className="text-xl font-semibold mb-4">Calling Hours</h2>
-                  <div className="space-y-2">
-                    <div className="flex justify-between">
-                      <span className="text-sm">Monday - Friday:</span>
-                      <span className="text-sm text-foreground/70">4:00 PM - 10:00 PM</span>
-                    </div>
-                    <div className="flex justify-between">
-                      <span className="text-sm">Saturday:</span>
-                      <span className="text-sm text-foreground/70">2:00 PM - 10:00 PM</span>
-                    </div>
-                    <div className="flex justify-between">
-                      <span className="text-sm">Sunday:</span>
-                      <span className="text-sm text-foreground/70">7:00 AM - 10:00 PM</span>
-                    </div>
-                  </div>
+                <div className="glass-panel rounded-lg overflow-hidden">
+                  <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3682.5954862470558!2d88.35414829999999!3d22.631576!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39f89dabe85e72bf%3A0x9076d0842f8e3d8c!2sRAMAKRISHNA%20MISSION%20VIDYAMANDIRA%2C%20Belur%20Math!5e0!3m2!1sen!2sin!4v1749155420645!5m2!1sen!2sin"
+                    width="100%"
+                    height="220"
+                    style={{ border: 0 }}
+                    allowFullScreen
+                    loading="lazy"
+                    referrerPolicy="no-referrer-when-downgrade"
+                    className="w-full"
+                  ></iframe>
                 </div>
               </div>
               
