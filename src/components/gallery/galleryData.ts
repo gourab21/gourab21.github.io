@@ -46,32 +46,12 @@ export const galleryImages: GalleryImage[] = [
   },
 
   {
-    id: "13",
-    title: "Gandhi Mandap Guwahati",
-    description: "A view of the mighty Brahmaputra River from Gandhi Mandap, Guwahati",
-    src: "/lovable-uploads/gallery/gandhi_mandap.jpg"
-  },
-
-  {
     id: "12",
     title: "Rashtrapati Bhavan",
     description: "Exclusive visit to Rashtrapati Bhavan, New Delhi.",
     src: "/lovable-uploads/gallery/rashtrapati_1.jpg"
   },
-
-  {
-    id: "11",
-    title: "India gate",
-    description: "A Peaceful evening at India Gate, New Delhi",
-    src: "/lovable-uploads/gallery/india_gate.jpg"
-  },
-  {
-    id: "10",
-    title: "ISKCON Temple Delhi",
-    description: "Visited ISKCON Temple, Delhi. It was a great experience to be there.",
-    src: "/lovable-uploads/gallery/iskcon_delhi.jpg"
-  },
-
+  
   {
     id: "5",
     title: "Graduation College",
