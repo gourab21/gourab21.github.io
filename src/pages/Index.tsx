@@ -86,7 +86,10 @@ const Index = () => {
                   </div>
                   
                   <p className="text-foreground/70 max-w-lg">
-                  <b>UGC NET JRF Qualified</b> postgraduate student with expertise in <b>Machine Learning, Deep Learning, IoT, UAV Security, and AI</b>. Passionate about solving real-world problems through research and innovation. <b>2× Coding Contest Winner</b> at prestigious institutions. Focused on developing <b>UAV Secure Communication</b> and applying Machine Learning for societal advancement.
+                  <b>NET JRF-qualified</b> <i>Computer Science Postgraduate</i> with internship experience at <b>IIT Kharagpur</b>.  
+Research interests include <b>Artificial Intelligence (AI), Machine Learning (ML), IoT, and Image Processing</b>,  
+with recent work on multi-modal Vision Transformer models for <b>plant genotype prediction</b>.  
+Strongly motivated towards <b>academic research, publications, and AI-driven societal applications</b>.
 
                   </p>
                   
