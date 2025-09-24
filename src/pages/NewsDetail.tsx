@@ -22,14 +22,9 @@ const NewsDetail = () => {
     }
   }, [newsItem]);
 
-    // Function to convert newlines to <br> tags
-  const formatTextWithLineBreaks = (text: string) => {
-    return text.split('\n').map((line, index) => (
-      <React.Fragment key={index}>
-        {line}
-        {index < text.split('\n').length - 1 && <br />}
-      </React.Fragment>
-    ));
+  // Function to convert newlines to <br> tags and preserve HTML
+  const formatContent = (text: string) => {
+    return text.replace(/\n/g, '<br />');
   };
 
 
@@ -107,10 +102,10 @@ const NewsDetail = () => {
                  className="text-lg font-medium mb-4"
                  dangerouslySetInnerHTML={{ __html: newsItem.summary }}
                />
-              <div className="prose dark:prose-invert max-w-none">
-                {formatTextWithLineBreaks(newsItem.content)}
-              </div>
-              
+              <div 
+                className="prose dark:prose-invert max-w-none"
+                dangerouslySetInnerHTML={{ __html: formatContent(newsItem.content) }}
+              />
               {newsItem.link && (
                 <div className="mt-6">
                   <a 

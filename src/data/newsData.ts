@@ -11,7 +11,15 @@ export interface NewsItem {
 
 // Sample news data
 export const newsData: NewsItem[] = [
-  
+
+  {
+    id: "993",
+    title: "Finished Summer Research Internship at IIT Kharagpur",
+    date: "2024-05-22",
+    summary: "Finished my Summer Internship at IIT Kharagpur under Professor <a href='https://scholar.google.com/citations?user=5bXSZPYAAAAJ&hl=en&oi=ao' target='_blank' rel='noopener noreferrer' class='font-bold text-secondary-purple hover:text-secondary-purple-hover '>Dr. Pabitra Mitra.</a>",
+    content: "Explored the intersection of Computer Vision, Image Processing, Machine Learning, and Deep Learning for plant phenotype-genotype classification. Developed multi-modal Vision Transformer models to predict plant genotypes from phenotypic images, achieving significant accuracy improvements. Gained hands-on experience with advanced deep learning frameworks and contributed to ongoing research in agricultural technology.\n \n This internship has been a transformative experience, enhancing my research skills and deepening my understanding of AI applications in agriculture. I am grateful to Dr. Pabitra Mitra and the IIT Kharagpur team for their mentorship and support throughout this journey. \n \n Looking forward to applying these insights in my future academic and professional endeavors.\n \n The <a href='https://drive.google.com/file/d/1Jn4Igit1mxBhWFNZoIlPMBCvanOgwvcp/view?usp=drive_link' target='_blank' rel='noopener noreferrer' class='font-bold text-secondary-purple hover:text-secondary-purple-hover '>Project Report</a> can be found here and detailed codes are available at the Projects section of this website.",
+    category: "achievement",
+  },
   
   {
     id: "994",
