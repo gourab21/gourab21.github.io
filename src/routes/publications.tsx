@@ -1,4 +1,7 @@
 import { createFileRoute } from "@tanstack/react-router";
+
+import { TransformWrapper, TransformComponent } from "react-zoom-pan-pinch";
+
 import { useState } from "react";
 import {
   ExternalLink,
@@ -19,17 +22,16 @@ import {
   DialogDescription,
 } from "@/components/ui/dialog";
 import { toast } from "sonner";
-import pub1 from "@/assets/pub-1.jpg";
-import pub2 from "@/assets/pub-2.jpg";
-import pub3 from "@/assets/pub-3.jpg";
-import pub4 from "@/assets/pub-4.jpg";
-import pub5 from "@/assets/pub-5.jpg";
+import { publications, type Publication, type PubType } from "@/Editing/pub";
 
 export const Route = createFileRoute("/publications")({
   head: () => ({
     meta: [
       { title: "Publications — Gourab Das" },
-      { name: "description", content: "Peer-reviewed publications by Gourab Das, grouped by year." },
+      {
+        name: "description",
+        content: "Peer-reviewed publications by Gourab Das, grouped by year.",
+      },
       { property: "og:title", content: "Publications — Gourab Das" },
       { property: "og:description", content: "Peer-reviewed publications grouped by year." },
     ],
@@ -37,127 +39,11 @@ export const Route = createFileRoute("/publications")({
   component: PublicationsPage,
 });
 
-type PubType = "Journal" | "Conference" | "Thesis" | "Book Chapter";
-
-type Publication = {
-  title: string;
-  authors: string;
-  venue: string;
-  type: PubType;
-  link: string;
-  bibtex: string;
-  abstract: string;
-  image: string;
-  tag?: string;
-  poster?: string;
-  videoId?: string; // YouTube ID
-};
-
-const publications: Record<number, Publication[]> = {
-  2024: [
-    {
-      title: "Towards Adaptive Latent Spaces in Non-Euclidean Manifolds",
-      authors: "G. Das, J. Miller, S. Chen",
-      venue: "NeurIPS 2024 · Spotlight",
-      type: "Conference",
-      tag: "Spotlight",
-      link: "#",
-      image: pub1,
-      poster: pub1,
-      videoId: "dQw4w9WgXcQ",
-      bibtex: `@inproceedings{das2024adaptive,
-  title     = {Towards Adaptive Latent Spaces in Non-Euclidean Manifolds},
-  author    = {Das, Gourab and Miller, J. and Chen, S.},
-  booktitle = {Advances in Neural Information Processing Systems (NeurIPS)},
-  year      = {2024}
-}`,
-      abstract:
-        "We present a novel framework for dynamic latent space adaptation using curvature-aware gradients. Our method reduces convergence time by 40% while maintaining structural integrity across a range of non-Euclidean benchmarks, and generalizes to previously unseen manifold geometries at inference time.",
-    },
-    {
-      title: "On the Communication Bottleneck in Federated Foundation Models",
-      authors: "G. Das, R. Patel",
-      venue: "IEEE Transactions on Machine Learning",
-      type: "Journal",
-      link: "#",
-      image: pub2,
-      poster: pub2,
-      bibtex: `@article{das2024federated,
-  title   = {On the Communication Bottleneck in Federated Foundation Models},
-  author  = {Das, Gourab and Patel, R.},
-  journal = {IEEE Transactions on Machine Learning},
-  year    = {2024}
-}`,
-      abstract:
-        "We characterize communication cost as a first-class citizen in federated fine-tuning of foundation models and derive a topology-aware scheduling scheme that reduces round-trip cost by an order of magnitude.",
-    },
-  ],
-  2023: [
-    {
-      title: "Sparse Attention Under Distribution Shift",
-      authors: "G. Das, H. Nguyen, D. Rao",
-      venue: "ACL 2023",
-      type: "Conference",
-      link: "#",
-      image: pub3,
-      videoId: "dQw4w9WgXcQ",
-      bibtex: `@inproceedings{das2023sparse,
-  title     = {Sparse Attention Under Distribution Shift},
-  author    = {Das, Gourab and Nguyen, H. and Rao, D.},
-  booktitle = {Proceedings of ACL},
-  year      = {2023}
-}`,
-      abstract:
-        "A study of sparse-attention transformers under covariate and label shift. We propose a lightweight adapter that recovers dense-attention accuracy with 3x less compute on long-context reasoning tasks.",
-    },
-    {
-      title: "Human Trust Calibration in AI-Assisted Decision Making",
-      authors: "L. Gomez, G. Das",
-      venue: "CHI 2023 · Best Paper Honorable Mention",
-      type: "Book Chapter",
-      tag: "Honorable Mention",
-      link: "#",
-      image: pub4,
-      poster: pub4,
-      bibtex: `@incollection{gomez2023trust,
-  title     = {Human Trust Calibration in AI-Assisted Decision Making},
-  author    = {Gomez, L. and Das, Gourab},
-  booktitle = {Advances in Human-AI Interaction},
-  year      = {2023}
-}`,
-      abstract:
-        "An empirical investigation of how uncertainty visualization affects clinician trust in AI triage tools. We report a controlled study with 82 clinicians across three hospitals.",
-    },
-  ],
-  2022: [
-    {
-      title: "Elastic Query Planning for Serverless Analytics",
-      authors: "G. Das",
-      venue: "IIIT Dharwad · Doctoral Thesis",
-      type: "Thesis",
-      link: "#",
-      image: pub5,
-      bibtex: `@phdthesis{das2022elastic,
-  title  = {Elastic Query Planning for Serverless Analytics},
-  author = {Das, Gourab},
-  school = {IIIT Dharwad},
-  year   = {2022}
-}`,
-      abstract:
-        "We propose an elastic query planner that continuously re-estimates worker allocations in serverless analytics, reducing tail latency by up to 62% at fixed cost.",
-    },
-  ],
-};
-
 const typeStyles: Record<PubType, string> = {
-  Journal:
-    "bg-blue-500/10 text-blue-600 dark:text-blue-400 border-blue-500/20",
-  Conference:
-    "bg-emerald-500/10 text-emerald-600 dark:text-emerald-400 border-emerald-500/20",
-  Thesis:
-    "bg-amber-500/10 text-amber-600 dark:text-amber-400 border-amber-500/20",
-  "Book Chapter":
-    "bg-violet-500/10 text-violet-600 dark:text-violet-400 border-violet-500/20",
+  Journal: "bg-orange-500/10 text-orange-600 dark:text-orange-400 border-orange-500/20",
+  Conference: "bg-emerald-500/10 text-emerald-600 dark:text-emerald-400 border-emerald-500/20",
+  Thesis: "bg-amber-500/10 text-amber-600 dark:text-amber-400 border-amber-500/20",
+  "Book Chapter": "bg-violet-500/10 text-violet-600 dark:text-violet-400 border-violet-500/20",
 };
 
 function PublicationsPage() {
@@ -191,6 +77,7 @@ function PublicationsPage() {
 }
 
 function PublicationCard({ pub, index }: { pub: Publication; index: number }) {
+  const [imageOpen, setImageOpen] = useState(false);
   const [open, setOpen] = useState(false);
   const [citeOpen, setCiteOpen] = useState(false);
   const [posterOpen, setPosterOpen] = useState(false);
@@ -213,9 +100,12 @@ function PublicationCard({ pub, index }: { pub: Publication; index: number }) {
       className="group relative overflow-hidden rounded-2xl border border-border bg-card transition-all duration-500 ease-out hover:-translate-y-0.5 hover:border-accent/50 hover:shadow-xl hover:shadow-accent/5 animate-fade-in"
       style={{ animationDelay: `${index * 60}ms`, animationFillMode: "backwards" }}
     >
-      <div className="grid gap-0 sm:grid-cols-[220px_1fr]">
+      <div className="grid gap-0 sm:grid-cols-[15rem_1fr]">
         {/* Image */}
-        <div className="relative aspect-[4/3] overflow-hidden bg-surface-strong sm:aspect-auto">
+        <div
+          className="relative aspect-[3/4] overflow-hidden bg-surface-strong sm:aspect-auto"
+          onClick={() => setImageOpen(true)}
+        >
           <img
             src={pub.image}
             alt={pub.title}
@@ -228,7 +118,7 @@ function PublicationCard({ pub, index }: { pub: Publication; index: number }) {
         </div>
 
         {/* Content */}
-        <div className="flex flex-col p-6">
+        <div className="flex flex-col px-6 pt-6 pb-2">
           <div className="mb-3 flex flex-wrap items-center gap-2">
             <span
               className={`rounded-full border px-2.5 py-0.5 text-[10px] font-bold uppercase tracking-wider ${typeStyles[pub.type]}`}
@@ -236,7 +126,7 @@ function PublicationCard({ pub, index }: { pub: Publication; index: number }) {
               {pub.type}
             </span>
             {pub.tag && (
-              <span className="rounded-full bg-accent/10 px-2.5 py-0.5 text-[10px] font-bold uppercase tracking-wider text-accent">
+              <span className="rounded-full border border-yellow-500/20 bg-yellow-500/10 px-2.5 py-0.5 text-[10px] font-bold uppercase tracking-wider text-yellow-700 dark:border-yellow-400/20 dark:bg-yellow-400/10 dark:text-yellow-300">
                 {pub.tag}
               </span>
             )}
@@ -273,26 +163,32 @@ function PublicationCard({ pub, index }: { pub: Publication; index: number }) {
             </div>
           </div>
 
-          <div className="mt-5 flex flex-wrap gap-2 border-t border-border pt-4">
+          <div className="mt-3 flex flex-wrap gap-2 border-t border-border pt-3">
             <ActionButton icon={FileText} label="Paper" href={pub.link} />
             <ActionButton icon={Quote} label="Cite" onClick={() => setCiteOpen(true)} />
             {pub.poster && (
-              <ActionButton
-                icon={ImageIcon}
-                label="Poster"
-                onClick={() => setPosterOpen(true)}
-              />
+              <ActionButton icon={ImageIcon} label="Poster" onClick={() => setPosterOpen(true)} />
             )}
             {pub.videoId && (
-              <ActionButton
-                icon={Play}
-                label="Video"
-                onClick={() => setVideoOpen(true)}
-              />
+              <ActionButton icon={Play} label="Video" onClick={() => setVideoOpen(true)} />
             )}
           </div>
         </div>
       </div>
+
+      <Dialog open={imageOpen} onOpenChange={setImageOpen}>
+        <DialogContent className="max-w-4xl p-2 sm:p-4">
+          <DialogHeader className="sr-only">
+            <DialogTitle>{pub.title}</DialogTitle>
+            <DialogDescription>Publication image</DialogDescription>
+          </DialogHeader>
+          <img
+            src={pub.image}
+            alt={pub.title}
+            className="mx-auto max-h-[85vh] w-auto max-w-full rounded-lg object-contain"
+          />{" "}
+        </DialogContent>
+      </Dialog>
 
       {/* Cite Dialog */}
       <Dialog open={citeOpen} onOpenChange={setCiteOpen}>
@@ -302,7 +198,7 @@ function PublicationCard({ pub, index }: { pub: Publication; index: number }) {
             <DialogDescription>BibTeX entry — copy to your reference manager.</DialogDescription>
           </DialogHeader>
           <div className="relative">
-            <pre className="max-h-80 overflow-auto rounded-lg border border-border bg-surface-strong p-4 pr-14 font-mono text-xs leading-relaxed text-foreground">
+            <pre className="max-h-80 overflow-auto whitespace-pre-wrap break-all rounded-lg border border-border bg-surface-strong p-4 pr-14 font-mono text-xs leading-relaxed text-foreground">
               {pub.bibtex}
             </pre>
             <button
@@ -317,17 +213,54 @@ function PublicationCard({ pub, index }: { pub: Publication; index: number }) {
       </Dialog>
 
       {/* Poster Dialog */}
+
       {pub.poster && (
         <Dialog open={posterOpen} onOpenChange={setPosterOpen}>
           <DialogContent className="max-w-4xl p-2 sm:p-4">
             <DialogHeader className="sr-only">
               <DialogTitle>{pub.title} — Poster</DialogTitle>
             </DialogHeader>
-            <img
-              src={pub.poster}
-              alt={`${pub.title} poster`}
-              className="h-auto w-full rounded-lg"
-            />
+
+            <TransformWrapper
+              centerOnInit
+              centerZoomedOut
+              initialScale={1}
+              minScale={0.5}
+              maxScale={6}
+              wheel={{ step: 0.01 }}
+            >
+              {({ zoomIn, zoomOut, resetTransform }) => (
+                <>
+                  <div className="mb-3 flex justify-end gap-2">
+                    <button onClick={() => zoomOut()} className="rounded border px-3 py-1">
+                      −
+                    </button>
+
+                    <button onClick={() => resetTransform()} className="rounded border px-3 py-1">
+                      Reset
+                    </button>
+
+                    <button onClick={() => zoomIn()} className="rounded border px-3 py-1">
+                      +
+                    </button>
+                  </div>
+
+                  <div className="flex max-h-[85vh] justify-center overflow-hidden">
+                    <TransformComponent
+                      wrapperClass="!w-full !h-full"
+                      contentClass="flex justify-center"
+                    >
+                      <img
+                        src={pub.poster}
+                        alt={`${pub.title} poster`}
+                        className="max-h-[85vh] w-auto max-w-full rounded-lg object-contain select-none"
+                        draggable={false}
+                      />
+                    </TransformComponent>
+                  </div>
+                </>
+              )}
+            </TransformWrapper>
           </DialogContent>
         </Dialog>
       )}

@@ -2,13 +2,14 @@ import { createFileRoute } from "@tanstack/react-router";
 import { useState } from "react";
 import { X } from "lucide-react";
 import { PageShell } from "@/components/page-shell";
+import top from "@/assets/linkedin.png";
 
 export const Route = createFileRoute("/gallery")({
   head: () => ({
     meta: [
-      { title: "Gallery & Notes — Dr. A. Researcher" },
+      { title: "Gallery & Notes — Gourab Das" },
       { name: "description", content: "Photos from fieldwork, conferences, and short blog notes." },
-      { property: "og:title", content: "Gallery & Notes — Dr. A. Researcher" },
+      { property: "og:title", content: "Gallery & Notes — Gourab Das" },
       { property: "og:description", content: "A mixed gallery of photographs and short essays." },
     ],
   }),
@@ -17,7 +18,15 @@ export const Route = createFileRoute("/gallery")({
 
 type Item =
   | { kind: "photo"; id: string; src: string; caption: string; span?: "wide" | "tall" }
-  | { kind: "note"; id: string; title: string; date: string; excerpt: string; body: string; span?: "wide" | "tall" };
+  | {
+      kind: "note";
+      id: string;
+      title: string;
+      date: string;
+      excerpt: string;
+      body: string;
+      span?: "wide" | "tall";
+    };
 
 const items: Item[] = [
   {
@@ -25,9 +34,9 @@ const items: Item[] = [
     id: "note-1",
     title: "Notes on Hardware–Software Co-Design",
     date: "August 2024",
-    excerpt: "A reflection from the summer research retreat on how compute is no longer the bottleneck.",
-    body:
-      "This week at the retreat, three teams independently reported the same finding: TPU utilization is being capped not by kernel efficiency but by inter-node communication. The implication is uncomfortable — we've been optimizing the wrong layer for two years. I want to explore what a topology-first training loop looks like.",
+    excerpt:
+      "A reflection from the summer research retreat on how compute is no longer the bottleneck.",
+    body: "This week at the retreat, three teams independently reported the same finding: TPU utilization is being capped not by kernel efficiency but by inter-node communication. The implication is uncomfortable — we've been optimizing the wrong layer for two years. I want to explore what a topology-first training loop looks like.",
     span: "wide",
   },
   {
@@ -48,8 +57,7 @@ const items: Item[] = [
     title: '"The bottleneck is the topology."',
     date: "July 2024",
     excerpt: "A one-line summary of the paper I keep meaning to write.",
-    body:
-      "I keep coming back to this. The bottleneck in modern distributed learning is no longer compute — it's the topology of communication itself. There is a paper here, and I have not written it yet.",
+    body: "I keep coming back to this. The bottleneck in modern distributed learning is no longer compute — it's the topology of communication itself. There is a paper here, and I have not written it yet.",
   },
   {
     kind: "photo",
@@ -70,13 +78,12 @@ const items: Item[] = [
     title: "On mentoring first-year PhDs",
     date: "May 2024",
     excerpt: "Three small habits that changed how I advise.",
-    body:
-      "Advising is mostly about listening. I've started ending every meeting by asking 'what are you worried about that we didn't discuss?' — and it changes everything. The second habit: writing back a 3-line summary within an hour. The third: never solving the problem in the first meeting.",
+    body: "Advising is mostly about listening. I've started ending every meeting by asking 'what are you worried about that we didn't discuss?' — and it changes everything. The second habit: writing back a 3-line summary within an hour. The third: never solving the problem in the first meeting.",
   },
   {
     kind: "photo",
     id: "ph-5",
-    src: "https://images.unsplash.com/photo-1451187580459-43490279c0fa?w=1200&q=80",
+    src: "@/assets/das2026forgeries_p.png",
     caption: "Late night, empty office",
     span: "wide",
   },
@@ -94,13 +101,8 @@ function GalleryPage() {
   return (
     <PageShell>
       <div className="mb-10 overflow-hidden rounded-2xl border border-border bg-surface-strong">
-        <img
-          src="https://images.unsplash.com/photo-1524169358666-79f22534bc6e?w=2000&q=80"
-          alt="Gallery banner"
-          className="h-64 w-full object-cover sm:h-80 md:h-96"
-        />
+        <img src={top} alt="Gallery banner" className="h- w-full object-cover sm:h- md:h-" />
       </div>
-
 
       <div className="grid auto-rows-[220px] grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3">
         {items.map((it) =>
@@ -139,7 +141,7 @@ function GalleryPage() {
                 Read entry →
               </span>
             </button>
-          )
+          ),
         )}
       </div>
 

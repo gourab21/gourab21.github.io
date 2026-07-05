@@ -18,7 +18,7 @@ export function SiteHeader() {
     <header className="sticky top-0 z-50 border-b border-border bg-background/80 backdrop-blur-md">
       <div className="mx-auto flex h-16 max-w-6xl items-center justify-between px-4 sm:px-6">
         <Link to="/" className="text-base font-bold tracking-tight sm:text-lg">
-          Dr. A. Researcher
+          Gourab Das
         </Link>
         <nav className="hidden items-center gap-7 md:flex">
           {nav.map((item) => (

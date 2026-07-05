@@ -6,9 +6,9 @@ import { ProfileLinkRow } from "@/components/profile-links";
 export const Route = createFileRoute("/contact")({
   head: () => ({
     meta: [
-      { title: "Contact — Dr. A. Researcher" },
-      { name: "description", content: "Office address, phone, email, and profile links for Dr. A. Researcher." },
-      { property: "og:title", content: "Contact — Dr. A. Researcher" },
+      { title: "Contact — Gourab Das" },
+      { name: "description", content: "Office address, phone, email, and profile links for Gourab Das." },
+      { property: "og:title", content: "Contact — Gourab Das" },
       { property: "og:description", content: "Get in touch: address, phone, email, and research profile links." },
     ],
   }),
@@ -17,7 +17,7 @@ export const Route = createFileRoute("/contact")({
 
 // Generic embed centered on a well-known landmark; researcher can replace src.
 const MAP_SRC =
-  "https://www.google.com/maps?q=Institute+of+Advanced+Computing&output=embed";
+  "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3846.676923125775!2d75.02419017458718!3d15.393973757162033!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bb8d3a4bc7f5c91%3A0xf0fc456099430c57!2sIndian%20Institute%20of%20Information%20Technology%20(IIIT)%2C%20Dharwad!5e0!3m2!1sen!2sin!4v1783076176335!5m2!1sen!2sin";
 
 function ContactPage() {
   return (
@@ -41,10 +41,10 @@ function ContactPage() {
                     Office
                   </p>
                   <p className="mt-1 font-serif text-base leading-relaxed">
-                    Adaptive Systems Lab, Room 402<br />
-                    Institute of Advanced Computing<br />
-                    128 Research Way, Building 4<br />
-                    Cambridge, MA 02139, USA
+                    Drone & UAV Lab, RD 2<br />
+                    &pi; Block, IIIT Dharwad<br />
+                    Near Sattur Colony, Dharwad<br />
+                    Karnataka 580009, India
                   </p>
                 </div>
               </div>
@@ -57,8 +57,8 @@ function ContactPage() {
                   <p className="text-xs font-black uppercase tracking-widest text-muted-foreground">
                     Phone
                   </p>
-                  <a href="tel:+15550129432" className="mt-1 block text-base font-semibold hover:text-accent">
-                    +1 (555) 012-9432
+                  <a href="tel:+917364997118" className="mt-1 block text-base font-semibold hover:text-accent">
+                    +91 7364997118
                   </a>
                 </div>
               </div>
@@ -71,11 +71,11 @@ function ContactPage() {
                   <p className="text-xs font-black uppercase tracking-widest text-muted-foreground">
                     Email
                   </p>
-                  <a href="mailto:contact@a-researcher.edu" className="mt-1 block text-base font-semibold hover:text-accent">
-                    contact@a-researcher.edu
+                  <a href="mailto:gourabdas2128@gmail.com" className="mt-1 block text-base font-semibold hover:text-accent">
+                    gourabdas2128@gmail.com
                   </a>
-                  <a href="mailto:a.researcher@lab.org" className="block text-sm text-muted-foreground hover:text-accent">
-                    a.researcher@lab.org
+                  <a href="mailto:gourab.das@iiitdwd.ac.in" className="mt-1 block text-base font-semibold hover:text-accent">
+                    gourab.das@iiitdwd.ac.in
                   </a>
                 </div>
               </div>

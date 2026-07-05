@@ -4,42 +4,52 @@ import { PageShell, PageHeading } from "@/components/page-shell";
 export const Route = createFileRoute("/activities")({
   head: () => ({
     meta: [
-      { title: "Activities — Dr. A. Researcher" },
-      { name: "description", content: "Reviewer roles, TPC memberships, professional memberships, and positions held." },
-      { property: "og:title", content: "Activities — Dr. A. Researcher" },
-      { property: "og:description", content: "Reviewer, TPC memberships, and professional positions." },
+      { title: "Activities — Gourab Das" },
+      {
+        name: "description",
+        content: "Reviewer roles, TPC memberships, professional memberships, and positions held.",
+      },
+      { property: "og:title", content: "Activities — Gourab Das" },
+      {
+        property: "og:description",
+        content: "Reviewer, TPC memberships, and professional positions.",
+      },
     ],
   }),
   component: ActivitiesPage,
 });
 
 const reviewer = [
-  { name: "IEEE Transactions on Pattern Analysis and Machine Intelligence", type: "Journal", since: "2021" },
-  { name: "ACM Transactions on Computer-Human Interaction", type: "Journal", since: "2022" },
-  { name: "Journal of Machine Learning Research", type: "Journal", since: "2020" },
-  { name: "NeurIPS / ICML / ICLR", type: "Conference", since: "2019" },
-  { name: "CVPR / ICCV / ECCV", type: "Conference", since: "2020" },
-  { name: "CHI / CSCW", type: "Conference", since: "2021" },
+  { name: "IEEE Transactions on Consumer Electronics (IEEE TCE)", type: "Journal", since: "2025" },
+  {
+    name: "IEEE Transactions on Artificial Intelligence (IEEE TAI)",
+    type: "Journal",
+    since: "2025",
+  },
+  {
+    name: "Journal of Computational and Cognitive Engineering (JCCE)",
+    type: "Journal",
+    since: "2025",
+  },
 ];
 
 const tpc = [
-  { name: "AAAI 2025", role: "Area Chair" },
-  { name: "NeurIPS 2024", role: "Senior Program Committee" },
-  { name: "ICLR 2024", role: "Program Committee" },
-  { name: "KDD 2023", role: "Program Committee" },
+  { name: "2nd ICTIST 2026", role: "Adversarial Biometrics in the Advanced AI Era" },
+  { name: "2nd ICTIST 2026", role: "Junior Program Committee" },
 ];
 
 const memberships = [
-  { name: "Senior Member, IEEE Computer Society", year: "since 2022" },
-  { name: "ACM Distinguished Speaker", year: "2023–present" },
-  { name: "AAAI Member", year: "since 2019" },
-  { name: "Editorial Board — Journal of Adaptive Systems", year: "2024–present" },
+  { name: "Student Member, European Association for Biometrics (EAB)", year: "since 2026" },
+  { name: "Member, Internet Society (ID – 2327705)", year: "since 2025" },
+  { name: "International Association of Engineers (IAENG) ( ID – 392155)", year: "since 2024" },
 ];
 
 const positions = [
-  { name: "Director, Adaptive Systems Lab", org: "Institute of Advanced Computing", year: "2023–Present" },
-  { name: "Faculty Search Committee Chair", org: "Department of Computer Science", year: "2024" },
-  { name: "Workshop Co-Chair, DistributedML", org: "NeurIPS", year: "2023" },
+  {
+    name: "Public Relations Head, PiXelation - Photography Club",
+    org: "ARSD College, University of Delhi, India",
+    year: "2022–2023",
+  },
 ];
 
 function Section({ title, children }: { title: string; children: React.ReactNode }) {
@@ -64,7 +74,10 @@ function ActivitiesPage() {
         <Section title="Reviewer">
           <div className="grid gap-3">
             {reviewer.map((r) => (
-              <div key={r.name} className="rounded-lg border-l-4 border-accent bg-surface-strong p-4">
+              <div
+                key={r.name}
+                className="rounded-lg border-l-4 border-accent bg-surface-strong p-4"
+              >
                 <p className="text-sm font-bold">{r.name}</p>
                 <p className="text-xs text-muted-foreground">
                   {r.type} · Reviewer since {r.since}
@@ -74,7 +87,7 @@ function ActivitiesPage() {
           </div>
         </Section>
 
-        <Section title="Technical Program Committee">
+        <Section title="Committees & Special Sessions">
           <div className="grid gap-3">
             {tpc.map((t) => (
               <div key={t.name} className="rounded-lg border border-border bg-card p-4">

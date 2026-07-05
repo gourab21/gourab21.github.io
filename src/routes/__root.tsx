@@ -75,17 +75,17 @@ function ErrorComponent({ error, reset }: { error: Error; reset: () => void }) {
 export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()({
   head: () => ({
     meta: [
-      { title: "Dr. A. Researcher — Academic Homepage" },
+      { title: "Gourab Das" },
       {
         name: "description",
         content:
-          "Personal academic homepage of Dr. A. Researcher: publications, activities, curriculum vitae, and contact.",
+          "Personal academic homepage of Gourab Das: publications, activities, curriculum vitae, and contact.",
       },
-      { property: "og:title", content: "Dr. A. Researcher — Academic Homepage" },
+      { property: "og:title", content: "Gourab Das" },
       {
         property: "og:description",
         content:
-          "Personal academic homepage of Dr. A. Researcher: publications, activities, CV, and gallery.",
+          "Personal academic homepage of Gourab Das: publications, activities, CV, and gallery.",
       },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },

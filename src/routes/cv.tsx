@@ -5,63 +5,207 @@ import { Download } from "lucide-react";
 export const Route = createFileRoute("/cv")({
   head: () => ({
     meta: [
-      { title: "CV — Dr. A. Researcher" },
-      { name: "description", content: "Curriculum vitae: research experience, education, awards, workshops, and references." },
-      { property: "og:title", content: "CV — Dr. A. Researcher" },
+      { title: "CV — G Das" },
+      {
+        name: "description",
+        content:
+          "Curriculum vitae: research experience, education, awards, workshops, and references.",
+      },
+      { property: "og:title", content: "CV — Gourab Das" },
       { property: "og:description", content: "Full academic curriculum vitae." },
     ],
   }),
   component: CvPage,
 });
 
-type Entry = { title: string; org: string; period: string; detail?: string };
+type Entry = {
+  title: string;
+  org: string;
+  url?: string;
+  period: string;
+  detail?: React.ReactNode;
+};
 
 const research: Entry[] = [
   {
-    title: "Assistant Professor",
-    org: "Institute of Advanced Computing",
-    period: "2023 – Present",
-    detail: "Founded the Adaptive Systems Lab. Six PhD students, three postdocs. Focus: distributed learning under constraints.",
+    title: "Junior Research Scientist",
+    org: "AI Explain You Science (AIEYS)",
+    url: "https://aieys.com/people/Gourab%20Das.html",
+    period: "Jan'26 - Present",
+    detail: (
+      <>
+        Working on <strong>"Safe & Secure UAV Communication."</strong>
+      </>
+    ),
   },
   {
-    title: "Postdoctoral Researcher",
-    org: "MIT CSAIL",
-    period: "2020 – 2023",
-    detail: "Worked with Prof. J. Smith on scalable federated learning and robust optimization.",
+    title: "Research Itern & Master's Thesis",
+    org: "Indian Institute of Informmation Technology, Dharwad",
+    url: "https://www.iiitdwd.ac.in",
+    period: "Dec'25 - Apr'26",
+    detail: (
+      <>
+        Researched on ID Card Presentation & Digital Injection Attack & Detection.
+        <br />
+        Worked under the supervision of -{" "}
+        <a
+          href="https://scholar.google.com/citations?user=OIYIrmIAAAAJ&hl=en"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="underline underline-offset-2 transition-colors hover:text-accent"
+        >
+          Prof. Raghavendra Ramachandra, NTNU, Norway
+        </a>{" "}
+        and{" "}
+        <a
+          href="https://pavankumarphd.github.io/"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="underline underline-offset-2 transition-colors hover:text-accent"
+        >
+          Dr. Pavan Kumar C, IIIT Dharwad
+        </a>
+      </>
+    ),
   },
   {
-    title: "Visiting Researcher",
-    org: "Microsoft Research, Cambridge",
-    period: "Summer 2019",
-    detail: "Systems for large-scale ML training on heterogeneous accelerators.",
+    title: "IASc-INSA-NASI Summer Research Fellowship 2025",
+    org: "Indian Academy of Sciences, Bangalore @ IIIT, Dharwad",
+    period: "Sep - Nov 2025",
+    url: "https://www.ias.ac.in/",
+    detail: (
+      <>
+        Performed research on <strong>"ID Card Forgery Detection"</strong> under the guidance of{" "}
+        <a
+          href="https://pavankumarphd.github.io/"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="text-accent underline underline-offset-4 hover:opacity-80"
+        >
+          Dr. Pavan Kumar C
+        </a>
+        , Assistant Professor, Department of CSE, IIIT Dharwad.
+      </>
+    ),
+  },
+  {
+    title: "Research Internship",
+    org: "Dept. of CSE, Indian Institute of Technology, Kharagpur",
+    period: "May - July 2025",
+    detail: (
+      <>
+        Performed research on <strong>"Plant Genotype Prediction from Phenotype"</strong> under the
+        guidance of{" "}
+        <a
+          href="https://scholar.google.co.in/citations?hl=en&user=5bXSZPYAAAAJ&view_op=list_works"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="text-accent underline underline-offset-4 hover:opacity-80"
+        >
+          Prof. Pabitra Mitra
+        </a>
+        , Professor, Department of CSE, IIT Kharagpur.
+      </>
+    ),
   },
 ];
 
 const education: Entry[] = [
-  { title: "Ph.D., Computer Science", org: "Stanford University", period: "2015 – 2020", detail: "Thesis: Communication-Efficient Learning in Distributed Systems." },
-  { title: "M.S., Computer Science", org: "Carnegie Mellon University", period: "2013 – 2015" },
-  { title: "B.Tech., Computer Engineering", org: "Indian Institute of Technology, Bombay", period: "2009 – 2013", detail: "Graduated with distinction." },
+  {
+    title: "M.Sc - Computer Science",
+    org: "Ramakrishna Mission Vidyamandira, Belur Math, India",
+    period: "2024 - 2026",
+    detail:
+      "Thesis: A Flip in the Script: Exploiting Generative Instability for Semantic Multilingual Document Authentication.",
+    url: "https://vidyamandira.ac.in/",
+  },
+  {
+    title: "B.Sc - Computer Science",
+    org: "ARSD College, University of Delhi, India",
+    period: "2020 – 2023",
+    detail: "Graduated with distinction.",
+    url: "https://www.arsdcollege.ac.in/",
+  },
+  {
+    title: "10 + 2 - Science",
+    org: "Ramakrishna Mission Vidyapith, Deoghar, India",
+    period: "2018 – 2020",
+    detail: "Completed undergraduate studies with distinction.",
+    url: "https://www.rkmvdeoghar.org/",
+  },
 ];
 
 const awards = [
-  { title: "NSF CAREER Award", year: "2024" },
-  { title: "Best Paper Honorable Mention, CHI", year: "2023" },
-  { title: "Rising Star in Data Science", org: "University of Chicago", year: "2022" },
-  { title: "Google Research Scholar Award", year: "2022" },
-  { title: "Stanford Graduate Fellowship", year: "2015" },
+  {
+    title: "Best Paper Award – Information Security Track",
+    year: "2025",
+    org: "7th ICRCICN, Kalyani, India",
+  },
+  {
+    title: "Research Excellence Award & Young Researcher Award",
+    year: "2025",
+    org: "3rd ICETI 2025",
+  },
+  {
+    title: "1st Position - Codeplay",
+    year: "2025",
+    org: "St. Xavier's College, Kolkata, India",
+  },
+  {
+    title: "1st Position - The Turing Show",
+    year: "2025",
+    org: "RKMVERI, Belur Math, India",
+  },
+  {
+    title: "UGC NET JRF & Assistant Professor Qualified",
+    year: "Dec 2024",
+    org: "National Testing Agency (UGC NET), India",
+  },
+  {
+    title: "Sanjeev Arora Memorial Prize & Meritorious Student Award",
+    year: "2023",
+    org: "Atma Ram Sanatan Dharma College, University of Delhi, India",
+  },
+  {
+    title: "Best Leadership Award in 10+2",
+    year: "2020",
+    org: "Ramakrishna Mission Vidyapith, Deoghar, India",
+  },
 ];
 
 const workshops = [
-  { title: "Foundations of Trustworthy AI — Simons Institute", year: "2024" },
-  { title: "Distributed ML Systems Bootcamp — Berkeley", year: "2023" },
-  { title: "Certified: Advanced Kubernetes Operator Design", year: "2022" },
-  { title: "Oxford Machine Learning Summer School", year: "2018" },
+  { title: "Problem Solving (6 Star - Gold level) – HackerRank", year: "2025" },
+  {
+    title: "Supervised Machine Learning: Regression and Classification DeepLearning.AI - Coursera",
+    year: "2025",
+  },
+  {
+    title:
+      "Next Generation Communication Technologies Using MATLAB Tools - Indian Institute of Information Technology Una",
+    year: "2025",
+  },
+  { title: "Cryptography I -   Stanford University - Coursera", year: "2024" },
 ];
 
 const references = [
-  { name: "Prof. Jane Smith", org: "MIT CSAIL", email: "jsmith@mit.edu", role: "Postdoc advisor" },
-  { name: "Prof. Robert Lee", org: "Stanford University", email: "rlee@cs.stanford.edu", role: "PhD advisor" },
-  { name: "Dr. Priya Nair", org: "Google Research", email: "pnair@google.com", role: "Industry collaborator" },
+  {
+    name: "Swami Divyasudhananda",
+    org: "BoG, CBSE, Govt. of India & Principal, RKMV Deoghar",
+    email: "divyasudhananda@gmail.com",
+    role: "10 + 2 School Principal & Mentor",
+  },
+  {
+    name: "Prof. Raghavendra Ramachandra",
+    org: "SAFE Center, NTNU, Norway",
+    email: "raghavendra.ramachandra@ntnu.no",
+    role: "Master's Thesis Supervisor & Research Mentor",
+  },
+  {
+    name: "Dr. Pavan Kumar C",
+    org: "Department of CSE, IIIT Dharwad, India",
+    email: "pavan@iiitdwd.ac.in",
+    role: "Master's Thesis Supervisor & Research Mentor",
+  },
 ];
 
 function Timeline({ items }: { items: Entry[] }) {
@@ -72,14 +216,25 @@ function Timeline({ items }: { items: Entry[] }) {
           key={`${e.title}-${e.period}`}
           className="grid gap-1 border-l-2 border-border pl-5 sm:grid-cols-[160px_1fr] sm:gap-6 sm:pl-0 sm:border-l-0"
         >
-          <p className="text-xs font-semibold uppercase tracking-widest text-accent">
-            {e.period}
-          </p>
+          <p className="text-xs font-semibold uppercase tracking-widest text-accent">{e.period}</p>
           <div>
             <p className="text-base font-bold">{e.title}</p>
-            <p className="text-sm text-muted-foreground">{e.org}</p>
+            <p className="text-base italic text-foreground font-[Times_New_Roman]">
+              {e.url ? (
+                <a
+                  href={e.url}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="transition-colors hover:text-accent"
+                >
+                  {e.org}
+                </a>
+              ) : (
+                e.org
+              )}
+            </p>{" "}
             {e.detail && (
-              <p className="mt-2 font-serif text-sm text-muted-foreground">{e.detail}</p>
+              <p className="mt-1 font-serif text-sm text-muted-foreground">{e.detail}</p>
             )}
           </div>
         </div>
@@ -88,7 +243,15 @@ function Timeline({ items }: { items: Entry[] }) {
   );
 }
 
-function Section({ id, title, children }: { id: string; title: string; children: React.ReactNode }) {
+function Section({
+  id,
+  title,
+  children,
+}: {
+  id: string;
+  title: string;
+  children: React.ReactNode;
+}) {
   return (
     <section id={id} className="space-y-6">
       <h2 className="border-b border-border pb-3 text-xl font-bold">{title}</h2>
@@ -104,7 +267,7 @@ function CvPage() {
         <PageHeading
           eyebrow="Curriculum Vitae"
           title="Gourab Das"
-          description="A detailed record of research, education, honors, and training."
+          description="Researcher, IIIT Dharwad, India."
         />
 
         <a
@@ -138,9 +301,14 @@ function CvPage() {
         <Section id="workshops" title="Workshops Attended & Certifications">
           <ul className="space-y-3">
             {workshops.map((w) => (
-              <li key={w.title} className="flex items-start justify-between gap-4 border-b border-border pb-3 last:border-b-0">
+              <li
+                key={w.title}
+                className="flex items-start justify-between gap-4 border-b border-border pb-3 last:border-b-0"
+              >
                 <span className="text-sm">{w.title}</span>
-                <span className="shrink-0 text-xs font-semibold text-muted-foreground">{w.year}</span>
+                <span className="shrink-0 text-xs font-semibold text-muted-foreground">
+                  {w.year}
+                </span>
               </li>
             ))}
           </ul>
@@ -150,9 +318,12 @@ function CvPage() {
             {references.map((r) => (
               <div key={r.name} className="rounded-2xl border border-border bg-card p-5">
                 <p className="text-sm font-bold">{r.name}</p>
-                <p className="text-xs text-muted-foreground">{r.org}</p>
-                <p className="mt-2 text-xs text-muted-foreground">{r.role}</p>
-                <a href={`mailto:${r.email}`} className="mt-3 block text-xs font-semibold text-accent hover:underline">
+                <p className="mt-1 text-xs text-muted-foreground">{r.org}</p>
+                <p className="mt-0.5 text-xs text-muted-foreground">{r.role}</p>
+                <a
+                  href={`mailto:${r.email}`}
+                  className="mt-1 block text-xs font-semibold text-accent hover:underline"
+                >
                   {r.email}
                 </a>
               </div>
