@@ -124,8 +124,17 @@ function HomePage() {
             className="glow-border group block w-full rounded-2xl bg-surface px-6 py-4 text-left transition-transform hover:scale-[1.01] sm:px-8 sm:py-5"
           >
             <div className="flex items-start gap-1">
-              <span className="inline-flex shrink-0 items-center gap-1.5 rounded-full bg-accent/10 px-3 py-1 text-[10px] font-bold uppercase tracking-widest text-accent">
-                <span className="size-1.5 rounded-full bg-accent animate-pulse" />
+              <span
+                className="inline-flex shrink-0 items-center gap-1.5 rounded-full px-3 py-1 text-[10px] font-bold uppercase tracking-widest"
+                style={{
+                  backgroundColor: "var(--badge-bg)",
+                  color: "var(--badge-text)",
+                }}
+              >
+                <span
+                  className="size-1.5 rounded-full animate-pulse"
+                  style={{ backgroundColor: "var(--badge-dot)" }}
+                />
                 {highlight.badge}
               </span>
             </div>
