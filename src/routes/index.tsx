@@ -40,7 +40,7 @@ function HomePage() {
           </div>
           <div className="mt-4 flex items-center gap-2 text-xs text-muted-foreground">
             <MapPin className="size-3.5" />
-            Researcher, Dept. of CSE, IIIT Dharwad, India
+            Researcher, Dept. of CSE, IIIT Dharwad, India.
           </div>
         </div>
 
