@@ -1,6 +1,13 @@
+@import url("https://fonts.googleapis.com/css2?family=Tiro+Bangla&display=swap");
+
 @import "tailwindcss" source(none);
 @source "../src";
 @import "tw-animate-css";
+
+.font-bengali {
+  font-family: "Tiro Bangla", serif !important;
+  font-style: normal;
+}
 
 @custom-variant dark (&:is(.dark *));
 

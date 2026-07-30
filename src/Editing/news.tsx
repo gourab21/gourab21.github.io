@@ -21,34 +21,30 @@ export type HighlightItem = {
 };
 
 export const highlight: HighlightItem = {
-  title: "Special Session · 2nd ICTIST 2026",
-  subtitle: "Leading a special session on Adversarial Biometrics in the Advanced AI Era",
-  badge: "Recent Highlight",
-  date: "ICTIST 2026 · 29-30 June 2026",
-  detail: (
-    <>
-      <p>
-        <strong>Session:</strong> Adversarial Biometrics in the Advanced AI Era.
-      </p>
-
-      <p>
-        <strong>Venue:</strong> ICTIST 2026, Tashkent, Uzbekistan.
-      </p>
-
-      <p>
-        The session brings together researchers working on adversarial attacks and defenses in
-        biometric systems, exploring the challenges and opportunities in ensuring the security and
-        reliability of biometric authentication in the era of advanced AI technologies.
-      </p>
-    </>
-  ),
-
-  primaryButtonText: "Conference Site",
-  primaryButtonHref: "https://aieys.com/ICTIST%202ND/Ictist.html",
-
-  secondaryButtonText: "Call for Papers",
-  secondaryButtonHref:
-    "https://aieys.com/ICTIST%202ND/special_session/special_session_adversarial_biometrics.html",
+  // title: "Special Session · 2nd ICTIST 2026",
+  // subtitle: "Leading a special session on Adversarial Biometrics in the Advanced AI Era",
+  // badge: "Recent Highlight",
+  // date: "ICTIST 2026 · 29-30 June 2026",
+  // detail: (
+  //   <>
+  //     <p>
+  //       <strong>Session:</strong> Adversarial Biometrics in the Advanced AI Era.
+  //     </p>
+  //     <p>
+  //       <strong>Venue:</strong> ICTIST 2026, Tashkent, Uzbekistan.
+  //     </p>
+  //     <p>
+  //       The session brings together researchers working on adversarial attacks and defenses in
+  //       biometric systems, exploring the challenges and opportunities in ensuring the security and
+  //       reliability of biometric authentication in the era of advanced AI technologies.
+  //     </p>
+  //   </>
+  // ),
+  // primaryButtonText: "Conference Site",
+  // primaryButtonHref: "https://aieys.com/ICTIST%202ND/Ictist.html",
+  // secondaryButtonText: "Call for Papers",
+  // secondaryButtonHref:
+  //   "https://aieys.com/ICTIST%202ND/special_session/special_session_adversarial_biometrics.html",
 };
 
 export const news: NewsItem[] = [
