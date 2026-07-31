@@ -1,10 +1,14 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { useState } from "react";
-import { X } from "lucide-react";
+import { X, Play } from "lucide-react";
 import { PageShell } from "@/components/page-shell";
 import top from "@/assets/linkedin.png";
 import U_PAL from "@/assets/u_pal.jpg";
 import IIT_KGP_PM from "@/assets/iit_kgp.jpg";
+import Newspaper from "@/assets/newspaper.jpg";
+import rkmveri from "@/assets/rkmveri.jpg";
+import stxaviers from "@/assets/stxaviers.jpg";
+import pixelation from "@/assets/pixelation.jpg";
 
 export const Route = createFileRoute("/gallery")({
   head: () => ({
@@ -20,6 +24,15 @@ export const Route = createFileRoute("/gallery")({
 
 type Item =
   | { kind: "photo"; id: string; src: string; caption: string; span?: "wide" | "tall" }
+  | {
+      kind: "video";
+      id: string;
+      videoId: string;
+      /** Start time in seconds (optional) */
+      start?: number;
+      caption: string;
+      span?: "wide" | "tall";
+    }
   | {
       kind: "note";
       id: string;
@@ -44,6 +57,47 @@ const items: Item[] = [
     src: U_PAL,
     caption:
       "With Prof. Umapada Pal Sir, Dr. Pavan Kumar C Sir & Prof. Raghavendra Ramachandra Sir.",
+  },
+  {
+    kind: "photo",
+    id: "ph-3",
+    src: Newspaper,
+    caption: "Published in Uttarbanga Samgbad after XII Results.",
+  },
+  {
+    kind: "photo",
+    id: "ph-3",
+    src: rkmveri,
+    caption:
+      "1st Position - The Turing Show (Coding Contest) at Perceptron (Tech Fest) @ RKMVERI, Belur Math, India ",
+  },
+  {
+    kind: "photo",
+    id: "ph-4",
+    src: stxaviers,
+    caption:
+      "1st Position - CodePlay (Coding Contest) at eXabyte @ St.Xaviers College, Kolkata, India ",
+  },
+  {
+    kind: "photo",
+    id: "ph-3",
+    src: pixelation,
+    caption:
+      "PR Head of Pixelation - Photography Society of ARSD COllege, University of Delhi, India(2022-2023).",
+  },
+
+  {
+    kind: "video",
+    id: "vid-1",
+    videoId: "Sergu3o4wD8",
+    caption: "Welcoming the Freshers 2026",
+  },
+  {
+    kind: "video",
+    id: "vid-2",
+    videoId: "OCcE2ebP9hw",
+    start: 635,
+    caption: "Debate in RKMV Deoghar",
   },
 
   // {
@@ -123,6 +177,27 @@ function GalleryPage() {
                 <p className="text-xs font-semibold text-white">{it.caption}</p>
               </div>
             </button>
+          ) : it.kind === "video" ? (
+            <button
+              key={it.id}
+              onClick={() => setActive(it)}
+              className={`group relative overflow-hidden rounded-2xl border border-border bg-surface-strong text-left ${spanClass(it.span)}`}
+            >
+              <img
+                src={`https://img.youtube.com/vi/${it.videoId}/hqdefault.jpg`}
+                alt={it.caption}
+                loading="lazy"
+                className="size-full object-cover transition-transform duration-500 group-hover:scale-105"
+              />
+              <div className="absolute inset-0 flex items-center justify-center bg-black/20 transition-colors group-hover:bg-black/30">
+                <span className="inline-flex size-14 items-center justify-center rounded-full bg-white/90 shadow-lg transition-transform group-hover:scale-110">
+                  <Play className="size-6 fill-black text-black" />
+                </span>
+              </div>
+              <div className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-black/70 to-transparent p-4 opacity-0 transition-opacity group-hover:opacity-100">
+                <p className="text-xs font-semibold text-white">{it.caption}</p>
+              </div>
+            </button>
           ) : (
             <button
               key={it.id}
@@ -165,6 +240,21 @@ function GalleryPage() {
             {active.kind === "photo" ? (
               <>
                 <img src={active.src} alt={active.caption} className="w-full object-cover" />
+                <p className="p-6 font-serif text-sm text-muted-foreground">{active.caption}</p>
+              </>
+            ) : active.kind === "video" ? (
+              <>
+                <div className="aspect-video w-full">
+                  <iframe
+                    src={`https://www.youtube.com/embed/${active.videoId}?autoplay=1${
+                      active.start ? `&start=${active.start}` : ""
+                    }`}
+                    title={active.caption}
+                    className="size-full"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowFullScreen
+                  />
+                </div>
                 <p className="p-6 font-serif text-sm text-muted-foreground">{active.caption}</p>
               </>
             ) : (
