@@ -7,6 +7,12 @@ import pub1 from "@/assets/pub-1.jpg";
 import baidya2026heefo from "@/assets/baidya2026heefo.png";
 import das2026forgeries from "@/assets/das2026forgeries.png";
 import das2026forgeries_p from "@/assets/das2026forgeries_p.png";
+import ocit_poster from "@/assets/ocit-poster.jpg";
+import kalyani_poster from "@/assets/kalyani-poster-better.png";
+import jadavpur_poster from "@/assets/jadav_poster.png";
+import peerj_poster from "@/assets/peerj_poster.png";
+import kalman_poster from "@/assets/kalman_poster.png";
+import heffo_poster from "@/assets/heffo_poster.png";
 
 export type PubType = "Journal" | "Conference" | "Thesis" | "Book Chapter";
 
@@ -41,7 +47,7 @@ export const publications: Record<number, Publication[]> = {
       link: "https://arxiv.org/abs/2607.01442",
       image: das2026forgeries,
       poster: das2026forgeries_p,
-      videoId: "dQw4w9WgXcQ",
+      videoId: "#",
       bibtex: `@article{das2026forgeries,
   title        = {From Forgeries to Foundation Models: A Systematic Survey of Identity Document Attack and Detection},
   author       = {Das, Gourab and Kumar C, Pavan and Ramachandra, Raghavendra},
@@ -69,8 +75,8 @@ export const publications: Record<number, Publication[]> = {
       tag: "Impact Factor: 5.7",
       link: "https://www.sciencedirect.com/science/article/abs/pii/S2214209626000318",
       image: baidya2026heefo,
-      poster: pub1,
-      videoId: "dQw4w9WgXcQ",
+      poster: heffo_poster,
+      videoId: "#",
       bibtex: `@article{baidya2026heefo,
   title={HEEFO: A lightweight cryptographic trinity for robust UAV communication security},
   author={Baidya, Bodhisattwa and Mondal, Atanu and Das, Gourab and Khan, Inam Ullah and Ahmad, Jawad and Shah, Syed Aziz},
@@ -98,8 +104,8 @@ export const publications: Record<number, Publication[]> = {
       tag: "Impact Factor: 2.9",
       link: "https://peerj.com/articles/cs-3599/",
       image: baidya2026decentralized,
-      poster: pub1,
-      videoId: "dQw4w9WgXcQ",
+      poster: peerj_poster,
+      videoId: "#",
       bibtex: `@article{baidya2026decentralized,
   title={Decentralized SecureSky: a hybrid blockchain-IPFS framework for secure and scalable UAV traffic management},
   author={Baidya, Bodhisattwa and Das, Gourab and Khan, Inam Ullah and Mondal, Atanu and Alam, Muhammad Mansoor and Kaushik, Keshav and others},
@@ -125,8 +131,8 @@ export const publications: Record<number, Publication[]> = {
       type: "Conference",
       link: "https://link.springer.com/chapter/10.1007/978-3-032-17187-0_15",
       image: baidya2025next,
-      poster: pub1,
-      videoId: "dQw4w9WgXcQ",
+      poster: jadavpur_poster,
+      videoId: "#",
       bibtex: `@inproceedings{baidya2025next,
   title={Next-Gen Secure UAV: Leveraging Hyperelliptic Curves and Particle Swarm Optimization},
   author={Baidya, Bodhisattwa and Das, Gourab and Mondal, Atanu},
@@ -155,8 +161,8 @@ export const publications: Record<number, Publication[]> = {
       tag: "Best Paper Award",
       link: "https://ieeexplore.ieee.org/abstract/document/11364836",
       image: baidya2025lightweight,
-      poster: pub1,
-      videoId: "dQw4w9WgXcQ",
+      poster: kalyani_poster,
+      videoId: "#",
       bibtex: `@inproceedings{baidya2025lightweight,
   title={Lightweight Cryptographic Authentication for UAV Networks: A Hyperelliptic Curve Approach},
   author={Baidya, Bodhisattwa and Mondal, Atanu and Banerjee, Sourav and Das, Gourab},
@@ -181,8 +187,8 @@ export const publications: Record<number, Publication[]> = {
       type: "Conference",
       link: "https://ieeexplore.ieee.org/abstract/document/11399863",
       image: das2025multi,
-      poster: pub1,
-      videoId: "dQw4w9WgXcQ",
+      poster: ocit_poster,
+      videoId: "#",
       bibtex: `@inproceedings{das2025multi,
   title={Multi-Level Stacking Framework for Robust Cardiovascular Disease Prediction},
   author={Das, Gourab and Khan, Inam Ullah and Baidya, Bodhisattwa and Saha, Rajarshi and Anamalamudi, Satish and Ahmad, Jawad and Shah, Syed Aziz},
@@ -210,8 +216,8 @@ export const publications: Record<number, Publication[]> = {
       type: "Conference",
       link: "https://ceur-ws.org/Vol-3900/Paper19.pdf",
       image: baidya2024enhanced,
-      poster: baidya2024enhanced,
-      videoId: "dQw4w9WgXcQ",
+      poster: kalman_poster,
+      videoId: "#",
       bibtex: `@inproceedings{baidya2024enhanced,
   title={Enhanced UAV Tracking through Multi-Sensor Fusion and Extended Kalman Filtering.},
   author={Baidya, Bodhisattwa and Mondal, Atanu and Manna, Sarbajit and Das, Gourab and Santra, Anirban and Chakraborty, Arkaprava}

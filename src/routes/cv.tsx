@@ -1,5 +1,6 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { PageShell, PageHeading } from "@/components/page-shell";
+import CV from "@/assets/GD.pdf";
 import { Download } from "lucide-react";
 
 export const Route = createFileRoute("/cv")({
@@ -271,10 +272,10 @@ function CvPage() {
         />
 
         <a
-          href="#"
+          href={CV}
           className="mb-12 inline-flex items-center gap-2 rounded-full border border-border bg-surface px-4 py-2 text-xs font-semibold uppercase tracking-wider hover:border-accent hover:text-accent"
         >
-          <Download className="size-3.5" /> Download PDF
+          <Download className="size-3.5" /> View CV
         </a>
       </div>
 
