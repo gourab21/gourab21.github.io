@@ -113,6 +113,13 @@ const research: Entry[] = [
 
 const education: Entry[] = [
   {
+    title: "Ph.D. - Computer Science & Engineering",
+    org: "Indian Institute of Information Technology, Dharwad, India",
+    period: "2026 - Present",
+    detail: "Focus: Presentation Attack & Detection in Digital Document Authentication.",
+    url: "https://iiitdwd.ac.in/",
+  },
+  {
     title: "M.Sc - Computer Science",
     org: "Ramakrishna Mission Vidyamandira, Belur Math, India",
     period: "2024 - 2026",
@@ -268,7 +275,7 @@ function CvPage() {
         <PageHeading
           eyebrow="Curriculum Vitae"
           title="Gourab Das"
-          description="Researcher, IIIT Dharwad, India."
+          description="PhD Scholar, Dept. of CSE, IIIT Dharwad, India."
         />
 
         <a

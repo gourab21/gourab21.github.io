@@ -40,7 +40,7 @@ function HomePage() {
           </div>
           <div className="mt-4 flex items-center gap-2 text-xs text-muted-foreground">
             <MapPin className="size-3.5" />
-            Researcher, Dept. of CSE, IIIT Dharwad, India.
+            PhD Scholar, Dept. of CSE, IIIT Dharwad, India.
           </div>
         </div>
 
@@ -52,7 +52,7 @@ function HomePage() {
             Building systems that actually matter.
           </p>
           <p className="max-w-xl font-serif text-lg leading-relaxed text-muted-foreground">
-            I am a Researcher in the Department of CSE at
+            I am a PhD Scholar in the Department of CSE at
             <a
               href="https://www.iiitdwd.ac.in/"
               target="_blank"
