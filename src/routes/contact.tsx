@@ -7,9 +7,15 @@ export const Route = createFileRoute("/contact")({
   head: () => ({
     meta: [
       { title: "Contact — Gourab Das" },
-      { name: "description", content: "Office address, phone, email, and profile links for Gourab Das." },
+      {
+        name: "description",
+        content: "Office address, phone, email, and profile links for Gourab Das.",
+      },
       { property: "og:title", content: "Contact — Gourab Das" },
-      { property: "og:description", content: "Get in touch: address, phone, email, and research profile links." },
+      {
+        property: "og:description",
+        content: "Get in touch: address, phone, email, and research profile links.",
+      },
     ],
   }),
   component: ContactPage,
@@ -42,9 +48,18 @@ function ContactPage() {
                   </p>
                   <p className="mt-1 font-serif text-base leading-relaxed">
                     Drone & UAV Lab, RD 2<br />
-                    &pi; Block, IIIT Dharwad<br />
-                    Near Sattur Colony, Dharwad<br />
-                    Karnataka 580009, India
+                    &pi; Block, IIIT Dharwad
+                    <br />
+                    Near Sattur Colony, Dharwad
+                    <br />
+                    Karnataka 580009,{" "}
+                    <a
+                      href="https://drive.google.com/drive/folders/14cIOga773XQvkIinn0cnfYJESBJb1kw0?usp=sharing"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      India
+                    </a>
                   </p>
                 </div>
               </div>
@@ -57,7 +72,10 @@ function ContactPage() {
                   <p className="text-xs font-black uppercase tracking-widest text-muted-foreground">
                     Phone
                   </p>
-                  <a href="tel:+917364997118" className="mt-1 block text-base font-semibold hover:text-accent">
+                  <a
+                    href="tel:+917364997118"
+                    className="mt-1 block text-base font-semibold hover:text-accent"
+                  >
                     +91 7364997118
                   </a>
                 </div>
@@ -71,10 +89,16 @@ function ContactPage() {
                   <p className="text-xs font-black uppercase tracking-widest text-muted-foreground">
                     Email
                   </p>
-                  <a href="mailto:gourabdas2128@gmail.com" className="mt-1 block text-base font-semibold hover:text-accent">
+                  <a
+                    href="mailto:gourabdas2128@gmail.com"
+                    className="mt-1 block text-base font-semibold hover:text-accent"
+                  >
                     gourabdas2128@gmail.com
                   </a>
-                  <a href="mailto:gourab.das@iiitdwd.ac.in" className="mt-1 block text-base font-semibold hover:text-accent">
+                  <a
+                    href="mailto:gourab.das@iiitdwd.ac.in"
+                    className="mt-1 block text-base font-semibold hover:text-accent"
+                  >
                     gourab.das@iiitdwd.ac.in
                   </a>
                 </div>
