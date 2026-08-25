@@ -49,6 +49,44 @@ export const highlight: HighlightItem = {
 
 export const news: NewsItem[] = [
   {
+    date: "17 Aug 2026",
+    title: "Joined PhD in CSE at IIIT Dharwad",
+    detail: (
+      <>
+        Joined <strong>PhD</strong> program at the{" "}
+        <strong>Department of Computer Science and Engineering</strong> at{" "}
+        <a
+          href="https://iiitdwd.ac.in/"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="text-accent underline underline-offset-4 hover:opacity-80"
+        >
+          Indian Institute of Information Technology Dharwad (IIIT Dharwad)
+        </a>{" "}
+        under the guidance of{" "}
+        <a
+          href="https://scholar.google.com/citations?user=OIYIrmIAAAAJ&hl=en"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="text-accent underline underline-offset-4 hover:opacity-80"
+        >
+          Prof. Raghavendra Ramachandra
+        </a>{" "}
+        Professor, Department of ICT, NTNU, Norway & Adjunct Faculty, Department of CSE, IIIT
+        Dharwad and{" "}
+        <a
+          href="https://pavankumarphd.github.io/"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="text-accent underline underline-offset-4 hover:opacity-80"
+        >
+          Dr. Pavan Kumar C
+        </a>
+        , Assistant Professor, Department of CSE, IIIT Dharwad.
+      </>
+    ),
+  },
+  {
     date: "Jan 2026",
     title: "Research Internship & Master's Project",
     detail: (

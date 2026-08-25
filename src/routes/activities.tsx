@@ -69,6 +69,10 @@ const tpc = [
 
 const memberships = [
   {
+    name: "Member - IEEE CTSoc Machine learning, Deep learning and AI in CE (MDA) Technical Committee (TC)",
+    year: "Since 2026",
+  },
+  {
     name: "Student Member, European Association for Biometrics (EAB)",
     year: "Since 2026",
   },
