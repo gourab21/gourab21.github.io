@@ -73,6 +73,10 @@ const memberships = [
     year: "Since 2026",
   },
   {
+    name: "Member - Technical Community on Computer Communications (TCCC)",
+    year: "Since 2026",
+  },
+  {
     name: "Student Member, European Association for Biometrics (EAB)",
     year: "Since 2026",
   },
