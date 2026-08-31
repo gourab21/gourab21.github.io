@@ -23,9 +23,21 @@ export const Route = createFileRoute("/activities")({
 
 const reviewer = [
   {
+    name: "IEEE Internet of Things Journal(IoT-J)",
+    type: "Journal",
+    since: "2026",
+    url: "https://ieee-iotj.org/",
+  },
+  {
+    name: "Engineering Applications of Artificial Intelligence (EAAI)",
+    type: "Journal",
+    since: "2026",
+    url: "https://www.sciencedirect.com/journal/engineering-applications-of-artificial-intelligence",
+  },
+  {
     name: "IEEE Access",
     type: "Journal",
-    since: "2025",
+    since: "2026",
     url: "https://ieeexplore.ieee.org/xpl/RecentIssue.jsp?punumber=6287639",
   },
   {
@@ -37,13 +49,13 @@ const reviewer = [
   {
     name: "IEEE Transactions on Consumer Electronics (IEEE TCE)",
     type: "Journal",
-    since: "2025",
+    since: "2026",
     url: "https://ieeexplore.ieee.org/xpl/RecentIssue.jsp?punumber=30",
   },
   {
     name: "IEEE Transactions on Artificial Intelligence (IEEE TAI)",
     type: "Journal",
-    since: "2025",
+    since: "2026",
     url: "https://ieeexplore.ieee.org/xpl/RecentIssue.jsp?punumber=9078688",
   },
   {

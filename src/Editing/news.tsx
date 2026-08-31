@@ -49,6 +49,34 @@ export const highlight: HighlightItem = {
 
 export const news: NewsItem[] = [
   {
+  date: "21 Aug 2026",
+  title: "Joined IEEE CTSoc MDA Technical Committee",
+  detail: (
+    <>
+      Joined as a <strong>member</strong> of the{" "}
+      <a
+        href="https://ctsoc.ieee.org/"
+        target="_blank"
+        rel="noopener noreferrer"
+        className="text-accent underline underline-offset-4 hover:opacity-80"
+      >
+        IEEE Consumer Technology Society (CTSoc)
+      </a>{" "}
+      Technical Committee on{" "}
+      <strong>Machine Learning, Deep Learning and AI in Consumer Electronics (MDA)</strong>.  
+      Listed among members at{" "}
+      <a
+        href="https://ctsoc.ieee.org/technical/technical-committees/mda-tc?view=article&id=310:mda-tc-members&catid=21#:~:text=Gourab%20Das,IIIT%20Dharwad"
+        target="_blank"
+        rel="noopener noreferrer"
+        className="text-accent underline underline-offset-4 hover:opacity-80"
+      >
+        MDA TC Members Page
+      </a>.
+    </>
+  ),
+},
+  {
     date: "17 Aug 2026",
     title: "Joined PhD in CSE at IIIT Dharwad",
     detail: (
