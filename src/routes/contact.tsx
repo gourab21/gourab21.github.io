@@ -90,10 +90,10 @@ function ContactPage() {
                     Email
                   </p>
                   <a
-                    href="mailto:gourab4ai@gmail.com"
+                    href="mailto:gourabdas2128@gmail.com"
                     className="mt-1 block text-base font-semibold hover:text-accent"
                   >
-                    gourab4ai@gmail.com
+                    gourabdas2128@gmail.com
                   </a>
                   <a
                     href="mailto:gourab.das@iiitdwd.ac.in"

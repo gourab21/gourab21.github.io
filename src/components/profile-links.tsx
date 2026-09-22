@@ -34,11 +34,6 @@ export const profileLinks: ProfileLink[] = [
     Icon: TbWorldSearch,
   },
   {
-    label: "Scopus",
-    href: "https://www.scopus.com/authid/detail.uri?authorId=59531593900",
-    Icon: SiScopus,
-  },
-  {
     label: "IEEE Xplore",
     href: "https://ieeexplore.ieee.org/author/37088839368",
     Icon: Cpu,
@@ -52,7 +47,6 @@ export const profileLinks: ProfileLink[] = [
   { label: "GitHub", href: "https://github.com/gourab21", Icon: Github },
   { label: "LinkedIn", href: "https://www.linkedin.com/in/gourab21/", Icon: Linkedin },
   { label: "YouTube", href: "https://www.youtube.com/@gourabdas2128", Icon: Youtube },
-  { label: "X (Twitter)", href: "https://x.com/gourabdas2128", Icon: Twitter },
 ];
 
 export function ProfileLinkRow({ variant = "chip" }: { variant?: "chip" | "icon" }) {

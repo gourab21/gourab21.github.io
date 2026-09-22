@@ -48,53 +48,78 @@ function HomePage() {
           <h1 className="text-5xl font-bold leading-[0.95] tracking-tight sm:text-6xl md:text-[4.25rem]">
             Gourab <span className="text-accent">Das.</span>
           </h1>
-          <p className="text-xl font-serif italic text-foreground/80 sm:text-2xl">
+          {/* <p className="text-xl font-serif italic text-foreground/80 sm:text-2xl">
             Building systems that actually matter.
-          </p>
+          </p> */}
           <p className="max-w-xl font-serif text-lg leading-relaxed text-muted-foreground">
-            I am a PhD Scholar in the Department of CSE at
-            <a
-              href="https://www.iiitdwd.ac.in/"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="underline underline-offset-3"
-            >
-              {" "}
-              IIIT Dharwad
-            </a>
-            , India. An Alumni of
-            <a
-              href="https://rkmvdeoghar.org/"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="underline underline-offset-3"
-            >
-              {" "}
-              RKMV Deoghar
-            </a>
-            ,
-            <a
-              href="https://arsdcollege.ac.in/"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="underline underline-offset-3"
-            >
-              {" "}
-              ARSD College{" "}
-            </a>
-            - University of Delhi, &
-            <a
-              href="https://www.vidyamandira.ac.in/"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="underline underline-offset-3"
-            >
-              {" "}
-              RKM Vidyamandira
-            </a>
-            , Belur Math, India. My work sits at the intersection of Machine Learning, Safe & Secure
-            Biometrics, & Forgery Detection.
-          </p>
+  I am a PhD Scholar in the Department of CSE at
+  <a
+    href="https://www.iiitdwd.ac.in/"
+    target="_blank"
+    rel="noopener noreferrer"
+    className="ml-1 underline underline-offset-4 decoration-1 transition-all duration-200 
+               hover:text-blue-600 hover:decoration-blue-600 
+               dark:hover:text-blue-400 dark:hover:decoration-blue-400"
+  >
+    IIIT Dharwad
+  </a>
+  , India under the supervision of{" "}
+  <a
+    href="https://scholar.google.com/citations?hl=en&user=OIYIrmIAAAAJ"
+    target="_blank"
+    rel="noopener noreferrer"
+    className="underline underline-offset-4 decoration-1 transition-all duration-200 
+               hover:text-blue-600 hover:decoration-blue-600 
+               dark:hover:text-blue-400 dark:hover:decoration-blue-400"
+  >
+    Prof. Raghavendra Ramachandra
+  </a>{" "}
+  &{" "}
+  <a
+    href="https://scholar.google.com/citations?hl=en&user=OIYIrmIAAAAJ"
+    target="_blank"
+    rel="noopener noreferrer"
+    className="underline underline-offset-4 decoration-1 transition-all duration-200 
+               hover:text-blue-600 hover:decoration-blue-600 
+               dark:hover:text-blue-400 dark:hover:decoration-blue-400"
+  >
+    Dr. Pavan Kumar C
+  </a>
+  . An Alumni of
+  <a
+    href="https://rkmvdeoghar.org/"
+    target="_blank"
+    rel="noopener noreferrer"
+    className="ml-1 underline underline-offset-4 decoration-1 transition-all duration-200 
+               hover:text-blue-600 hover:decoration-blue-600 
+               dark:hover:text-blue-400 dark:hover:decoration-blue-400"
+  >
+    RKMV Deoghar
+  </a>
+  ,
+  <a
+    href="https://arsdcollege.ac.in/"
+    target="_blank"
+    rel="noopener noreferrer"
+    className="ml-1 underline underline-offset-4 decoration-1 transition-all duration-200 
+               hover:text-blue-600 hover:decoration-blue-600 
+               dark:hover:text-blue-400 dark:hover:decoration-blue-400"
+  >
+    ARSD College
+  </a>{" "}
+  - University of Delhi, &
+  <a
+    href="https://www.vidyamandira.ac.in/"
+    target="_blank"
+    rel="noopener noreferrer"
+    className="ml-1 underline underline-offset-4 decoration-1 transition-all duration-200 
+               hover:text-blue-600 hover:decoration-blue-600 
+               dark:hover:text-blue-400 dark:hover:decoration-blue-400"
+  >
+    RKM Vidyamandira
+  </a>
+  , Belur Math, India. My work centers on the development of safe and secure biometric technologies, with a strong emphasis on detecting and preventing forgery.
+</p>
 
           <ProfileLinkRow />
 
