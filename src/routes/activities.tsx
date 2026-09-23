@@ -64,11 +64,17 @@ const reviewer = [
     since: "2025",
     url: "https://ojs.bonviewpress.com/index.php/JCCE",
   },
+  {
+    name: "CVIP 2026",
+    type: "Conference",
+    since: "2026",
+    url: "https://cvip2026.nitc.ac.in/",
+  }
 ];
 
 const tpc = [
   {
-    name: "2nd ICTIST 2026",
+    name: "Session Chair - 2nd ICTIST 2026",
     role: "Track: Adversarial Biometrics in the Advanced AI Era",
     url: "https://aieys.com/ICTIST%202ND/special_session/special_session_adversarial_biometrics.html",
   },
@@ -154,7 +160,7 @@ function ActivitiesPage() {
           </div>
         </Section>
 
-        <Section title="Technical Program Committee">
+        <Section title="Conference Program Committees">
           <div className="flex flex-wrap gap-3">
             {tpc.map((t) => (
               <a
