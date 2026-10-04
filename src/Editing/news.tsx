@@ -21,10 +21,10 @@ export type HighlightItem = {
 };
 
 export const highlight: HighlightItem = {
-  // title: "Special Session · 2nd ICTIST 2026",
-  // subtitle: "Leading a special session on Adversarial Biometrics in the Advanced AI Era",
-  // badge: "Recent Highlight",
-  // date: "ICTIST 2026 · 29-30 June 2026",
+  title: "Paper Accepted at 28th ICDCN 2026 Main Track",
+  subtitle: "Beyond Encryption: Quantum-Resilient Semantic Deniability Against Intent Leakage in 6G UAV Networks, co-authored with Bodhisattwa Baidya and Dr. Ayan Mondal, IIT Indore.",
+  badge: "Paper Accepted",
+  date: "ICTIST 2026 · 29-30 June 2026",
   // detail: (
   //   <>
   //     <p>
@@ -43,11 +43,49 @@ export const highlight: HighlightItem = {
   // primaryButtonText: "Conference Site",
   // primaryButtonHref: "https://aieys.com/ICTIST%202ND/Ictist.html",
   // secondaryButtonText: "Call for Papers",
-  // secondaryButtonHref:
-  //   "https://aieys.com/ICTIST%202ND/special_session/special_session_adversarial_biometrics.html",
+  // secondaryButtonHref:"https://aieys.com/ICTIST%202ND/special_session/special_session_adversarial_biometrics.html",
 };
 
 export const news: NewsItem[] = [
+{
+  date: "02 Oct 2026",
+  title: "Paper Accepted at 28th ICDCN (Main Track)",
+  detail: (
+    <>
+      Our paper{" "}
+      <strong>
+        Beyond Encryption: Quantum-Resilient Semantic Deniability Against Intent Leakage in 6G UAV Networks
+      </strong>{" "}
+      has been accepted at the Main Track of{" "}
+      <a
+        href="https://sites.google.com/view/icdcn2026/"
+        target="_blank"
+        rel="noopener noreferrer"
+        className="text-accent underline underline-offset-4 hover:opacity-80"
+      >
+        28th ICDCN
+      </a>.
+      The paper was a collaborative effort of{" "}
+      <a
+        href="https://scholar.google.com/citations?user=IV97v-wAAAAJ&hl=en"
+        target="_blank"
+        rel="noopener noreferrer"
+        className="text-accent underline underline-offset-4 hover:opacity-80"
+      >
+        Bodhisattwa Baidya
+      </a>{" "}
+      and me, with valuable guidance from{" "}
+      <a
+        href="https://people.iiti.ac.in/~ayanm/"
+        target="_blank"
+        rel="noopener noreferrer"
+        className="text-accent underline underline-offset-4 hover:opacity-80"
+      >
+        Dr. Ayan Mondal
+      </a>, IIT Indore.
+    </>
+  ),
+},
   {
   date: "21 Aug 2026",
   title: "Joined IEEE CTSoc MDA Technical Committee",
