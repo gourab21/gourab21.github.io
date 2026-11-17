@@ -1,6 +1,6 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { PageShell, PageHeading } from "@/components/page-shell";
-import CV from "@/assets/GD.pdf";
+import CV from "@/assets/CV.pdf";
 import { Download } from "lucide-react";
 
 export const Route = createFileRoute("/cv")({

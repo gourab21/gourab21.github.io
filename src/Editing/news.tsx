@@ -21,10 +21,10 @@ export type HighlightItem = {
 };
 
 export const highlight: HighlightItem = {
-  title: "Paper Accepted at 28th ICDCN 2026 Main Track",
-  subtitle: "Beyond Encryption: Quantum-Resilient Semantic Deniability Against Intent Leakage in 6G UAV Networks, co-authored with Bodhisattwa Baidya and Dr. Ayan Mondal, IIT Indore.",
-  badge: "Paper Accepted",
-  date: "ICTIST 2026 · 29-30 June 2026",
+  // title: "Paper Accepted at 28th ICDCN 2026 Main Track",
+  // subtitle: "Beyond Encryption: Quantum-Resilient Semantic Deniability Against Intent Leakage in 6G UAV Networks, co-authored with Bodhisattwa Baidya and Dr. Ayan Mondal, IIT Indore.",
+  // badge: "Paper Accepted",
+  // date: "ICTIST 2026 · 29-30 June 2026",
   // detail: (
   //   <>
   //     <p>
@@ -47,73 +47,157 @@ export const highlight: HighlightItem = {
 };
 
 export const news: NewsItem[] = [
-{
-  date: "02 Oct 2026",
-  title: "Paper Accepted at 28th ICDCN (Main Track)",
-  detail: (
-    <>
-      Our paper{" "}
-      <strong>
-        Beyond Encryption: Quantum-Resilient Semantic Deniability Against Intent Leakage in 6G UAV Networks
-      </strong>{" "}
-      has been accepted at the Main Track of{" "}
-      <a
-        href="https://sites.google.com/view/icdcn2026/"
-        target="_blank"
-        rel="noopener noreferrer"
-        className="text-accent underline underline-offset-4 hover:opacity-80"
-      >
-        28th ICDCN
-      </a>.
-      The paper was a collaborative effort of{" "}
-      <a
-        href="https://scholar.google.com/citations?user=IV97v-wAAAAJ&hl=en"
-        target="_blank"
-        rel="noopener noreferrer"
-        className="text-accent underline underline-offset-4 hover:opacity-80"
-      >
-        Bodhisattwa Baidya
-      </a>{" "}
-      and me, with valuable guidance from{" "}
-      <a
-        href="https://people.iiti.ac.in/~ayanm/"
-        target="_blank"
-        rel="noopener noreferrer"
-        className="text-accent underline underline-offset-4 hover:opacity-80"
-      >
-        Dr. Ayan Mondal
-      </a>, IIT Indore.
-    </>
-  ),
-},
   {
-  date: "21 Aug 2026",
-  title: "Joined IEEE CTSoc MDA Technical Committee",
-  detail: (
-    <>
-      Joined as a <strong>member</strong> of the{" "}
-      <a
-        href="https://ctsoc.ieee.org/"
-        target="_blank"
-        rel="noopener noreferrer"
-        className="text-accent underline underline-offset-4 hover:opacity-80"
-      >
-        IEEE Consumer Technology Society (CTSoc)
-      </a>{" "}
-      Technical Committee on{" "}
-      <strong>Machine Learning, Deep Learning and AI in Consumer Electronics (MDA)</strong>.  
-      Listed among members at{" "}
-      <a
-        href="https://ctsoc.ieee.org/technical/technical-committees/mda-tc?view=article&id=310:mda-tc-members&catid=21#:~:text=Gourab%20Das,IIIT%20Dharwad"
-        target="_blank"
-        rel="noopener noreferrer"
-        className="text-accent underline underline-offset-4 hover:opacity-80"
-      >
-        MDA TC Members Page
-      </a>.
-    </>
-  ),
-},
+    date: "Nov 2026",
+    title: "Paper Accepted at 2nd AIFB Conference",
+    detail: (
+      <>
+        Our paper{" "}
+        <strong>
+          CLV-ID: Cross-Lingual Verification for Detecting AI-Generated Text Forgeries in
+          Multilingual Identity Documents
+        </strong>{" "}
+        has been accepted at the{" "}
+        <a
+          href="https://aifb2026.iitdh.ac.in/"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="text-accent underline underline-offset-4 hover:opacity-80"
+        >
+          2nd AIFB Conference
+        </a>
+        . This work was completed under the guidance of my PhD guides,{" "}
+        <a
+          href="https://scholar.google.com/citations?user=OIYIrmIAAAAJ&hl=en"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="text-accent underline underline-offset-4 hover:opacity-80"
+        >
+          Prof. Raghavendra Ramachandra
+        </a>{" "}
+        and{" "}
+        <a
+          href="https://pavankumarphd.github.io/"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="text-accent underline underline-offset-4 hover:opacity-80"
+        >
+          Dr. Pavan Kumar C
+        </a>
+        .
+      </>
+    ),
+  },
+  {
+    date: "Nov 2026",
+    title: "Poster Accepted at 28th ICDCN",
+    detail: (
+      <>
+        Our poster featuring{" "}
+        <strong>
+          PRISM: Continuous Semantic Fidelity-Aware UAV Scheduling for Heterogeneous IoT Networks
+        </strong>{" "}
+        has been accepted at the{" "}
+        <a
+          href="https://cs3-lab.github.io/icdcn/index.html"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="text-accent underline underline-offset-4 hover:opacity-80"
+        >
+          28th ICDCN
+        </a>
+        . The poster was a collaborative effort of{" "}
+        <a
+          href="https://bodhisattwabaidya.com/"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="text-accent underline underline-offset-4 hover:opacity-80"
+        >
+          Bodhisattwa Baidya
+        </a>{" "}
+        and me, with valuable guidance from{" "}
+        <a
+          href="https://people.iiti.ac.in/~ayanm/"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="text-accent underline underline-offset-4 hover:opacity-80"
+        >
+          Dr. Ayan Mondal
+        </a>
+        , IIT Indore.
+      </>
+    ),
+  },
+  {
+    date: "02 Oct 2026",
+    title: "Paper Accepted at 28th ICDCN (Main Track)",
+    detail: (
+      <>
+        Our paper{" "}
+        <strong>
+          Beyond Encryption: Quantum-Resilient Semantic Deniability Against Intent Leakage in 6G UAV
+          Networks
+        </strong>{" "}
+        has been accepted at the Main Track of{" "}
+        <a
+          href="https://sites.google.com/view/icdcn2026/"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="text-accent underline underline-offset-4 hover:opacity-80"
+        >
+          28th ICDCN
+        </a>
+        . The paper was a collaborative effort of{" "}
+        <a
+          href="https://scholar.google.com/citations?user=IV97v-wAAAAJ&hl=en"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="text-accent underline underline-offset-4 hover:opacity-80"
+        >
+          Bodhisattwa Baidya
+        </a>{" "}
+        and me, with valuable guidance from{" "}
+        <a
+          href="https://people.iiti.ac.in/~ayanm/"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="text-accent underline underline-offset-4 hover:opacity-80"
+        >
+          Dr. Ayan Mondal
+        </a>
+        , IIT Indore.
+      </>
+    ),
+  },
+  {
+    date: "21 Aug 2026",
+    title: "Joined IEEE CTSoc MDA Technical Committee",
+    detail: (
+      <>
+        Joined as a <strong>member</strong> of the{" "}
+        <a
+          href="https://ctsoc.ieee.org/"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="text-accent underline underline-offset-4 hover:opacity-80"
+        >
+          IEEE Consumer Technology Society (CTSoc)
+        </a>{" "}
+        Technical Committee on{" "}
+        <strong>Machine Learning, Deep Learning and AI in Consumer Electronics (MDA)</strong>.
+        Listed among members at{" "}
+        <a
+          href="https://ctsoc.ieee.org/technical/technical-committees/mda-tc?view=article&id=310:mda-tc-members&catid=21#:~:text=Gourab%20Das,IIIT%20Dharwad"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="text-accent underline underline-offset-4 hover:opacity-80"
+        >
+          MDA TC Members Page
+        </a>
+        .
+      </>
+    ),
+  },
   {
     date: "17 Aug 2026",
     title: "Joined PhD in CSE at IIIT Dharwad",

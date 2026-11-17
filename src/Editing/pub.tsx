@@ -13,6 +13,19 @@ import jadavpur_poster from "@/assets/jadav_poster.png";
 import peerj_poster from "@/assets/peerj_poster.png";
 import kalman_poster from "@/assets/kalman_poster.png";
 import heffo_poster from "@/assets/heffo_poster.png";
+import beyond_poster from "@/assets/beyond-poster.png";
+import clv_id_poster from "@/assets/clv-id-poster.png";
+import prism_poster from "@/assets/prism-poster.png";
+import prism_abs from "@/assets/prism-abs.png";
+import beyond_abs from "@/assets/beyond-abs.png";
+import clv_abs from "@/assets/clv-abs.png";
+
+// Replace these placeholders with the publication and video links when available.
+const aifb2026Link = "#";
+const aifb2026VideoId = "#";
+const icdcn2027PosterLink = "#";
+const icdcn2027PosterVideoId = "#";
+const icdcn2027PaperVideoId = "#";
 
 export type PubType = "Journal" | "Conference" | "Thesis" | "Book Chapter";
 
@@ -31,7 +44,85 @@ export type Publication = {
 };
 
 export const publications: Record<number, Publication[]> = {
+  2027: [
+    {
+      title:
+        "PRISM: Continuous Semantic Fidelity-Aware UAV Scheduling for Heterogeneous IoT Networks",
+      authors: (
+        <>
+          <span className="font-bold underline underline-offset-4">Gourab Das</span>, Bodhisattwa
+          Baidya, Ayan Mondal
+        </>
+      ),
+      venue: "ICDCN Companion 2027 (Poster)",
+      type: "Conference",
+      link: icdcn2027PosterLink,
+      image: prism_abs,
+      poster: prism_poster,
+      videoId: icdcn2027PosterVideoId,
+      bibtex: `@inproceedings{das2027prism,
+  title     = {PRISM: Continuous Semantic Fidelity-Aware UAV Scheduling for Heterogeneous IoT Networks},
+  author    = {Das, Gourab and Baidya, Bodhisattwa and Mondal, Ayan},
+  booktitle = {28th International Conference on Distributed Computing and Networking (ICDCN 2027) Companion},
+  year      = {2027},
+  address   = {Mangalore, India}
+}`,
+      abstract:
+        "UAVs provide an effective means of monitoring IoT sensors, but efficient scheduling remains challenging when sensors differ in their information staleness rates. Traditional metrics, such as Age of Information (AoI) and Age of Incorrect Information (AoII), do not fully capture these differences. To address this limitation, we propose Continuous Semantic Fidelity (CSF), a sensor-specific exponential decay model, and develop PRISM, a greedy policy that polls the sensor with the lowest current fidelity. Monte Carlo simulations show that PRISM achieves a mean fidelity of 0.899, compared with 0.884 for AoI-greedy and 0.822 for Random scheduling. Camera sensors show an 8.5% improvement. These findings demonstrate the potential of continuous semantic fidelity for scheduling heterogeneous sensors in UAV-assisted IoT monitoring.",
+    },
+    {
+      title:
+        "Beyond Encryption: Quantum-Resilient Semantic Deniability Against Intent Leakage in 6G UAV Networks",
+      authors: (
+        <>
+          Bodhisattwa Baidya, <span className="font-bold underline underline-offset-4">Gourab Das</span>,
+          Ayan Mondal
+        </>
+      ),
+      venue: "ICDCN 2027, January 4–7, Mangalore, India",
+      type: "Conference",
+      link: "https://doi.org/10.1145/3861277.3861288",
+      image: beyond_abs,
+      poster: beyond_poster,
+      videoId: icdcn2027PaperVideoId,
+      bibtex: `@inproceedings{baidya2027beyond,
+  title     = {Beyond Encryption: Quantum-Resilient Semantic Deniability Against Intent Leakage in 6G UAV Networks},
+  author    = {Baidya, Bodhisattwa and Das, Gourab and Mondal, Ayan},
+  booktitle = {Proceedings of the 28th International Conference on Distributed Computing and Networking},
+  year      = {2027},
+  address   = {Mangalore, India},
+  publisher = {Association for Computing Machinery},
+  doi       = {10.1145/3861277.3861288}
+}`,
+      abstract:
+        "Semantic communication systems for sixth-generation (6G) unmanned aerial vehicle (UAV) swarms introduce a fundamentally new attack surface that transcends conventional cryptographic boundaries. We identify and formally characterize Semantic Inference Leakage (SIL), a novel threat wherein quantum-capable adversaries reconstruct UAV operational intent directly from the geometric structure of semantic embeddings, without breaking any encryption layer. We prove that post-quantum cryptography (PQC) alone is provably insufficient against SIL, and that quantum adversaries achieve a superquadratic inference advantage over classical counterparts through manifold-exploiting amplitude amplification. To counter this, we propose PQC-Keyed Orthogonal Semantic Permutation (PQOSP), a lattice-anchored isometric transformation derived from Kyber-768 shared secrets via SHAKE-256 expansion and QR decomposition, achieving (ε_den, δ_fid)-Semantic Deniability with zero fidelity cost. Experiments across a 50-UAV 6G swarm demonstrate Ω = 0 deniability, Semantic Security Level of 208 bits, end-to-end latency of 1.782 ms, and statistically significant separation (t = 41.17, p < 10⁻⁶) over all baselines.",
+    },
+  ],
   2026: [
+    {
+      title:
+        "CLV-ID: Cross-Lingual Verification for Detecting AI-Generated Text Forgeries in Multilingual Identity Documents",
+      authors: (
+        <>
+          <span className="font-bold underline underline-offset-4">Gourab Das</span>, Pavan Kumar
+          C, Raghavendra Ramachandra
+        </>
+      ),
+      venue: "2nd AIFB Conference",
+      type: "Conference",
+      link: aifb2026Link,
+      image: clv_abs,
+      poster: clv_id_poster,
+      videoId: aifb2026VideoId,
+      bibtex: `@inproceedings{das2026clvid,
+  title     = {CLV-ID: Cross-Lingual Verification for Detecting AI-Generated Text Forgeries in Multilingual Identity Documents},
+  author    = {Das, Gourab and Kumar C, Pavan and Ramachandra, Raghavendra},
+  booktitle = {AI for Forensics and Biometric Applications (AIFB) 2026},
+  year      = {2026}
+}`,
+      abstract:
+        "AI-generated text forgery in identity documents is increasingly difficult to detect because modern generative models can alter text while preserving visual appearance. As a result, pixel-level forensic methods often fail when manipulated text remains visually coherent. This paper presents CLV-ID, a training-free semantic verification framework for multilingual identity documents that checks whether identity fields printed in different scripts remain cross-lingually consistent. CLV-ID combines confidence-aware OCR, controlled phonetic transliteration of the local script, and full-string comparison with the printed English field. Experiments on the multilingual subset of the FantasyID dataset (923 samples) show that CLV-ID achieves 98.37% accuracy, 98.20% recall, and 1.49% HTER. It consistently outperforms representative pixel-based forensic baselines, including TruFor, MMFusion, and FatFormer, under diffusion-based text attacks. CLV-ID applies to documents with redundant cross-script name fields and does not detect symmetric manipulations that alter both scripts consistently. Within this scope, semantic consistency is an effective forensic signal, and CLV-ID serves as a complementary layer in a multi-factor document authentication pipeline rather than replacing pixel-level forensics.",
+    },
     {
       title:
         "From Forgeries to Foundation Models: A Systematic Survey of Identity Document Attack and Detection",
