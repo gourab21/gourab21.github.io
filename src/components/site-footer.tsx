@@ -1,21 +1,24 @@
 import { Link } from "@tanstack/react-router";
+import { ArrowUpRight } from "lucide-react";
 
 export function SiteFooter() {
   return (
-    <footer className="border-t border-border">
-      <div className="mx-auto flex max-w-6xl flex-col items-start justify-between gap-4 px-4 py-10 sm:flex-row sm:items-center sm:px-6">
-        <p className="text-xs text-muted-foreground">© {new Date().getFullYear()} Gourab Das.</p>
-        <div className="flex gap-6 text-xs font-semibold uppercase tracking-wider text-muted-foreground">
-          <Link to="/publications" className="hover:text-accent">
-            Publications
+    <footer className="site-footer mt-16 border-t border-border">
+      <div className="site-footer-inner mx-auto max-w-7xl px-5 py-8 sm:px-8 lg:px-12">
+        <Link to="/" className="brand-lockup" aria-label="Gourab Das home">
+          <span className="brand-name">GDAS</span>
+        </Link>
+        <nav className="site-footer-nav" aria-label="Footer navigation">
+          <Link to="/publications">Publications</Link>
+          <Link to="/activities">Activities</Link>
+          <Link to="/cv">CV</Link>
+          <Link to="/gallery">Gallery</Link>
+          <Link to="/contact">
+            Contact <ArrowUpRight className="size-3" />
           </Link>
-          <Link to="/cv" className="hover:text-accent">
-            CV
-          </Link>
-          <Link to="/contact" className="hover:text-accent">
-            Contact
-          </Link>
-        </div>
+          <Link to="/news">News</Link>
+        </nav>
+        <p className="site-footer-copy">© {new Date().getFullYear()} Gourab Das</p>
       </div>
     </footer>
   );

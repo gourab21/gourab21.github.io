@@ -1,5 +1,5 @@
 import { createFileRoute } from "@tanstack/react-router";
-import { PageShell, PageHeading } from "@/components/page-shell";
+import { PageShell } from "@/components/page-shell";
 import { cn } from "@/lib/utils";
 import { ExternalLink } from "lucide-react";
 
@@ -69,7 +69,7 @@ const reviewer = [
     type: "Conference",
     since: "2026",
     url: "https://cvip2026.nitc.ac.in/",
-  }
+  },
 ];
 
 const tpc = [
@@ -136,12 +136,6 @@ function Section({
 function ActivitiesPage() {
   return (
     <PageShell>
-      <PageHeading
-        eyebrow="Service"
-        title="Activities"
-        description="Reviewing, program committees, memberships, and positions held."
-      />
-
       <div className="grid gap-14">
         <Section title="Reviewer">
           <div className="flex flex-wrap gap-3">
@@ -151,7 +145,7 @@ function ActivitiesPage() {
                 href={r.url}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="group inline-flex items-center gap-2 rounded-full border border-border border-l-4 border-l-accent bg-card px-4 py-2 text-sm font-medium transition-all hover:bg-accent/15 hover:shadow-sm hover:shadow-accent/10"
+                className="group inline-flex items-center gap-2 rounded-xl border border-border bg-card px-4 py-3 text-sm font-medium transition-all duration-300 hover:-translate-y-1 hover:border-accent hover:bg-accent/10 hover:shadow-lg"
               >
                 <span>{r.name}</span>
                 <ExternalLink className="size-3.5 text-muted-foreground opacity-0 transition-all group-hover:translate-x-0.5 group-hover:text-accent group-hover:opacity-100" />
@@ -168,7 +162,7 @@ function ActivitiesPage() {
                 href={t.url}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="group flex flex-col items-center justify-center rounded-full border border-border border-l-4 border-l-accent bg-card px-4 py-2 text-center text-sm font-medium transition-all hover:bg-accent/15 hover:shadow-sm hover:shadow-accent/10"
+                className="group flex flex-col items-center justify-center rounded-xl border border-border bg-card px-5 py-4 text-center text-sm font-medium transition-all duration-300 hover:-translate-y-1 hover:border-accent hover:bg-accent/10 hover:shadow-lg"
               >
                 <span className="inline-flex items-center gap-2">
                   <span>{t.name}</span>
@@ -184,7 +178,10 @@ function ActivitiesPage() {
           <Section title="Memberships">
             <ul className="space-y-3">
               {memberships.map((m) => (
-                <li key={m.name} className="flex items-start gap-3 text-sm">
+                <li
+                  key={m.name}
+                  className="flex items-start gap-3 rounded-xl border border-border bg-card p-4 text-sm transition-transform hover:translate-x-1"
+                >
                   <span className="mt-1.5 size-2 shrink-0 rounded-full bg-accent" />
                   <span>
                     <span className="font-medium">{m.name}</span>

@@ -52,7 +52,7 @@ export const profileLinks: ProfileLink[] = [
 export function ProfileLinkRow({ variant = "chip" }: { variant?: "chip" | "icon" }) {
   if (variant === "icon") {
     return (
-      <div className="flex flex-wrap gap-2">
+      <div className="profile-link-row flex flex-wrap gap-2">
         {profileLinks.map(({ label, href, Icon }) => (
           <a
             key={label}
@@ -60,7 +60,8 @@ export function ProfileLinkRow({ variant = "chip" }: { variant?: "chip" | "icon"
             target="_blank"
             rel="noreferrer"
             aria-label={label}
-            className="inline-flex size-10 items-center justify-center rounded-full border border-border bg-surface text-muted-foreground transition-colors hover:border-accent hover:text-accent"
+            title={label}
+            className="profile-icon profile-link-chip inline-flex size-9 items-center justify-center rounded-full border border-border bg-surface text-muted-foreground transition-all hover:scale-110 hover:border-accent hover:text-accent hover:shadow-[0_0_20px_color-mix(in_srgb,var(--accent)_25%,transparent)]"
           >
             <Icon className="size-4" />
           </a>
@@ -69,14 +70,14 @@ export function ProfileLinkRow({ variant = "chip" }: { variant?: "chip" | "icon"
     );
   }
   return (
-    <div className="flex flex-wrap gap-2">
+    <div className="profile-link-row flex flex-wrap gap-2">
       {profileLinks.map(({ label, href, Icon }) => (
         <a
           key={label}
           href={href}
           target="_blank"
           rel="noreferrer"
-          className="inline-flex items-center gap-2 rounded-full border border-border bg-surface px-3.5 py-2 text-xs font-semibold text-foreground transition-all hover:border-accent hover:text-accent"
+          className="profile-link-chip inline-flex items-center gap-2 rounded-full border border-border bg-surface px-3.5 py-2 text-xs font-semibold text-foreground transition-all hover:border-accent hover:text-accent"
         >
           <Icon className="size-3.5" />
           {label}

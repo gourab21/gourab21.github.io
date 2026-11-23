@@ -75,11 +75,11 @@ export const publications: Record<number, Publication[]> = {
         "Beyond Encryption: Quantum-Resilient Semantic Deniability Against Intent Leakage in 6G UAV Networks",
       authors: (
         <>
-          Bodhisattwa Baidya, <span className="font-bold underline underline-offset-4">Gourab Das</span>,
-          Ayan Mondal
+          Bodhisattwa Baidya,{" "}
+          <span className="font-bold underline underline-offset-4">Gourab Das</span>, Ayan Mondal
         </>
       ),
-      venue: "ICDCN 2027, January 4–7, Mangalore, India",
+      venue: "28th ICDCN 2027",
       type: "Conference",
       link: "https://doi.org/10.1145/3861277.3861288",
       image: beyond_abs,
@@ -104,8 +104,8 @@ export const publications: Record<number, Publication[]> = {
         "CLV-ID: Cross-Lingual Verification for Detecting AI-Generated Text Forgeries in Multilingual Identity Documents",
       authors: (
         <>
-          <span className="font-bold underline underline-offset-4">Gourab Das</span>, Pavan Kumar
-          C, Raghavendra Ramachandra
+          <span className="font-bold underline underline-offset-4">Gourab Das</span>, Pavan Kumar C,
+          Raghavendra Ramachandra
         </>
       ),
       venue: "2nd AIFB Conference",
@@ -303,7 +303,7 @@ export const publications: Record<number, Publication[]> = {
           Santra, Arkaprava Chakraborty
         </>
       ),
-      venue: "Sixth Doctoral Symposium on Intelligence Enabled Research (DoSIER 2024)",
+      venue: "6TH DoSIER 2024",
       type: "Conference",
       link: "https://ceur-ws.org/Vol-3900/Paper19.pdf",
       image: baidya2024enhanced,

@@ -1,5 +1,5 @@
 import { createFileRoute } from "@tanstack/react-router";
-import { PageShell, PageHeading } from "@/components/page-shell";
+import { PageShell } from "@/components/page-shell";
 import CV from "@/assets/CV.pdf";
 import { Download } from "lucide-react";
 
@@ -271,12 +271,11 @@ function Section({
 function CvPage() {
   return (
     <PageShell>
-      <div className="flex flex-wrap items-end justify-between gap-4">
-        <PageHeading
-          eyebrow="Curriculum Vitae"
-          title="Gourab Das"
-          description="PhD Scholar, Dept. of CSE, IIIT Dharwad, India."
-        />
+      <div className="cv-hero flex flex-wrap items-end justify-between gap-4">
+        <div className="cv-identity">
+          <h1>Gourab Das</h1>
+          <p>PhD Scholar, IIIT Dharwad</p>
+        </div>
 
         <a
           href={CV}
@@ -286,7 +285,7 @@ function CvPage() {
         </a>
       </div>
 
-      <div className="space-y-14">
+      <div className="cv-layout space-y-14">
         <Section id="research" title="Research Experience">
           <Timeline items={research} />
         </Section>
@@ -296,7 +295,10 @@ function CvPage() {
         <Section id="awards" title="Awards & Achievements">
           <ul className="grid gap-3 sm:grid-cols-2">
             {awards.map((a) => (
-              <li key={a.title} className="rounded-lg border border-border bg-card p-4">
+              <li
+                key={a.title}
+                className="rounded-xl border border-border bg-card p-5 transition-all duration-300 hover:-translate-y-1 hover:border-accent hover:shadow-lg"
+              >
                 <p className="text-sm font-bold">{a.title}</p>
                 <p className="text-xs text-muted-foreground">
                   {a.org ? `${a.org} · ` : ""}
@@ -311,7 +313,7 @@ function CvPage() {
             {workshops.map((w) => (
               <li
                 key={w.title}
-                className="flex items-start justify-between gap-4 border-b border-border pb-3 last:border-b-0"
+                className="flex items-start justify-between gap-4 rounded-lg border-b border-border bg-card px-4 py-3 last:border-b-0"
               >
                 <span className="text-sm">{w.title}</span>
                 <span className="shrink-0 text-xs font-semibold text-muted-foreground">
@@ -324,7 +326,10 @@ function CvPage() {
         <Section id="references" title="References">
           <div className="grid gap-4 sm:grid-cols-3">
             {references.map((r) => (
-              <div key={r.name} className="rounded-2xl border border-border bg-card p-5">
+              <div
+                key={r.name}
+                className="rounded-2xl border border-border bg-card p-5 transition-transform duration-300 hover:-translate-y-1"
+              >
                 <p className="text-sm font-bold">{r.name}</p>
                 <p className="mt-1 text-xs text-muted-foreground">{r.org}</p>
                 <p className="mt-0.5 text-xs text-muted-foreground">{r.role}</p>

@@ -10,6 +10,7 @@
 
 import { Route as rootRouteImport } from './routes/__root'
 import { Route as PublicationsRouteImport } from './routes/publications'
+import { Route as NewsRouteImport } from './routes/news'
 import { Route as GalleryRouteImport } from './routes/gallery'
 import { Route as CvRouteImport } from './routes/cv'
 import { Route as ContactRouteImport } from './routes/contact'
@@ -19,6 +20,11 @@ import { Route as IndexRouteImport } from './routes/index'
 const PublicationsRoute = PublicationsRouteImport.update({
   id: '/publications',
   path: '/publications',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const NewsRoute = NewsRouteImport.update({
+  id: '/news',
+  path: '/news',
   getParentRoute: () => rootRouteImport,
 } as any)
 const GalleryRoute = GalleryRouteImport.update({
@@ -53,6 +59,7 @@ export interface FileRoutesByFullPath {
   '/contact': typeof ContactRoute
   '/cv': typeof CvRoute
   '/gallery': typeof GalleryRoute
+  '/news': typeof NewsRoute
   '/publications': typeof PublicationsRoute
 }
 export interface FileRoutesByTo {
@@ -61,6 +68,7 @@ export interface FileRoutesByTo {
   '/contact': typeof ContactRoute
   '/cv': typeof CvRoute
   '/gallery': typeof GalleryRoute
+  '/news': typeof NewsRoute
   '/publications': typeof PublicationsRoute
 }
 export interface FileRoutesById {
@@ -70,14 +78,28 @@ export interface FileRoutesById {
   '/contact': typeof ContactRoute
   '/cv': typeof CvRoute
   '/gallery': typeof GalleryRoute
+  '/news': typeof NewsRoute
   '/publications': typeof PublicationsRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
   fullPaths:
-    '/' | '/activities' | '/contact' | '/cv' | '/gallery' | '/publications'
+    | '/'
+    | '/activities'
+    | '/contact'
+    | '/cv'
+    | '/gallery'
+    | '/news'
+    | '/publications'
   fileRoutesByTo: FileRoutesByTo
-  to: '/' | '/activities' | '/contact' | '/cv' | '/gallery' | '/publications'
+  to:
+    | '/'
+    | '/activities'
+    | '/contact'
+    | '/cv'
+    | '/gallery'
+    | '/news'
+    | '/publications'
   id:
     | '__root__'
     | '/'
@@ -85,6 +107,7 @@ export interface FileRouteTypes {
     | '/contact'
     | '/cv'
     | '/gallery'
+    | '/news'
     | '/publications'
   fileRoutesById: FileRoutesById
 }
@@ -94,6 +117,7 @@ export interface RootRouteChildren {
   ContactRoute: typeof ContactRoute
   CvRoute: typeof CvRoute
   GalleryRoute: typeof GalleryRoute
+  NewsRoute: typeof NewsRoute
   PublicationsRoute: typeof PublicationsRoute
 }
 
@@ -104,6 +128,13 @@ declare module '@tanstack/react-router' {
       path: '/publications'
       fullPath: '/publications'
       preLoaderRoute: typeof PublicationsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/news': {
+      id: '/news'
+      path: '/news'
+      fullPath: '/news'
+      preLoaderRoute: typeof NewsRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/gallery': {
@@ -150,6 +181,7 @@ const rootRouteChildren: RootRouteChildren = {
   ContactRoute: ContactRoute,
   CvRoute: CvRoute,
   GalleryRoute: GalleryRoute,
+  NewsRoute: NewsRoute,
   PublicationsRoute: PublicationsRoute,
 }
 export const routeTree = rootRouteImport

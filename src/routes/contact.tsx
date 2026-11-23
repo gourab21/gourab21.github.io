@@ -1,6 +1,6 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { Mail, Phone, MapPin } from "lucide-react";
-import { PageShell, PageHeading } from "@/components/page-shell";
+import { PageShell } from "@/components/page-shell";
 import { ProfileLinkRow } from "@/components/profile-links";
 
 export const Route = createFileRoute("/contact")({
@@ -28,17 +28,11 @@ const MAP_SRC =
 function ContactPage() {
   return (
     <PageShell>
-      <PageHeading
-        eyebrow="Get in touch"
-        title="Contact"
-        description="Reach out for collaborations, invited talks, student mentoring, or media inquiries."
-      />
-
       <div className="grid gap-10 lg:grid-cols-[1.1fr_1fr]">
         <div className="space-y-8">
           <div className="rounded-2xl border border-border bg-card p-6 sm:p-8">
             <div className="space-y-6">
-              <div className="flex items-start gap-4">
+              <div className="flex items-start gap-4 rounded-xl border border-border bg-surface p-4 transition-transform hover:translate-x-1">
                 <span className="mt-1 inline-flex size-9 shrink-0 items-center justify-center rounded-full bg-accent/10 text-accent">
                   <MapPin className="size-4" />
                 </span>
@@ -64,7 +58,7 @@ function ContactPage() {
                 </div>
               </div>
 
-              <div className="flex items-start gap-4">
+              <div className="flex items-start gap-4 rounded-xl border border-border bg-surface p-4 transition-transform hover:translate-x-1">
                 <span className="mt-1 inline-flex size-9 shrink-0 items-center justify-center rounded-full bg-accent/10 text-accent">
                   <Phone className="size-4" />
                 </span>
@@ -81,7 +75,7 @@ function ContactPage() {
                 </div>
               </div>
 
-              <div className="flex items-start gap-4">
+              <div className="flex items-start gap-4 rounded-xl border border-border bg-surface p-4 transition-transform hover:translate-x-1">
                 <span className="mt-1 inline-flex size-9 shrink-0 items-center justify-center rounded-full bg-accent/10 text-accent">
                   <Mail className="size-4" />
                 </span>
@@ -110,11 +104,13 @@ function ContactPage() {
             <p className="mb-3 text-xs font-black uppercase tracking-widest text-muted-foreground">
               Research profiles
             </p>
-            <ProfileLinkRow />
+            <div className="contact-profile-links">
+              <ProfileLinkRow />
+            </div>
           </div>
         </div>
 
-        <div className="overflow-hidden rounded-2xl border border-border bg-surface-strong">
+        <div className="overflow-hidden rounded-2xl border border-border bg-surface-strong transition-transform duration-500 hover:shadow-2xl">
           <iframe
             title="Office location map"
             src={MAP_SRC}

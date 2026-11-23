@@ -1,14 +1,15 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { useState } from "react";
 import { X, Play } from "lucide-react";
+import { TransformComponent, TransformWrapper } from "react-zoom-pan-pinch";
 import { PageShell } from "@/components/page-shell";
-import top from "@/assets/linkedin.png";
 import U_PAL from "@/assets/u_pal.jpg";
 import IIT_KGP_PM from "@/assets/iit_kgp.jpg";
 import Newspaper from "@/assets/newspaper.jpg";
 import rkmveri from "@/assets/rkmveri.jpg";
 import stxaviers from "@/assets/stxaviers.jpg";
 import pixelation from "@/assets/pixelation.jpg";
+import galleryBanner from "@/assets/linkedin.png";
 
 export const Route = createFileRoute("/gallery")({
   head: () => ({
@@ -155,8 +156,8 @@ function GalleryPage() {
 
   return (
     <PageShell>
-      <div className="mb-10 overflow-hidden rounded-2xl border border-border bg-surface-strong">
-        <img src={top} alt="Gallery banner" className="h- w-full object-cover sm:h- md:h-" />
+      <div className="gallery-heading-image">
+        <img src={galleryBanner} alt="Gourab Das gallery" />
       </div>
 
       <div className="grid auto-rows-[220px] grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3">
@@ -165,7 +166,7 @@ function GalleryPage() {
             <button
               key={it.id}
               onClick={() => setActive(it)}
-              className={`group relative overflow-hidden rounded-2xl border border-border bg-surface-strong text-left ${spanClass(it.span)}`}
+              className={`group relative overflow-hidden rounded-2xl border border-border bg-surface-strong text-left transition-transform duration-300 hover:-translate-y-1 ${spanClass(it.span)}`}
             >
               <img
                 src={it.src}
@@ -181,7 +182,7 @@ function GalleryPage() {
             <button
               key={it.id}
               onClick={() => setActive(it)}
-              className={`group relative overflow-hidden rounded-2xl border border-border bg-surface-strong text-left ${spanClass(it.span)}`}
+              className={`group relative overflow-hidden rounded-2xl border border-border bg-surface-strong text-left transition-transform duration-300 hover:-translate-y-1 ${spanClass(it.span)}`}
             >
               <img
                 src={`https://img.youtube.com/vi/${it.videoId}/hqdefault.jpg`}
@@ -227,7 +228,7 @@ function GalleryPage() {
           onClick={() => setActive(null)}
         >
           <div
-            className="relative max-h-[90vh] w-full max-w-3xl overflow-auto rounded-2xl border border-border bg-card"
+            className="gallery-lightbox relative flex max-h-[92vh] w-full max-w-5xl flex-col overflow-hidden rounded-2xl border border-border bg-card"
             onClick={(e) => e.stopPropagation()}
           >
             <button
@@ -239,8 +240,23 @@ function GalleryPage() {
             </button>
             {active.kind === "photo" ? (
               <>
-                <img src={active.src} alt={active.caption} className="w-full object-cover" />
-                <p className="p-6 font-serif text-sm text-muted-foreground">{active.caption}</p>
+                <div className="gallery-zoom">
+                  <TransformWrapper initialScale={1} minScale={0.6} maxScale={5} centerOnInit>
+                    <TransformComponent
+                      wrapperClass="!w-full !h-[min(72vh,760px)]"
+                      contentClass="!w-full !h-full !flex !items-center !justify-center"
+                    >
+                      <img
+                        src={active.src}
+                        alt={active.caption}
+                        className="max-h-[min(70vh,740px)] max-w-full object-contain"
+                      />
+                    </TransformComponent>
+                  </TransformWrapper>
+                </div>
+                <p className="gallery-caption p-4 font-serif text-sm text-muted-foreground">
+                  {active.caption}
+                </p>
               </>
             ) : active.kind === "video" ? (
               <>

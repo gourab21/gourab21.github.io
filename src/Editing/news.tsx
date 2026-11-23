@@ -7,8 +7,8 @@ export type NewsItem = {
 };
 
 export type HighlightItem = {
-  title: string;
-  subtitle: string;
+  title?: string;
+  subtitle?: string;
   badge?: string;
   date?: string;
   detail?: ReactNode;
@@ -21,29 +21,21 @@ export type HighlightItem = {
 };
 
 export const highlight: HighlightItem = {
-  // title: "Paper Accepted at 28th ICDCN 2026 Main Track",
-  // subtitle: "Beyond Encryption: Quantum-Resilient Semantic Deniability Against Intent Leakage in 6G UAV Networks, co-authored with Bodhisattwa Baidya and Dr. Ayan Mondal, IIT Indore.",
-  // badge: "Paper Accepted",
-  // date: "ICTIST 2026 · 29-30 June 2026",
-  // detail: (
-  //   <>
-  //     <p>
-  //       <strong>Session:</strong> Adversarial Biometrics in the Advanced AI Era.
-  //     </p>
-  //     <p>
-  //       <strong>Venue:</strong> ICTIST 2026, Tashkent, Uzbekistan.
-  //     </p>
-  //     <p>
-  //       The session brings together researchers working on adversarial attacks and defenses in
-  //       biometric systems, exploring the challenges and opportunities in ensuring the security and
-  //       reliability of biometric authentication in the era of advanced AI technologies.
-  //     </p>
-  //   </>
-  // ),
-  // primaryButtonText: "Conference Site",
-  // primaryButtonHref: "https://aieys.com/ICTIST%202ND/Ictist.html",
-  // secondaryButtonText: "Call for Papers",
-  // secondaryButtonHref:"https://aieys.com/ICTIST%202ND/special_session/special_session_adversarial_biometrics.html",
+  title: "Paper accepted at the 2nd AIFB Conference",
+  subtitle:
+    "CLV-ID presents a cross-lingual approach to detecting AI-generated text forgeries in multilingual identity documents.",
+  badge: "Paper accepted",
+  date: "Nov 2026",
+  detail: (
+    <p>
+      <strong>
+        CLV-ID: Cross-Lingual Verification for Detecting AI-Generated Text Forgeries in Multilingual
+        Identity Documents
+      </strong>{" "}
+      has been accepted at the 2nd AIFB Conference. The work was completed under the guidance of
+      Prof. Raghavendra Ramachandra and Dr. Pavan Kumar C.
+    </p>
+  ),
 };
 
 export const news: NewsItem[] = [

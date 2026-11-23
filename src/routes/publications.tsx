@@ -2,7 +2,7 @@ import { createFileRoute } from "@tanstack/react-router";
 
 import { TransformWrapper, TransformComponent } from "react-zoom-pan-pinch";
 
-import { useState } from "react";
+import { useMemo, useState } from "react";
 import {
   ExternalLink,
   ChevronDown,
@@ -13,7 +13,7 @@ import {
   Copy,
   Check,
 } from "lucide-react";
-import { PageShell, PageHeading } from "@/components/page-shell";
+import { PageShell } from "@/components/page-shell";
 import {
   Dialog,
   DialogContent,
@@ -47,11 +47,55 @@ const typeStyles: Record<PubType, string> = {
 };
 
 function PublicationsPage() {
+  const [yearFilter, setYearFilter] = useState("All years");
+  const [typeFilter, setTypeFilter] = useState("All types");
+  const years = Object.keys(publications).sort((a, b) => Number(b) - Number(a));
+  const types = [
+    ...new Set(
+      Object.values(publications)
+        .flat()
+        .map((p) => p.type),
+    ),
+  ];
+  const filtered = useMemo(
+    () =>
+      Object.entries(publications)
+        .filter(([year]) => yearFilter === "All years" || year === yearFilter)
+        .map(
+          ([year, items]) =>
+            [
+              year,
+              items.filter((p) => typeFilter === "All types" || p.type === typeFilter),
+            ] as const,
+        )
+        .filter(([, items]) => items.length),
+    [yearFilter, typeFilter],
+  );
   return (
     <PageShell>
-      <PageHeading title="Publications" />
+      <div className="filter-bar">
+        <label>
+          Year{" "}
+          <select value={yearFilter} onChange={(e) => setYearFilter(e.target.value)}>
+            <option>All years</option>
+            {years.map((y) => (
+              <option key={y}>{y}</option>
+            ))}
+          </select>
+        </label>
+        <label>
+          Type{" "}
+          <select value={typeFilter} onChange={(e) => setTypeFilter(e.target.value)}>
+            <option>All types</option>
+            {types.map((t) => (
+              <option key={t}>{t}</option>
+            ))}
+          </select>
+        </label>
+        <span>{filtered.reduce((n, [, items]) => n + items.length, 0)} works</span>
+      </div>
       <div className="space-y-16">
-        {Object.entries(publications)
+        {filtered
           .sort((a, b) => Number(b[0]) - Number(a[0]))
           .map(([year, items]) => (
             <div key={year}>
@@ -100,7 +144,7 @@ function PublicationCard({ pub, index }: { pub: Publication; index: number }) {
       className="group relative overflow-hidden rounded-2xl border border-border bg-card transition-all duration-500 ease-out hover:-translate-y-0.5 hover:border-accent/50 hover:shadow-xl hover:shadow-accent/5 animate-fade-in"
       style={{ animationDelay: `${index * 60}ms`, animationFillMode: "backwards" }}
     >
-      <div className="grid gap-0 sm:grid-cols-[15rem_1fr]">
+      <div className="grid gap-0 sm:grid-cols-[22rem_1fr]">
         {/* Image */}
         <div
           className="relative aspect-[3/4] overflow-hidden bg-surface-strong sm:aspect-auto"
@@ -121,7 +165,7 @@ function PublicationCard({ pub, index }: { pub: Publication; index: number }) {
         <div className="flex flex-col px-6 pt-6 pb-2">
           <div className="mb-3 flex flex-wrap items-center gap-2">
             <span
-              className={`rounded-full border px-2.5 py-0.5 text-[10px] font-bold uppercase tracking-wider ${typeStyles[pub.type]}`}
+              className={`pub-type-label rounded-full border px-2.5 py-1 text-xs font-bold uppercase tracking-wider ${typeStyles[pub.type]}`}
             >
               {pub.type}
             </span>
@@ -130,7 +174,7 @@ function PublicationCard({ pub, index }: { pub: Publication; index: number }) {
                 {pub.tag}
               </span>
             )}
-            <span className="ml-auto text-xs font-semibold uppercase tracking-wider text-muted-foreground">
+            <span className="pub-venue ml-auto text-sm font-semibold uppercase tracking-wider text-muted-foreground">
               {pub.venue}
             </span>
           </div>
